@@ -1,4 +1,3 @@
-import ASSETFAQ from "@/components/ASSET/ASSETFAQ";
 import Asset from "@/components/Home/ASSET";
 import Banner from "@/components/Home/Banner";
 import BentoGallery from "@/components/Home/Gallary";
@@ -19,7 +18,6 @@ export default function Home() {
     <Partners/>
     <SuccessStories/>
     <BentoGallery/>
-  
    </div>
   );
 }

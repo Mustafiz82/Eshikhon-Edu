@@ -28,7 +28,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-gradient-to-b from-[#0c4d5a] to-[#062c33] text-teal-100/80 font-sans pt-14 text-sm border-t border-teal-800/40">
+    <footer className="bg-linear-to-b from-[#0c4d5a] to-[#062c33] text-teal-100/80 font-sans pt-14 text-sm border-t border-teal-800/40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Main Grid */}

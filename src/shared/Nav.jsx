@@ -12,7 +12,7 @@ export default function Navbar() {
       <div className="max-w-7xl relative bg-white/95 mx-auto px-4">
         <div className="flex w-full items-center justify-between h-20">
           {/* Left Brand Logo */}
-          <div className="flex-shrink-0">
+          <div className="shrink-0">
             <img className="h-16" src="/logo.png" alt="Logo" />
           </div>
 

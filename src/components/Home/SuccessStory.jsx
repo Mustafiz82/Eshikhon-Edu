@@ -51,7 +51,7 @@ export default function SuccessStories() {
   const activeVideo = successVideos[activeIndex];
 
   return (
-       <section className="relative  py-16 md:py-24 bg-gradient-to-b from-[#F8FAFC] via-[#F8FAFC] to-[#F1F5F9] overflow-hidden">
+       <section className="relative  py-16 md:py-24 bg-linear-to-b from-[#F8FAFC] via-[#F8FAFC] to-[#F1F5F9] overflow-hidden">
       {/* Decorative subtle background glows */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-96 bg-radial from-orange-100/40 via-blue-50/20 to-transparent pointer-events-none blur-3xl -z-10" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -61,7 +61,7 @@ export default function SuccessStories() {
          
 
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight ">
-            শিক্ষার্থীদের <span className="  font-HindSiliguri text-[#0C2340] tracking-tight leading-[1.15] text-transparent bg-clip-text bg-gradient-to-r from-[#005776] to-[#008BB8]">বাস্তব অর্জন ও অভিজ্ঞতা</span>
+            শিক্ষার্থীদের <span className="  font-HindSiliguri  tracking-tight leading-[1.15] text-transparent bg-clip-text bg-linear-to-b from-[#005776] to-[#008BB8]">বাস্তব অর্জন ও অভিজ্ঞতা</span>
           </h2>
           <p className="mt-2 text-xs sm:text-sm text-slate-500 font-medium">
             আমাদের কোর্স এবং প্র্যাকটিক্যাল ল্যাব ট্রেনিংয়ের মাধ্যমে যারা গড়েছেন সফল ক্যারিয়ার
@@ -124,7 +124,7 @@ export default function SuccessStories() {
                   }`}
                 >
                   {/* Clean Thumbnail with Teal/Orange Play Icon */}
-                  <div className="relative w-28 h-16 rounded-lg overflow-hidden flex-shrink-0 bg-slate-100 border border-slate-200">
+                  <div className="relative w-28 h-16 rounded-lg overflow-hidden shrink-0 bg-slate-100 border border-slate-200">
                     <img
                       src={`https://img.youtube.com/vi/${item.videoId}/hqdefault.jpg`}
                       alt={item.title}
@@ -160,11 +160,11 @@ export default function SuccessStories() {
 
         {/* ================= MOBILE (< lg): Horizontal Snap Peek Row ================= */}
         <div className="lg:hidden">
-          <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-4 pt-1 px-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-4 pt-1 px-1 [-ms-overflow-style:none] scrollbar-none [&::-webkit-scrollbar]:hidden">
             {successVideos.map((story) => (
               <div
                 key={story.id}
-                className="w-[85vw] sm:w-[320px] flex-shrink-0 snap-center bg-white rounded-2xl border border-slate-200 p-3 flex flex-col justify-between"
+                className="w-[85vw] sm:w-[320px] shrink-0 snap-center bg-white rounded-2xl border border-slate-200 p-3 flex flex-col justify-between"
               >
                 {/* 16:9 Video Frame */}
                 <div className="relative w-full aspect-video rounded-xl overflow-hidden bg-slate-100 border border-slate-200 mb-3">
@@ -188,7 +188,7 @@ export default function SuccessStories() {
                   </h3>
                   <div className="mt-3 pt-2.5 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-600">
                     <span className="font-semibold">{story.student}</span>
-                    <span className="text-[#f25c05] font-bold truncate max-w-[120px]">{story.role}</span>
+                    <span className="text-[#f25c05] font-bold truncate max-w-30">{story.role}</span>
                   </div>
                 </div>
               </div>

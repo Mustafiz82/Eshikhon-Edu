@@ -39,7 +39,7 @@ export default function Banner() {
           {/* Main Heading */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#0C2340] tracking-tight leading-[1.15]">
             Government-recognized <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#005776] to-[#008BB8]">
+            <span className="text-transparent bg-clip-text bg-linear-to-b from-[#005776] to-[#008BB8]">
               skills for your future
             </span>
           </h1>
@@ -58,7 +58,7 @@ export default function Banner() {
           {/* Action Pills / Buttons */}
           <div className="flex flex-wrap items-center gap-3 pt-1 w-full">
             {/* Primary Action Button (Featured) */}
-            <button className="group flex items-center gap-2.5 px-5 py-3 rounded-xl bg-gradient-to-r from-[#EA580C] to-[#D97706] hover:from-[#C2410C] hover:to-[#B45309] text-white font-semibold text-sm transition-all duration-300 shadow-md shadow-orange-950/15 hover:shadow-lg hover:-translate-y-0.5">
+            <button className="group flex items-center gap-2.5 px-5 py-3 rounded-xl bg-linear-to-b from-[#EA580C] to-[#D97706] hover:from-[#C2410C] hover:to-[#B45309] text-white font-semibold text-sm transition-all duration-300 shadow-md shadow-orange-950/15 hover:shadow-lg hover:-translate-y-0.5">
               <FaGraduationCap className="text-lg text-orange-100" />
               <span>ASSET ট্রেনিং <span className="text-xs opacity-80">(NSDA)</span></span>
               <FaArrowRight className="text-xs opacity-70 group-hover:translate-x-1 transition-transform" />

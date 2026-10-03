@@ -4,7 +4,7 @@ import { HiOutlinePhone } from "react-icons/hi2";
 
 export default function ASSETCTA() {
   return (
-    <section className="py-14 font-HindSiliguri bg-gradient-to-b from-[#F8FAFC] via-[#F8FAFC] to-[#F1F5F9] text-slate-800">
+    <section className="py-14 font-HindSiliguri bg-linear-to-b from-[#F8FAFC] via-[#F8FAFC] to-[#F1F5F9] text-slate-800">
       <div className="max-w-6xl mx-auto px-4">
         {/* Horizontal Card */}
         <div className="bg-white rounded-3xl border border-teal-100 p-7 sm:p-10 shadow-lg shadow-teal-900/5 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
@@ -17,7 +17,7 @@ export default function ASSETCTA() {
             </div>
 
             {/* Headline */}
-            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-[#0C2340] text-transparent bg-clip-text bg-gradient-to-r from-[#005776] to-[#008BB8] leading-tight">
+            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight  text-transparent bg-clip-text bg-linear-to-b from-[#005776] to-[#008BB8] leading-tight">
               পরবর্তী ASSET ব্যাচের আপডেট সবার আগে পান
             </h2>
 

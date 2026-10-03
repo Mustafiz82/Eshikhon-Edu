@@ -32,7 +32,7 @@ export default function WhatIsAsset() {
   ];
 
   return (
-    <section className="py-14 font-HindSiliguri bg-gradient-to-b from-[#F8FAFC] via-[#F8FAFC] to-[#F1F5F9]   text-slate-800">
+    <section className="py-14 font-HindSiliguri bg-linear-to-b from-[#F8FAFC] via-[#F8FAFC] to-[#F1F5F9]   text-slate-800">
       <div className="max-w-5xl mx-auto px-4 text-center">
         {/* Top Badge */}
         <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-teal-50 border border-teal-200 text-teal-700 text-xs font-semibold tracking-wide mb-3">
@@ -41,7 +41,7 @@ export default function WhatIsAsset() {
         </div>
 
         {/* Section Heading */}
-        <h2 className="text-2xl  sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight  font-HindSiliguri text-[#0C2340]  pt-4 text-transparent bg-clip-text bg-gradient-to-r from-[#005776] to-[#008BB8]">
+        <h2 className="text-2xl  sm:text-3xl md:text-4xl font-extrabold  tracking-tight  font-HindSiliguri   pt-4 text-transparent bg-clip-text bg-linear-to-b from-[#005776] to-[#008BB8]">
           ASSET প্রজেক্ট কী?
         </h2>
 

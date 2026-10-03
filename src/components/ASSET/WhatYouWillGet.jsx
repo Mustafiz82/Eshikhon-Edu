@@ -61,7 +61,7 @@ export default function WhatYouWillGet() {
         
         {/* Section Heading */}
         <div className="text-center mb-10">
-          <h2 className="text-2xl py-4 sm:text-3xl md:text-4xl font-extrabold tracking-tight text-[#0C2340] text-transparent bg-clip-text bg-gradient-to-r from-[#005776] to-[#008BB8]">
+          <h2 className="text-2xl py-4 sm:text-3xl md:text-4xl font-extrabold tracking-tight text-transparent bg-clip-text bg-linear-to-b from-[#005776] to-[#008BB8]">
             আপনি কী কী সুবিধা পাবেন?
           </h2>
         </div>

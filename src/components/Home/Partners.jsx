@@ -10,7 +10,7 @@ const partners = [
 
 export default function Partners() {
   return (
-      <section className="relative py-16 md:py-24 bg-gradient-to-b from-[#F8FAFC] via-[#F8FAFC] to-[#F1F5F9] overflow-hidden">
+      <section className="relative py-16 md:py-24 bg-linear-to-b from-[#F8FAFC] via-[#F8FAFC] to-[#F1F5F9] overflow-hidden">
       {/* Decorative subtle background glows */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-96 bg-radial from-orange-100/40 via-blue-50/20 to-transparent pointer-events-none blur-3xl -z-10" />
       <div className="max-w-6xl mx-auto px-4 sm:px-6">

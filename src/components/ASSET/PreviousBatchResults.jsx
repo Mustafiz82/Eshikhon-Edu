@@ -97,7 +97,7 @@ export default function PreviousBatchResults() {
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-teal-50 border border-teal-200 text-teal-700 text-xs font-bold tracking-wide mb-3">
             বাস্তব প্রমাণ ও অর্জন
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-[#0C2340] text-transparent bg-clip-text bg-gradient-to-r from-[#005776] to-[#008BB8]">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-transparent bg-clip-text bg-linear-to-b from-[#005776] to-[#008BB8]">
             আমাদের পূর্ববর্তী ব্যাচের সফলতা
           </h2>
           <p className="mt-2 text-sm sm:text-base text-slate-600">

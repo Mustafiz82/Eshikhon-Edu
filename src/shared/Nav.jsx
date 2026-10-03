@@ -8,7 +8,7 @@ export default function Navbar() {
   const [drawerOpen, setDrawerOpen] = useState(false);
   
   return (
-    <header className="sticky top-0 z-40 w-full bg-white backdrop-blur-md border-b border-slate-100 shadow-sm">
+    <header className="sticky top-0 bg z-40 w-full bg-white backdrop-blur-md border-b border-slate-100 shadow-sm">
       <div className="max-w-7xl relative bg-white/95 mx-auto px-4">
         <div className="flex w-full items-center justify-between h-20">
           {/* Left Brand Logo */}

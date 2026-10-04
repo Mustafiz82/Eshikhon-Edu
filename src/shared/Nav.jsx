@@ -13,7 +13,7 @@ export default function Navbar() {
         <div className="flex w-full items-center justify-between h-20">
           {/* Left Brand Logo */}
           <div className="shrink-0">
-            <img className="h-16" src="/logo.png" alt="Logo" />
+           <Link href={"/"}>  <img className="h-16" src="/logo.png" alt="Logo" /></Link>
           </div>
 
           {/* Right Navigation & Interactive Island */}

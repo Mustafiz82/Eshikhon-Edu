@@ -45,5 +45,5 @@ export default async function CourseDetailPage({ params }) {
   }
 
   // Render the template with the course from the array
-  return <CourseDetailTemplate course={course} />;
+  return <CourseDetailTemplate course={course}  />;
 }

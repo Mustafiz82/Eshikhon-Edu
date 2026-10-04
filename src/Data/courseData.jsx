@@ -36,8 +36,8 @@ export const courses = [
       perkLine: "সম্পূর্ণ ফ্রি + প্রতি মাসে সরকারি ভাতা (Stipend)",
     },
     action: {
-      type: "closed",
-      link: "",
+      type: "apply",
+      link: "https://docs.google.com/forms/d/e/1FAIpQLSejBgm5OyJQ_IVjhfG07amXOop8e9f34Zzlf8oESMEVymG5bg/viewform",
     },
     instructors: [
       {
@@ -84,7 +84,7 @@ export const courses = [
     slug: "digital-marketing-for-freelancing",
     program: "rpl",
     level: "3",
-    title: "ডিজিটাল মার্কেটিং ফর ফ্রিল্যান্সিং (RPL সার্টিফিকেশন)",
+    title: "ডিজিটাল মার্কেটিং ফর ফ্রিল্যান্সিং ",
     thumbnail: {
       src: "https://images.unsplash.com/photo-1557838923-2985c318be48?w=800&auto=format&fit=crop&q=80",
       alt: "RPL ডিজিটাল মার্কেটিং অ্যাসেসমেন্ট",

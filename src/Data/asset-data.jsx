@@ -24,7 +24,7 @@ export const assetCoursesData = [
     upcoming: true,
   },
   {
-    slug: "asset-python-programming-level-4",
+  slug: "asset-python-programming-level-4",
     name: " Python Programming (Level 4)",
     sellPrice: 0,
     discount: "Stipend Included",

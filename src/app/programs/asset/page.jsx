@@ -18,9 +18,12 @@ const Page = () => {
         imageUrl="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1600&auto=format&fit=crop"
         title="ASSET ফ্রি প্রশিক্ষণ"
         subtitle="৩ মাসের হাতে-কলমে ডিজিটাল স্কিল প্রশিক্ষণ, মাসিক স্টাইপেন্ড ও NSDA সার্টিফিকেটসহ।"
+        courseID={"#asset-course"}
       />
       <WhatIsAsset/>
-      <Asset/>
+      <div id="asset-course">
+         <Asset/>
+      </div>
       <WhoCanApply/>
       <WhatYouWillGet/>
       <RequiredDocuments/>

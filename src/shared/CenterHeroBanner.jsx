@@ -1,10 +1,12 @@
 // components/CenterHeroBanner.jsx
+import Link from 'next/link';
 import React from 'react';
 
 export default function CenterHeroBanner({ 
   imageUrl, 
   title, 
-  subtitle 
+  subtitle ,
+  courseID,
 }) {
   return (
     <section className="relative w-full font-HindSiliguri h-[400px] sm:h-[500px] lg:h-[500px] flex items-center justify-center overflow-hidden  shadow-xl ">
@@ -37,7 +39,7 @@ export default function CenterHeroBanner({
         </p>
 
 
-        <button className='w-fit px-8 mt-2  flex items-center justify-center py-3 text-sm font-bold text-white bg-[#F26724] hover:bg-[#df5613] rounded-xl shadow-md shadow-[#F26724]/20 active:scale-[0.98] transition-all'>কোর্স দেখুন </button>
+        <Link href={courseID} className='w-fit px-8 mt-2  flex items-center justify-center py-3 text-sm font-bold text-white bg-[#F26724] hover:bg-[#df5613] rounded-xl shadow-md shadow-[#F26724]/20 active:scale-[0.98] transition-all'>কোর্স দেখুন </Link>
 
         {/* Optional CTA Button (Styled in Orange) */}
         {/* 

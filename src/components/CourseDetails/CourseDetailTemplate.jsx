@@ -13,6 +13,7 @@ import {
   HiOutlineInformationCircle,
   HiOutlinePhone,
 } from "react-icons/hi2";
+import ProgramTrustCard from "./ProgramTrustCard";
 
 export default function CourseDetailTemplate({ course }) {
   const [openModule, setOpenModule] = useState(0);
@@ -161,6 +162,10 @@ export default function CourseDetailTemplate({ course }) {
                 {course.description}
               </div>
             </div>
+
+
+             <ProgramTrustCard program={course.program} courseTitle={course.title} />
+
 
             {/* Curriculum Accordion */}
             <div className="bg-white p-6 sm:p-7 rounded-2xl border border-slate-200/80 shadow-xs">

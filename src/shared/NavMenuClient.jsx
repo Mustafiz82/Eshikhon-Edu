@@ -72,7 +72,7 @@ export default function NavMenuClient({
 
               {/* Desktop Dropdown Flyout Panel */}
               <div
-                className={`absolute left-0 top-full pt-2 w-82 transition-all duration-200 z-50 ${
+                className={`absolute left-0 top-full pt-2 w-90 transition-all duration-200 z-50 ${
                   openDropdown === dropdown.title
                     ? "opacity-100 visible translate-y-0"
                     : "opacity-0 invisible -translate-y-2 pointer-events-none"
@@ -120,6 +120,7 @@ export default function NavMenuClient({
           {staticLinks.map((link) =>
             link.isButton ? (
               <Link
+                target={(link.href.includes("eshikhon.com.bd")) ? "_blank" : undefined}
                 key={link.title}
                 href={link.href}
                 className="ml-2 px-5 py-2 text-sm font-bold text-white bg-[#F26724] hover:bg-[#df5613] active:scale-95 transition-all rounded-full shadow-md shadow-[#F26724]/20"
@@ -129,6 +130,7 @@ export default function NavMenuClient({
             ) : (
               <Link
                 key={link.title}
+                  target={(link.href.includes("eshikhon.com.bd")) ? "_blank" : undefined}
                 href={link.href}
                 className="px-3 py-2 text-[14.5px] font-semibold text-[#0b3238] hover:text-[#F26724] transition-colors rounded-md"
               >

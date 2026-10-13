@@ -1,49 +1,79 @@
-// app/programs/[program]/[slug]/page.jsx
 import { notFound } from "next/navigation";
 import { getCourse, toUrlProgram } from "@/lib/courses";
 import CourseDetailTemplate from "@/components/CourseDetails/CourseDetailTemplate";
 import { courses } from "@/Data/courseData";
 
-// 1. Tell Next.js all the static pages to generate at build time
 export async function generateStaticParams() {
   return courses.map((course) => ({
-    program: toUrlProgram(course.program), // 'asset', 'rpl', or 'industrial-attachment'
+    program: toUrlProgram(course.program),
     slug: course.slug,
   }));
 }
 
-// 2. Dynamic SEO title & description (Updated for plain strings)
 export async function generateMetadata({ params }) {
   const { program, slug } = await params;
   const course = getCourse(program, slug);
 
   if (!course) {
-    return { title: "Course Not Found" };
+    return {
+      title: "Course Not Found | eShikhon",
+      robots: {
+        index: false,
+        follow: false,
+      },
+    };
   }
 
-  // Create clean short description (removes line breaks)
-  const cleanDescription = course.description
-    ? course.description.replace(/\n+/g, " ").slice(0, 160)
-    : "";
+  const title = course.seo?.title || `${course.title} | eShikhon`;
+
+  const description = course.seo?.description
+    ? course.seo.description.replace(/\s+/g, " ").trim().slice(0, 160)
+    : course.description
+      ? course.description.replace(/\s+/g, " ").trim().slice(0, 160)
+      : "";
+
+  const canonical = `https://eshikhon.edu.bd/programs/${program}/${slug}`;
 
   return {
-    title: `${course.title} | Skill Training`,
-    description: cleanDescription,
+    title,
+    description,
+    keywords: course.seo?.keywords || [],
+
+    alternates: {
+      canonical,
+    },
+
+    robots: {
+      index: true,
+      follow: true,
+    },
+
+    openGraph: {
+      title,
+      description,
+      url: canonical,
+      siteName: "eShikhon",
+      locale: "bn_BD",
+      type: "website",
+      images: course.thumbnail?.src
+        ? [
+            {
+              url: course.thumbnail.src,
+              alt: course.thumbnail.alt || course.title,
+            },
+          ]
+        : undefined,
+    },
   };
 }
 
-// 3. The Page Component
 export default async function CourseDetailPage({ params }) {
   const { program, slug } = await params;
-
-  // Simple array search from static data
   const course = getCourse(program, slug);
 
-  // If slug doesn't exist in our array -> trigger Next.js 404 page
   if (!course) {
     notFound();
   }
 
-  // Render the template with the course from the array
-  return <CourseDetailTemplate course={course}  />;
+  return <CourseDetailTemplate course={course} />;
 }

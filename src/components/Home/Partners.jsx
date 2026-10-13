@@ -18,15 +18,15 @@ export default function Partners() {
         <div className="text-center max-w-xl mx-auto mb-10">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-50 border border-orange-200/50 text-[11px] font-semibold text-[#f25c05] mb-2.5">
             <span className="w-1.5 h-1.5 rounded-full bg-[#f25c05]"></span>
-            <span>আমাদের পার্টনার্স ও সহযোগী প্রতিষ্ঠান</span>
+            <span>আমাদের সহযোগী প্রতিষ্ঠানসমূহ</span>
           </div>
 
           <h3 className="text-2xl font-bold text-[#0a2540] tracking-tight">
-            We Are Partnered With
+            Our Partners in Skills Development Training 
           </h3>
           <p className="mt-1.5 text-xs sm:text-sm text-slate-500 font-normal">
-            জাতীয় ও আন্তর্জাতিক মানের শীর্ষস্থানীয় প্রতিষ্ঠানের সাথে আমাদের
-            পার্টনারশিপ
+        দক্ষতা উন্নয়ন ও মানসম্মত প্রশিক্ষণের লক্ষ্যে বিভিন্ন প্রতিষ্ঠানের সঙ্গে আমাদের পথচলা।
+
           </p>
         </div>
 

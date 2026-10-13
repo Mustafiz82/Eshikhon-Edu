@@ -1,4 +1,5 @@
 import { assetCoursesData } from "@/Data/asset-data";
+import { courses } from "@/Data/courseData";
 import { IndustrialDAta } from "@/Data/industrial-course";
 import CourseCard from "@/shared/CourseCard";
 import Title from "@/shared/title";
@@ -14,14 +15,14 @@ const Asset = () => {
         {/* Section Title & Subtitle */}
         <div className="text-center max-w-3xl mx-auto mb-10 md:mb-14">
           <Title
-            title="ASSET প্রশিক্ষণ কোর্স"
-            desc="নতুন ডিজিটাল স্কিল শিখুন NSDA-সংযুক্ত Level 3 ও Level 4 কোর্সে।"
+            title="ASSET Project: Free Skills Training"
+            desc="নতুন কোনো স্কিল শিখতে চান, কিন্তু খরচের কথা ভেবে শুরু করতে পারছেন না? ASSET Project-এর আওতায় বিনামূল্যে ৩ মাসের প্রশিক্ষণের সুযোগ নিন। প্রশিক্ষণ শেষে নির্ধারিত যোগ্যতা পূরণ করলে পাবেন NSDA অনুমোদিত সার্টিফিকেট ও বৃত্তি। "
           />
         </div>
 
         {/* Responsive Course Grid (1 col on mobile, 2 on tablet, 3 on desktop) */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-4">
-          {assetCoursesData.map((item, index) => (
+          {courses?.filter(item => item.program == "asset-project-training").map((item, index) => (
             <CourseCard
               key={item.id || item._id || index}
               course={item}

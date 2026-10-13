@@ -85,11 +85,11 @@ export default function BentoGallery() {
         <div className="text-center max-w-xl mx-auto mb-8">
          
           <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">
-            Explore Campus Life & <span className="text-[#EA580C]">Labs</span>
+           একনজরে <span className="text-[#EA580C]">EShikhon</span>
           </h2>
 
           <p className="mt-1 text-sm font-HindSiliguri font-medium text-[#0D9488]">
-            আধুনিক ল্যাব ফ্যাসিলিটি ও হ্যান্ডস-অন ইন্ডাস্ট্রিয়াল ট্রেনিং অভিজ্ঞতা
+           শেখার পাশাপাশি হাতে-কলমে অনুশীলন আর নতুন দক্ষতা গড়ে তোলার সুযোগ রয়েছে।
           </p>
         </div>
 

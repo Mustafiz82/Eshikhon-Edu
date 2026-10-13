@@ -44,7 +44,7 @@ export default function WhoIsThisProgramFor() {
 
         {/* Section Heading & Subtitle */}
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-transparent bg-clip-text bg-linear-to-b from-[#005776] to-[#008BB8]">
-          Who Is This Program For?
+          কারা এই প্রোগ্রামের জন্য উপযুক্ত?
         </h2>
 
         <p className="text-xs sm:text-sm text-slate-500 mt-2 max-w-xl mx-auto">

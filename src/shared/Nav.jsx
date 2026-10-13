@@ -6,6 +6,10 @@ import { useState } from "react";
 
 export default function Navbar() {
   const [drawerOpen, setDrawerOpen] = useState(false);
+
+  console.log(staticNavLinks[0].href.includes("eshikhon.com.bd"))
+
+  
   
   return (
     <header className="sticky top-0 bg z-40 w-full bg-white backdrop-blur-md border-b border-slate-100 shadow-sm">
@@ -98,20 +102,24 @@ export default function Navbar() {
             ))}
 
             {/* Regular Static Text Links */}
-            <div className="pt-2 space-y-1">
-              {staticNavLinks
-                .filter((link) => !link.isButton)
-                .map((link) => (
-                  <Link
-                    key={link.title}
-                    href={link.href}
-                    onClick={() => setDrawerOpen(false)}
-                    className="block px-4 py-2.5 text-sm font-semibold text-[#186774] hover:bg-slate-50 rounded-xl transition-colors"
-                  >
-                    {link.title}
-                  </Link>
-                ))}
-            </div>
+{/* Regular Static Text Links */}
+<div className="pt-2 space-y-1">
+  {staticNavLinks
+    .filter((link) => !link.isButton)
+    .map((link) => (
+      <Link
+        key={link.title}
+        href={link.href}
+        // Change "self" to undefined or "_self"
+        target={(link.href.includes("eshikhon.com.bd")) ? "_blank" : undefined}
+        onClick={() => setDrawerOpen(false)}
+        className="block px-4 py-2.5 text-sm font-semibold text-[#186774] hover:bg-slate-50 rounded-xl transition-colors"
+      >
+        {link.title}
+      </Link>
+    ))}
+</div>
+
 
             <div className="pt-4 border-t border-slate-100">
               {staticNavLinks

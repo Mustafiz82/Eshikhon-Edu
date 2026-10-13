@@ -4,7 +4,7 @@ export const assetCoursesData = [
     name: " Digital Marketing for Freelancing (Level 3)",
     sellPrice: 0,
     discount: "Stipend Included",
-    imageUrl: "",
+    imageUrl: "/RPL-WEB-Banner-Digital-Marketing-Level-6-v3.webp",
     upcoming : true
   },
   {

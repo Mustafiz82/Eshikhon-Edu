@@ -21,7 +21,7 @@ export default function CourseDetailTemplate({ course }) {
   const isFree = course.pricing.type === "free";
   const hasStipend = Boolean(course.pricing.perkLine);
   const isAttachment = course.program === "attachment";
-  
+
   // Check if course or program is closed/info-only
   const isClosed = course.isClosed || course.action?.type === "closed";
 
@@ -33,9 +33,11 @@ export default function CourseDetailTemplate({ course }) {
 
   return (
     <div className="min-h-screen bg-[#F8FAFC] font-HindSiliguri text-slate-800 pb-20">
-      
       {/* 1. Breadcrumb Bar */}
-      <nav aria-label="Breadcrumb" className="bg-white border-b border-slate-200 py-3">
+      <nav
+        aria-label="Breadcrumb"
+        className="bg-white border-b border-slate-200 py-3"
+      >
         <div className="max-w-6xl mx-auto px-4 flex flex-wrap items-center justify-between text-xs sm:text-sm text-slate-500">
           <div className="flex items-center gap-2">
             <span className="hover:text-teal-700 cursor-pointer">হোম</span>
@@ -69,7 +71,6 @@ export default function CourseDetailTemplate({ course }) {
       <header className="bg-white border-b border-slate-100 py-8 relative overflow-hidden">
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex flex-wrap items-center gap-2.5 mb-3.5">
-            
             {/* Status Pill: Changes depending on isClosed */}
             {isClosed ? (
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-slate-200 text-slate-700">
@@ -97,7 +98,7 @@ export default function CourseDetailTemplate({ course }) {
             )}
           </div>
 
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#005776] via-[#006d94] to-[#008BB8] max-w-3xl leading-snug">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold wrap-break-word text-wra overflow-visible text-transparent bg-clip-text bg-gradient-to-r from-[#005776] via-[#006d94] to-[#008BB8] max-w-4xl leading-snug">
             {course.title}
           </h1>
 
@@ -106,7 +107,9 @@ export default function CourseDetailTemplate({ course }) {
             <div className="mt-4 p-3.5 bg-amber-50/90 border border-amber-200 rounded-xl flex items-start gap-2.5 text-xs sm:text-sm text-amber-900 max-w-2xl">
               <HiOutlineInformationCircle className="text-xl text-amber-600 shrink-0 mt-0.5" />
               <p>
-                <strong>বিজ্ঞপ্তি:</strong> বর্তমানে এই প্রোগ্রামের নতুন ব্যাচের আবেদন গ্রহণ স্থগিত রয়েছে। নিচে উল্লেখিত তথ্যসমূহ শুধুমাত্র কোর্স সিলেবাস ও যোগ্যতা সম্পর্কিত ধারণার জন্য প্রদর্শিত হচ্ছে।
+                <strong>বিজ্ঞপ্তি:</strong> বর্তমানে এই প্রোগ্রামের নতুন ব্যাচের
+                আবেদন গ্রহণ স্থগিত রয়েছে। নিচে উল্লেখিত তথ্যসমূহ শুধুমাত্র কোর্স
+                সিলেবাস ও যোগ্যতা সম্পর্কিত ধারণার জন্য প্রদর্শিত হচ্ছে।
               </p>
             </div>
           )}
@@ -116,117 +119,220 @@ export default function CourseDetailTemplate({ course }) {
       {/* 3. Main Grid Layout */}
       <main className="max-w-6xl mx-auto px-4 mt-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          
           {/* ================= LEFT CONTENT AREA (65%) ================= */}
           <div className="lg:col-span-8 space-y-7">
-            
             {/* Stats Card: 3 numeric stats + FULL UNBROKEN VENUE */}
-            <div className="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200/80 shadow-xs space-y-4">
-              <div className="grid grid-cols-3 gap-3 pb-4 border-b border-slate-100 text-center sm:text-left">
-                <div className="sm:border-r border-slate-100 sm:pr-3">
-                  <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">সময়সীমা</span>
-                  <p className="font-extrabold text-slate-900 text-base sm:text-lg mt-0.5">{course.durationMonths} মাস</p>
-                </div>
-                <div className="sm:border-r border-slate-100 sm:pr-3">
-                  <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">মোট ক্লাস</span>
-                  <p className="font-extrabold text-orange-600 text-base sm:text-lg mt-0.5">{course.totalClasses} টি সেশন</p>
-                </div>
-                <div>
-                  <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">মোট সময়</span>
-                  <p className="font-extrabold text-slate-900 text-base sm:text-lg mt-0.5">{course.totalHours}+ ঘণ্টা</p>
-                </div>
-              </div>
 
-              {/* Dedicated Full-Width Venue Strip */}
-              <div className="flex items-start gap-3 p-3.5 rounded-xl bg-orange-50/60 border border-orange-100">
-                <div className="w-8 h-8 rounded-lg bg-orange-500 text-white flex items-center justify-center shrink-0 mt-0.5 shadow-xs">
-                  <HiOutlineMapPin className="text-lg" />
+            {course.program !== "rpl" && (
+              <div className="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200/80 shadow-xs space-y-4">
+                <div className="grid grid-cols-3 gap-3 pb-4 border-b border-slate-100 text-center sm:text-left">
+                  <div className="sm:border-r border-slate-100 sm:pr-3">
+                    <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">
+                      সময়সীমা
+                    </span>
+                    <p className="font-extrabold text-slate-900 text-base sm:text-lg mt-0.5">
+                      {course.durationMonths} মাস
+                    </p>
+                  </div>
+                  <div className="sm:border-r border-slate-100 sm:pr-3">
+                    <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">
+                      মোট ক্লাস
+                    </span>
+                    <p className="font-extrabold text-orange-600 text-base sm:text-lg mt-0.5">
+                      {course.totalClasses} টি সেশন
+                    </p>
+                  </div>
+                  <div>
+                    <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">
+                      মোট সময়
+                    </span>
+                    <p className="font-extrabold text-slate-900 text-base sm:text-lg mt-0.5">
+                      {course.totalHours}+ ঘণ্টা
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <span className="text-[11px] font-bold uppercase tracking-wider text-orange-700 block">
-                    ক্যাম্পাস / ভেন্যু লোকেশন
-                  </span>
-                  <p className="text-xs sm:text-sm font-semibold text-slate-800 mt-0.5 leading-relaxed break-words">
-                    {course.venue}
-                  </p>
+
+                {/* Dedicated Full-Width Venue Strip */}
+                <div className="flex items-start gap-3 p-3.5 rounded-xl bg-orange-50/60 border border-orange-100">
+                  <div className="w-8 h-8 rounded-lg bg-orange-500 text-white flex items-center justify-center shrink-0 mt-0.5 shadow-xs">
+                    <HiOutlineMapPin className="text-lg" />
+                  </div>
+                  <div>
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-orange-700 block">
+                      ক্যাম্পাস / ভেন্যু লোকেশন
+                    </span>
+                    <p className="text-xs sm:text-sm font-semibold text-slate-800 mt-0.5 leading-relaxed break-words">
+                      {course.venue}
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
+            )}
+
+            {course.program == "rpl" && (
+              <div className="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200/80 shadow-xs space-y-4">
+                <div className="grid grid-cols-3 gap-3 pb-4 border-b border-slate-100 text-center sm:text-left">
+                  <div className="sm:border-r border-slate-100 sm:pr-3">
+                    <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">
+                      Assessment Date 
+                    </span>
+                    <p className="font-extrabold text-slate-900 text-base sm:text-lg mt-0.5">
+                      {course.assessmentDate} 
+                    </p>
+                  </div>
+                  <div className="sm:border-r border-slate-100 sm:pr-3">
+                    <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">
+                      Registration Deadline
+                    </span>
+                    <p className="font-extrabold text-orange-600 text-base sm:text-lg mt-0.5">
+                      {course.registrationDeadline} 
+                    </p>
+                  </div>
+                  <div>
+                    <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">
+                    Assessment Duration
+                    </span>
+                    <p className="font-extrabold text-slate-900 text-base sm:text-lg mt-0.5">
+                      {course.duration}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Dedicated Full-Width Venue Strip */}
+                <div className="flex items-start gap-3 p-3.5 rounded-xl bg-orange-50/60 border border-orange-100">
+                  <div className="w-8 h-8 rounded-lg bg-orange-500 text-white flex items-center justify-center shrink-0 mt-0.5 shadow-xs">
+                    <HiOutlineMapPin className="text-lg" />
+                  </div>
+                  <div>
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-orange-700 block">
+                      ক্যাম্পাস / ভেন্যু লোকেশন
+                    </span>
+                    <p className="text-xs sm:text-sm font-semibold text-slate-800 mt-0.5 leading-relaxed break-words">
+                      {course.venue}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
 
             {/* Description & Eligibility */}
-            <div className="bg-white p-6 sm:p-7 rounded-2xl border border-slate-200/80 shadow-xs">
-              <h2 className="text-xl font-bold text-slate-900 mb-4 pb-2 border-b border-slate-100 border-l-4 border-l-orange-500 pl-3">
-                কোর্স পরিচিতি ও পূর্বশর্ত
-              </h2>
-              <div className="text-sm sm:text-base text-slate-600 leading-relaxed whitespace-pre-line space-y-3">
-                {course.description}
-              </div>
+            <div className="space-y-6">
+              {course.sections?.map((section, index) => (
+                <div
+                  key={index}
+                  className="bg-white p-6 sm:p-7 rounded-2xl border border-slate-200/80 shadow-xs"
+                >
+                  {/* সেকশন টাইটেল */}
+                  <h2 className="text-xl font-bold text-slate-900 mb-4 pb-2 border-b border-slate-100 border-l-4 border-l-orange-500 pl-3">
+                    {section.title}
+                  </h2>
+
+                  {/* সেকশন কনটেন্ট */}
+                  <div className="text-sm sm:text-base text-slate-600 leading-relaxed">
+                    {/* টেক্সট ডেসক্রিপশন থাকলে */}
+                    {section.content && (
+                      <p className="whitespace-pre-line">{section.content}</p>
+                    )}
+
+                    {/* বুলেট পয়েন্ট লিস্ট থাকলে */}
+                    {section.points && (
+                      <ul className="space-y-2.5">
+                        {section.points.map((point, idx) => (
+                          <li key={idx} className="flex items-start gap-2.5">
+                            <span className="h-2 w-2 rounded-full bg-orange-500 mt-2 shrink-0" />
+                            <span>{point}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                </div>
+              ))}
             </div>
 
+            <ProgramTrustCard
+              program={course.program}
+              courseTitle={course.title}
+            />
+            {course.curriculum && (
+              <div className="bg-white p-6 sm:p-7 rounded-2xl border border-slate-200/80 shadow-xs">
+                <h2 className="text-xl font-bold text-slate-900 mb-4 pb-2 border-b border-slate-100 border-l-4 border-l-orange-500 pl-3 flex items-center justify-between">
+                  <span>পাঠ্যসূচি (Curriculum)</span>
+                  <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-orange-100 text-orange-700">
+                    {course.curriculum.length} টি মডিউল
+                  </span>
+                </h2>
 
-             <ProgramTrustCard program={course.program} courseTitle={course.title} />
-
-
-            {/* Curriculum Accordion */}
-            <div className="bg-white p-6 sm:p-7 rounded-2xl border border-slate-200/80 shadow-xs">
-              <h2 className="text-xl font-bold text-slate-900 mb-4 pb-2 border-b border-slate-100 border-l-4 border-l-orange-500 pl-3 flex items-center justify-between">
-                <span>পাঠ্যসূচি (Curriculum)</span>
-                <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-orange-100 text-orange-700">
-                  {course.curriculum.length} টি মডিউল
-                </span>
-              </h2>
-
-              <div className="space-y-3">
-                {course.curriculum.map((mod, idx) => {
-                  const isOpen = openModule === idx;
-                  return (
-                    <div
-                      key={idx}
-                      className={`border rounded-xl overflow-hidden transition-colors ${
-                        isOpen ? "border-orange-300 shadow-xs" : "border-slate-200 hover:border-slate-300"
-                      }`}
-                    >
-                      <button
-                        onClick={() => setOpenModule(isOpen ? -1 : idx)}
-                        className={`w-full flex items-center justify-between p-4 text-left transition cursor-pointer ${
-                          isOpen ? "bg-orange-50/50" : "bg-slate-50 hover:bg-slate-100"
+                <div className="space-y-3">
+                  {course.curriculum.map((mod, idx) => {
+                    const isOpen = openModule === idx;
+                    return (
+                      <div
+                        key={idx}
+                        className={`border rounded-xl overflow-hidden transition-colors ${
+                          isOpen
+                            ? "border-orange-300 shadow-xs"
+                            : "border-slate-200 hover:border-slate-300"
                         }`}
                       >
-                        <div className="flex items-center gap-2.5">
-                          <span className={`w-6 h-6 rounded-md flex items-center justify-center text-xs font-bold ${
-                            isOpen ? "bg-orange-500 text-white" : "bg-slate-200 text-slate-700"
-                          }`}>
-                            {idx + 1}
-                          </span>
-                          <span className="font-bold text-slate-800 text-sm sm:text-base">{mod.title}</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <span className="text-xs text-slate-500 font-semibold">{mod.topics.length} টি টপিক</span>
-                          <HiOutlineChevronDown className={`text-slate-500 transition-transform ${isOpen ? "rotate-180 text-orange-600" : ""}`} />
-                        </div>
-                      </button>
+                        <button
+                          onClick={() => setOpenModule(isOpen ? -1 : idx)}
+                          className={`w-full flex items-center justify-between p-4 text-left transition cursor-pointer ${
+                            isOpen
+                              ? "bg-orange-50/50"
+                              : "bg-slate-50 hover:bg-slate-100"
+                          }`}
+                        >
+                          <div className="flex items-center gap-2.5">
+                            <span
+                              className={`w-6 h-6 rounded-md flex items-center justify-center text-xs font-bold ${
+                                isOpen
+                                  ? "bg-orange-500 text-white"
+                                  : "bg-slate-200 text-slate-700"
+                              }`}
+                            >
+                              {idx + 1}
+                            </span>
+                            <span className="font-bold text-slate-800 text-sm sm:text-base">
+                              {mod.title}
+                            </span>
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <span className="text-xs text-slate-500 font-semibold">
+                              {mod.topics.length} টি টপিক
+                            </span>
+                            <HiOutlineChevronDown
+                              className={`text-slate-500 transition-transform ${isOpen ? "rotate-180 text-orange-600" : ""}`}
+                            />
+                          </div>
+                        </button>
 
-                      {isOpen && (
-                        <div className="p-4 bg-white space-y-2.5 border-t border-orange-100">
-                          {mod.topics.map((t, tIdx) => (
-                            <div key={tIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-600">
-                              <HiOutlineCheckCircle className="text-orange-500 text-base shrink-0 mt-0.5" />
-                              <span className="leading-snug">{t}</span>
-                            </div>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  );
-                })}
+                        {isOpen && (
+                          <div className="p-4 bg-white space-y-2.5 border-t border-orange-100">
+                            {mod.topics.map((t, tIdx) => (
+                              <div
+                                key={tIdx}
+                                className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-600"
+                              >
+                                <HiOutlineCheckCircle className="text-orange-500 text-base shrink-0 mt-0.5" />
+                                <span className="leading-snug">{t}</span>
+                              </div>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
-            </div>
-
+            )}
           </div>
 
           {/* ================= RIGHT STICKY SIDEBAR (35%) ================= */}
-          <aside aria-label="Enrollment Actions" className="lg:col-span-4 lg:sticky lg:top-20 space-y-5">
-            
+          <aside
+            aria-label="Enrollment Actions"
+            className="lg:col-span-4 lg:sticky lg:top-20 space-y-5"
+          >
             {/* Action / Pricing Card */}
             <div className="bg-white rounded-2xl border-2 border-orange-100 shadow-md overflow-hidden">
               <div className="relative aspect-video overflow-hidden">
@@ -235,9 +341,11 @@ export default function CourseDetailTemplate({ course }) {
                   alt={course.thumbnail.alt}
                   className="w-full h-full object-cover"
                 />
-                <div className={`absolute top-3 left-3 text-white text-[11px] font-bold px-2.5 py-1 rounded-md ${
-                  isClosed ? "bg-slate-800/90" : "bg-orange-600"
-                }`}>
+                <div
+                  className={`absolute top-3 left-3 text-white text-[11px] font-bold px-2.5 py-1 rounded-md ${
+                    isClosed ? "bg-slate-800/90" : "bg-orange-600"
+                  }`}
+                >
                   {isClosed ? "আবেদন স্থগিত" : "ব্যাচ এনরোলমেন্ট"}
                 </div>
               </div>
@@ -281,7 +389,7 @@ export default function CourseDetailTemplate({ course }) {
                     >
                       বর্তমানে আবেদন বন্ধ রয়েছে
                     </button>
-                    
+
                     {/* Secondary Helpful CTA */}
                     <a
                       href="/contact"
@@ -298,29 +406,38 @@ export default function CourseDetailTemplate({ course }) {
                   >
                     <HiOutlineCreditCard className="text-lg" />
                     <span>
-                      {course.action.type === "apply" ? "আবেদন ফরম পূরণ করুন" : "কোর্সে ভর্তি নিশ্চিত করুন"}
+                      {course.action.type === "apply"
+                        ? "আবেদন ফরম পূরণ করুন"
+                        : "কোর্সে ভর্তি নিশ্চিত করুন"}
                     </span>
                   </a>
                 )}
 
                 {/* Schedule & Full Venue */}
                 <div className="pt-4 border-t border-slate-100 space-y-3 text-xs text-slate-600">
-                  <div className="flex items-start gap-2.5">
-                    <div className="w-6 h-6 rounded-md bg-teal-50 text-teal-700 flex items-center justify-center shrink-0 mt-0.5">
-                      <HiOutlineCalendarDays className="text-sm" />
+                  {course.schedule && (
+                    <div className="flex items-start gap-2.5">
+                      <div className="w-6 h-6 rounded-md bg-teal-50 text-teal-700 flex items-center justify-center shrink-0 mt-0.5">
+                        <HiOutlineCalendarDays className="text-sm" />
+                      </div>
+                      <div>
+                        <strong className="text-slate-800 block">
+                          ক্লাস শিডিউল:
+                        </strong>
+                        <span className="leading-relaxed">
+                          {course.schedule}
+                        </span>
+                      </div>
                     </div>
-                    <div>
-                      <strong className="text-slate-800 block">ক্লাস শিডিউল:</strong>
-                      <span className="leading-relaxed">{course.schedule}</span>
-                    </div>
-                  </div>
-
+                  )}
                   <div className="flex items-start gap-2.5">
                     <div className="w-6 h-6 rounded-md bg-orange-50 text-orange-600 flex items-center justify-center shrink-0 mt-0.5">
                       <HiOutlineMapPin className="text-sm" />
                     </div>
                     <div>
-                      <strong className="text-slate-800 block">ক্যাম্পাস ভেন্যু:</strong>
+                      <strong className="text-slate-800 block">
+                        ক্যাম্পাস ভেন্যু:
+                      </strong>
                       <span className="leading-relaxed text-slate-700 break-words font-medium">
                         {course.venue}
                       </span>
@@ -331,30 +448,37 @@ export default function CourseDetailTemplate({ course }) {
             </div>
 
             {/* Instructors Card */}
-            <div className="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200/90 shadow-xs">
-              <h2 className="text-sm font-bold text-slate-900 mb-3 pb-2 border-b border-slate-100 border-l-3 border-l-orange-500 pl-2">
-                ইন্সট্রাক্টর ও মেন্টর
-              </h2>
-              <div className="space-y-4">
-                {course.instructors.map((inst, i) => (
-                  <div key={i} className="flex items-start gap-3.5">
-                    <img
-                      src={inst.photo}
-                      alt={inst.name}
-                      className="w-14 h-14 rounded-xl object-cover border border-slate-200 shrink-0"
-                    />
-                    <div>
-                      <h3 className="text-sm font-bold text-slate-900 leading-snug">{inst.name}</h3>
-                      <p className="text-[11px] font-semibold text-orange-600 mt-0.5">{inst.designation}</p>
-                      <p className="text-xs text-slate-500 mt-1 leading-relaxed line-clamp-2">{inst.bio}</p>
+
+            {course?.instructors && (
+              <div className="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200/90 shadow-xs">
+                <h2 className="text-sm font-bold text-slate-900 mb-3 pb-2 border-b border-slate-100 border-l-3 border-l-orange-500 pl-2">
+                  ইন্সট্রাক্টর ও মেন্টর
+                </h2>
+                <div className="space-y-4">
+                  {course.instructors.map((inst, i) => (
+                    <div key={i} className="flex items-start gap-3.5">
+                      <img
+                        src={inst.photo}
+                        alt={inst.name}
+                        className="w-14 h-14 rounded-xl object-cover border border-slate-200 shrink-0"
+                      />
+                      <div>
+                        <h3 className="text-lg font-bold text-slate-900 leading-snug">
+                          {inst.name}
+                        </h3>
+                        <p className="text-sm font-semibold text-orange-600 mt-0.5">
+                          {inst.designation}
+                        </p>
+                        <p className="text-xs text-slate-500 mt-1 leading-relaxed line-clamp-2">
+                          {inst.bio}
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
-            </div>
-
+            )}
           </aside>
-
         </div>
       </main>
     </div>

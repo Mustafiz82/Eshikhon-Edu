@@ -1,4 +1,4 @@
-"use client";
+
 
 import React from "react";
 import {
@@ -14,6 +14,45 @@ import {
   FaYoutube,
   FaPhoneVolume,
 } from "react-icons/fa6";
+
+export const metadata = {
+  title: "Contact eShikhon | IT Training & Course Counselling in Dhaka",
+  description:
+    "eShikhon-এর সাথে যোগাযোগ করুন কোর্সের তথ্য, IT Training, Career Counselling ও ভর্তি সংক্রান্ত সহায়তার জন্য। আমাদের হটলাইন, WhatsApp এবং পান্থপথ, ঢাকার ক্যাম্পাসের ঠিকানা জানুন।",
+  alternates: {
+    canonical: "https://eshikhon.com.bd/contact/",
+  },
+  keywords: [
+    "Contact eShikhon",
+    "eShikhon contact number",
+    "eShikhon hotline",
+    "eShikhon address",
+    "eShikhon Dhaka campus",
+    "IT training institute in Dhaka",
+    "IT training Bangladesh",
+    "IT course counselling Bangladesh",
+    "computer training center in Dhaka",
+    "IT course admission Bangladesh",
+    "eShikhon WhatsApp number",
+    "Panthapath training institute",
+    "Green Road training institute Dhaka",
+  ],
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    title: "Contact eShikhon | IT Training & Course Counselling in Dhaka",
+    description:
+      "কোর্সের তথ্য, IT Training, Career Counselling ও ভর্তি সংক্রান্ত সহায়তার জন্য eShikhনের সাথে যোগাযোগ করুন। পান্থপথ, ঢাকার ক্যাম্পাসের ঠিকানা ও হটলাইন নম্বর জানুন।",
+    url: "https://eshikhon.com.bd/contact/",
+    siteName: "eShikhon",
+    locale: "bn_BD",
+    type: "website",
+  },
+};
+
+
 
 export default function Page() {
   const phoneNumbers = [

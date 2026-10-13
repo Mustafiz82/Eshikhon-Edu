@@ -58,10 +58,13 @@ export default function SuccessStories() {
         
         {/* Crisp Header with Orange & Teal */}
         <div className="text-center max-w-2xl mx-auto mb-12">
-         
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-50 border border-orange-200/50 text-[11px] font-semibold text-[#f25c05] mb-2.5">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#f25c05]"></span>
+            <span>শিক্ষার্থীদের সাফল্য ও অভিজ্ঞতা</span>
+          </div>
 
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight ">
-            শিক্ষার্থীদের <span className="  font-HindSiliguri  tracking-tight leading-[1.15] text-transparent bg-clip-text bg-linear-to-b from-[#005776] to-[#008BB8]">বাস্তব অর্জন ও অভিজ্ঞতা</span>
+            Student <span className="  font-HindSiliguri  tracking-tight leading-[1.15] text-transparent bg-clip-text bg-linear-to-b from-[#005776] to-[#008BB8]"> Success Stories</span>
           </h2>
           <p className="mt-2 text-xs sm:text-sm text-slate-500 font-medium">
             আমাদের কোর্স এবং প্র্যাকটিক্যাল ল্যাব ট্রেনিংয়ের মাধ্যমে যারা গড়েছেন সফল ক্যারিয়ার

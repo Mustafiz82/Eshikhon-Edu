@@ -46,11 +46,13 @@ export default function WhatIsAsset() {
         </h2>
 
         {/* Short Subtitle for Students */}
-        <p className="mt-3 max-w-2xl mx-auto text-sm sm:text-base text-slate-600 leading-relaxed">
-          বাংলাদেশ সরকার ও বিশ্বব্যাংকের যৌথ উদ্যোগে দেশের ১০ লাখ তরুণ-তরুণীকে
-          আধুনিক কর্মমুখী দক্ষতায় গড়ে তুলে নিশ্চিত কর্মসংস্থানে যুক্ত করার একটি
-          জাতীয় প্রকল্প।{" "}
-            </p>
+        <p className="mt-3 max-w-3xl mx-auto text-sm sm:text-base text-slate-600 leading-relaxed">
+          ASSET (Accelerating and Strengthening Skills for Economic
+          Transformation) হলো বাংলাদেশ সরকারের একটি দক্ষতা উন্নয়ন প্রকল্প, যার
+          লক্ষ্য কারিগরি ও কর্মমুখী প্রশিক্ষণের মাধ্যমে তরুণ-তরুণীদের কর্মদক্ষতা
+          বাড়ানো এবং কর্মসংস্থানের সুযোগ তৈরি করা। এই প্রকল্পের আওতায় eShikhon-এ
+          বিনামূল্যে প্রশিক্ষণ নিয়ে নিজের দক্ষতা গড়ে তোলার সুযোগ রয়েছে।{" "}
+        </p>
 
         {/* 3 Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-10 text-left">

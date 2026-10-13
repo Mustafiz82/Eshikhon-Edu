@@ -25,80 +25,43 @@ export default function WhatIsIndustrialAttachment() {
             </div>
 
             {/* Description Text */}
-            <div className="space-y-3 text-slate-600 text-sm sm:text-base leading-relaxed">
-              <p>
-                The Polytechnic{" "}
-                <strong className="text-slate-800 font-semibold">
-                  Industrial Attachment Training
-                </strong>{" "}
-                হলো Diploma Engineering শিক্ষার্থীদের জন্য একটি{" "}
-                <strong className="text-slate-800 font-semibold">
-                  ৩ মাসের practical training program
-                </strong>
-                , যেখানে তারা classroom-এ শেখা বিষয়গুলো বাস্তব কাজের পরিবেশে
-                প্রয়োগ করার সুযোগ পান।
-              </p>
+         <div className="space-y-3 text-slate-600 text-sm sm:text-base leading-relaxed">
+  <p>
+    <strong className="text-slate-800 font-semibold">
+      Industrial Attachment Training
+    </strong>{" "}
+    হলো এমন একটি প্রশিক্ষণ কার্যক্রম, যেখানে শিক্ষার্থীরা তাদের একাডেমিক জ্ঞান বাস্তব কাজের মাধ্যমে প্রয়োগ করার সুযোগ পান। এর মাধ্যমে নির্দিষ্ট বিষয়ে{" "}
+    <strong className="text-slate-800 font-semibold">
+      Practical Skills
+    </strong>{" "}
+    তৈরি, কাজের প্রক্রিয়া বোঝা এবং পেশাগত পরিবেশের সঙ্গে পরিচিত হওয়ার সুযোগ হয়।
+  </p>
 
-              <p>
-                এই training-এর সময় শিক্ষার্থীরা{" "}
-                <strong className="text-slate-800 font-semibold">
-                  real projects
-                </strong>
-                ,{" "}
-                <strong className="text-slate-800 font-semibold">
-                  live systems
-                </strong>{" "}
-                এবং experienced engineers-এর guidance নিয়ে কাজ করেন। এর মাধ্যমে
-                তারা theoretical knowledge-এর পাশাপাশি professional workplace-এ
-                কীভাবে কাজ করতে হয়, team-এর সাথে কাজ করতে হয় এবং বাস্তব সমস্যার
-                সমাধান করতে হয়—সেগুলোও শিখতে পারেন।
-              </p>
-
-              <p>
-                The goal is simple: শিক্ষার্থীদের{" "}
-                <strong className="text-slate-800 font-semibold">
-                  practical skills
-                </strong>
-                , real work experience এবং workplace confidence তৈরি করা, যাতে
-                তারা academic learning থেকে professional career-এ আরও সহজে
-                transition করতে পারেন।
-              </p>
-            </div>
+  <p>
+    <strong className="text-slate-800 font-semibold">
+      Industrial Attachment Programme
+    </strong>{" "}
+    বিশেষ করে{" "}
+    <strong className="text-slate-800 font-semibold">
+      Diploma ও Polytechnic
+    </strong>{" "}
+    শিক্ষার্থীদের জন্য অত্যন্ত গুরুত্বপূর্ণ, কারণ এটি পড়াশোনার পাশাপাশি বাস্তব কাজ শেখার সুযোগ তৈরি করে। নিজের বিভাগের সঙ্গে সম্পর্কিত বিষয়ে প্রশিক্ষণ নিলে ভবিষ্যতে চাকরি বা পেশাগত জীবনের জন্য প্রস্তুতি নিতেও সুবিধা হতে পারে।
+  </p>
+</div>
 
             {/* Action Buttons */}
             <div className="flex flex-wrap items-center gap-3.5 pt-2">
               <a
-                href="#courses"
+                href="#attachment-course"
                 className="inline-flex items-center gap-2 bg-[#d95d13] hover:bg-[#b84d0d] text-white font-medium px-6 py-3 rounded-xl shadow-md shadow-orange-500/20 transition-all duration-200 text-sm"
               >
                 <span>View Courses</span>
                 <FiArrowRight className="w-4 h-4" />
               </a>
 
-              <a
-                href="#syllabus"
-                className="inline-flex items-center gap-2 bg-white hover:bg-slate-50 border border-slate-200 text-slate-700 font-medium px-5 py-3 rounded-xl shadow-sm transition-all duration-200 text-sm"
-              >
-                <FiDownload className="w-4 h-4 text-slate-500" />
-                <span>Download Outline</span>
-              </a>
             </div>
 
-            {/* Feature Checkpoints */}
-            <div className="pt-6 border-t border-slate-200/80 grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs text-slate-700 font-medium">
-              <div className="flex items-center gap-2">
-                <BsShieldCheck className="w-4 h-4 text-emerald-600 shrink-0" />
-                <span>সরকারি ও NSDA মানদণ্ড</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <LuFlaskConical className="w-4 h-4 text-sky-600 shrink-0" />
-                <span>১০০% প্র্যাকটিক্যাল ল্যাব</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <BsPatchCheckFill className="w-4 h-4 text-blue-600 shrink-0" />
-                <span>ভেরিফায়েড সার্টিফিকেট</span>
-              </div>
-            </div>
+
           </div>
 
           {/* ================= RIGHT CARD COLUMN ================= */}

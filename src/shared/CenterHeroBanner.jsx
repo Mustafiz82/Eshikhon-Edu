@@ -27,14 +27,14 @@ export default function CenterHeroBanner({
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center text-white flex flex-col items-center">
         
         {/* Title */}
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight drop-shadow-sm">
+        <h1 className="text-4xl sm:text-[40px] font-HindSiliguri font-extrabold tracking-tight text-white leading-tight drop-shadow-sm">
           {title}
         </h1>
 
    
 
         {/* Subtitle */}
-        <p className="text-lg sm:text-xl text-gray-100 leading-relaxed max-w-2xl drop-shadow-sm">
+        <p className="text-md  text-gray-100/90 mt-2 leading-relaxed max-w-4xl drop-shadow-sm">
           {subtitle}
         </p>
 

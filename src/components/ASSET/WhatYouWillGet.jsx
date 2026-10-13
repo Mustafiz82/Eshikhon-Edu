@@ -22,7 +22,7 @@ export default function WhatYouWillGet() {
     },
     {
       num: "০২",
-      title: "NSDA সার্টিফিকেশন",
+      title: "NSDA Certificate",
       tag: "সরকারি অনুমোদন",
       theme: "orange",
       icon: <HiOutlineDocumentCheck className="text-2xl" />,

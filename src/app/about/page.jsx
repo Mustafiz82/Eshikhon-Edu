@@ -1,5 +1,4 @@
-// components/AboutUs.jsx
-"use client";
+
 
 import React from "react";
 import {
@@ -12,40 +11,81 @@ import {
 } from "react-icons/hi2";
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa6";
 
+export const metadata = {
+  title: "About eShikhon | IT Training Institute in Bangladesh",
+  description:
+    "২০১২ সাল থেকে eShikhon বাংলাদেশে IT Training, Online ও Offline Courses এবং Skill Development-এর মাধ্যমে শিক্ষার্থীদের ক্যারিয়ার গড়তে সহায়তা করছে। আমাদের লক্ষ্য, টিম ও প্রশিক্ষণ সম্পর্কে জানুন।",
+  alternates: {
+    canonical: "https://eshikhon.com.bd/about-us/",
+  },
+  keywords: [
+    "eShikhon",
+    "About eShikhon",
+    "IT training institute in Bangladesh",
+    "online training institute Bangladesh",
+    "offline IT training Bangladesh",
+    "skill development training Bangladesh",
+    "professional training institute Bangladesh",
+    "computer training center in Bangladesh",
+    "freelancing training institute Bangladesh",
+    "career development training Bangladesh",
+    "IT courses in Bangladesh",
+    "eShikhon about us",
+  ],
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    title: "About eShikhon | IT Training Institute in Bangladesh",
+    description:
+      "২০১২ সাল থেকে eShikhon-এর পথচলা, আমাদের মিশন, ভিশন, টিম এবং বাংলাদেশে IT ও Digital Skills Training-এর মাধ্যমে ক্যারিয়ার গঠনে আমাদের ভূমিকা সম্পর্কে জানুন।",
+    url: "https://eshikhon.com.bd/about-us/",
+    siteName: "eShikhon",
+    locale: "bn_BD",
+    type: "website",
+  },
+};
 export default function AboutUs() {
-  // 1. Mission, Vision & Goals (From eshikhon.site/aboutus/)
+  // 1. Mission, Vision & Goals (Updated Content)
   const missionVisionGoals = [
     {
       label: "আমাদের ভিশন",
       title: "Vision: ডিজিটাল কর্মসংস্থান",
+      description:
+        "বাংলাদেশের তরুণ-তরুণীদের দক্ষ করে তোলা এবং তাদের জন্য দেশীয় ও আন্তর্জাতিক কর্মক্ষেত্রে সুযোগ তৈরিতে অবদান রাখাই আমাদের ভিশন।",
       theme: "teal",
       icon: <HiOutlineGlobeAlt className="text-2xl" />,
       points: [
-        "বাংলাদেশের প্রতিটি তরুণ-তরুণীকে ঘরে বসে আন্তর্জাতিক মানের আইটি দক্ষতায় দক্ষ করা।",
-        "গ্লোবাল মার্কেটপ্লেস ও দেশীয় কর্পোরেট সেক্টরে শীর্ষস্থানীয় দক্ষ মানবসম্পদ তৈরি।",
-        "প্রান্তিক পর্যায় পর্যন্ত মানসম্মত আইটি শিক্ষাকে সহজে পৌঁছে দেওয়া।",
+        "বাংলাদেশের তরুণ-তরুণীদের আন্তর্জাতিক মানের IT ও ডিজিটাল দক্ষতা অর্জনে সহায়তা করা।",
+        "গ্লোবাল মার্কেটপ্লেস ও দেশীয় কর্পোরেট সেক্টরের জন্য দক্ষ মানবসম্পদ গড়ে তোলা।",
+        "দেশের বিভিন্ন পর্যায়ে মানসম্মত প্রযুক্তিভিত্তিক শিক্ষা পৌঁছে দিতে কাজ করা।",
       ],
     },
     {
       label: "আমাদের মিশন",
       title: "Mission: হাতে-কলমে বাস্তব শিক্ষা",
+      description:
+        "শুধু তাত্ত্বিক জ্ঞান নয়, বাস্তব কাজের অভিজ্ঞতার মাধ্যমে দক্ষতা অর্জনের সুযোগ তৈরি করাই আমাদের মিশন।",
       theme: "orange",
       icon: <HiOutlineRocketLaunch className="text-2xl" />,
       points: [
-        "তাত্ত্বিক শিক্ষার বদলে লাইভ রিয়েল-ওয়ার্ল্ড প্রজেক্ট ও পোর্টফোলিওভিত্তিক প্রশিক্ষণ।",
-        "ইন্ডাস্ট্রি-এক্সপার্ট মেন্টরদের সার্বক্ষণিক গাইডলাইন এবং ২৪/৭ সাপোর্ট সুবিধা।",
-        "সাশ্রয়ী খরচে সর্বোচ্চ মানের পেশাদার কারিকুলাম নিশ্চিত করা।",
+        "বাস্তবধর্মী প্রজেক্ট ও পোর্টফোলিও তৈরির মাধ্যমে ব্যবহারিক শেখাকে গুরুত্ব দেওয়া।",
+        "অভিজ্ঞ মেন্টরের দিকনির্দেশনা এবং শেখার প্রয়োজনে সহায়তা প্রদান করা।",
+        "সাশ্রয়ী খরচে মানসম্মত ও কর্মক্ষেত্রের উপযোগী প্রশিক্ষণের সুযোগ তৈরি করা।",
       ],
     },
     {
       label: "আমাদের লক্ষ্য",
       title: "Goal: স্বাবলম্বী বাংলাদেশ",
+      description:
+        "দক্ষতা উন্নয়নের মাধ্যমে আরও বেশি মানুষের কর্মসংস্থান, আত্মকর্মসংস্থান ও স্বাবলম্বী হওয়ার সুযোগ তৈরিতে কাজ করতে চাই আমরা।",
       theme: "teal",
       icon: <HiOutlineTrophy className="text-2xl" />,
       points: [
-        "আগামী ৫ বছরে আরও ২ লক্ষাধিক তরুণ-তরুণীকে স্বাবলম্বী হিসেবে গড়ে তোলা।",
-        "জাতীয় দক্ষতা মানদণ্ড (BTEB ও NSDA) অনুযায়ী প্রতিটি কোর্সের মান নিশ্চিতকরণ।",
-        "কোর্স সমাপ্তির পর সফল শিক্ষার্থীদের জন্য ১০০% ক্যারিয়ার ও ইন্টার্নশিপ সহায়তা।",
+        "আগামী ৫ বছরে আরও ২ লক্ষাধিক তরুণ-তরুণীকে দক্ষতা অর্জন ও স্বাবলম্বী হওয়ার পথে এগিয়ে নিতে কাজ করা।",
+        "প্রযোজ্য জাতীয় দক্ষতা মানদণ্ড অনুযায়ী প্রশিক্ষণের মান উন্নয়নে গুরুত্ব দেওয়া।",
+        "শিক্ষার্থীদের ক্যারিয়ার প্রস্তুতি, ইন্টার্নশিপ ও কর্মসংস্থানের সুযোগ পেতে সহায়তা করা।",
       ],
     },
   ];
@@ -54,12 +94,21 @@ export default function AboutUs() {
   const leadership = {
     name: "Ibrahim Akbar",
     role: "Founder & CEO",
-    photo: "https://eshikhon.com.bd/wp-content/uploads/2025/06/Ibrahim-vai.webp",
+    photo:
+      "https://eshikhon.com.bd/wp-content/uploads/2025/06/Ibrahim-vai.webp",
     quote:
       "Empowering your learning journey with passion, purpose, and people who care. আমাদের মূল লক্ষ্য হলো দেশের প্রত্যন্ত অঞ্চলের তরুণদেরও এমন একটি আন্তর্জাতিক মানের দক্ষতায় গড়ে তোলা, যাতে ঘরে বসেই তারা বিশ্বমানের প্রযুক্তি ক্যারিয়ার গড়তে পারে।",
     socials: [
-      { name: "Facebook", href: "https://www.facebook.com/w3cibrahim", icon: <FaFacebookF className="text-sm" /> },
-      { name: "LinkedIn", href: "https://www.linkedin.com/in/ibrahimakbar01/", icon: <FaLinkedinIn className="text-sm" /> },
+      {
+        name: "Facebook",
+        href: "https://www.facebook.com/w3cibrahim",
+        icon: <FaFacebookF className="text-sm" />,
+      },
+      {
+        name: "LinkedIn",
+        href: "https://www.linkedin.com/in/ibrahimakbar01/",
+        icon: <FaLinkedinIn className="text-sm" />,
+      },
     ],
   };
 
@@ -72,17 +121,20 @@ export default function AboutUs() {
         {
           name: "Rahe Sanjid Nahid",
           role: "Senior Operating Officer",
-          photo: "https://eshikhon.com.bd/wp-content/uploads/2026/06/Rahe-Sanjid-Nahid-1.webp",
+          photo:
+            "https://eshikhon.com.bd/wp-content/uploads/2026/06/Rahe-Sanjid-Nahid-1.webp",
         },
         {
           name: "Fozle Anwar Nayem",
           role: "Executive Director, Business Development",
-          photo: "https://eshikhon.com.bd/wp-content/uploads/2026/04/Fozle-Anwar-Nayem.webp",
+          photo:
+            "https://eshikhon.com.bd/wp-content/uploads/2026/04/Fozle-Anwar-Nayem.webp",
         },
         {
           name: "Md Nadim Mahamud",
           role: "Business Development Executive",
-          photo: "https://eshikhon.com.bd/wp-content/uploads/2026/06/Nadim-Mahmud.webp",
+          photo:
+            "https://eshikhon.com.bd/wp-content/uploads/2026/06/Nadim-Mahmud.webp",
         },
       ],
     },
@@ -93,27 +145,32 @@ export default function AboutUs() {
         {
           name: "Md. Shihab Shaharia",
           role: "Head of Digital Marketing Department",
-          photo: "https://eshikhon.com.bd/wp-content/uploads/2026/04/Md.-Shihab-Shaharia.webp",
+          photo:
+            "https://eshikhon.com.bd/wp-content/uploads/2026/04/Md.-Shihab-Shaharia.webp",
         },
         {
           name: "Israt Jahan",
           role: "Senior Digital Marketing Executive",
-          photo: "https://eshikhon.com.bd/wp-content/uploads/2026/04/Israt-Jahan_Senior-Digital-Marketing-Executive.webp",
+          photo:
+            "https://eshikhon.com.bd/wp-content/uploads/2026/04/Israt-Jahan_Senior-Digital-Marketing-Executive.webp",
         },
         {
           name: "Shafikul Islam Shohag",
           role: "Sr Graphic Design Executive",
-          photo: "https://eshikhon.com.bd/wp-content/uploads/2026/04/Shafikul-Islam-Shohag.webp",
+          photo:
+            "https://eshikhon.com.bd/wp-content/uploads/2026/04/Shafikul-Islam-Shohag.webp",
         },
         {
           name: "MD. Atikur Rahman",
           role: "Sr Graphic Design Executive",
-          photo: "https://eshikhon.com.bd/wp-content/uploads/2026/06/Atikur-Rahman.webp",
+          photo:
+            "https://eshikhon.com.bd/wp-content/uploads/2026/06/Atikur-Rahman.webp",
         },
         {
           name: "Md Mehedi Hasan",
           role: "Creative Video Editor & Videographer",
-          photo: "https://eshikhon.com.bd/wp-content/uploads/2025/06/mehedi-vai.webp",
+          photo:
+            "https://eshikhon.com.bd/wp-content/uploads/2025/06/mehedi-vai.webp",
         },
       ],
     },
@@ -124,22 +181,26 @@ export default function AboutUs() {
         {
           name: "Jannatul Ferdous",
           role: "Sr. Customer Support Executive",
-          photo: "https://eshikhon.com.bd/wp-content/uploads/2025/06/jannat-apu.webp",
+          photo:
+            "https://eshikhon.com.bd/wp-content/uploads/2025/06/jannat-apu.webp",
         },
         {
           name: "Md. Shamim Sweet",
           role: "Sr. Customer Support Executive",
-          photo: "https://eshikhon.com.bd/wp-content/uploads/2026/04/Md.-Shamim-Sweet.webp",
+          photo:
+            "https://eshikhon.com.bd/wp-content/uploads/2026/04/Md.-Shamim-Sweet.webp",
         },
         {
           name: "Nayela Ahmed",
           role: "Front-Desk Executive",
-          photo: "https://eshikhon.com.bd/wp-content/uploads/2025/06/nayla-apu.webp",
+          photo:
+            "https://eshikhon.com.bd/wp-content/uploads/2025/06/nayla-apu.webp",
         },
         {
           name: "Antora Imaculate Gomes",
           role: "Front-Desk Executive",
-          photo: "https://eshikhon.com.bd/wp-content/uploads/2025/06/noboni-apu.webp",
+          photo:
+            "https://eshikhon.com.bd/wp-content/uploads/2025/06/noboni-apu.webp",
         },
         {
           name: "Sabrina Reem",
@@ -149,27 +210,32 @@ export default function AboutUs() {
         {
           name: "Niamur Rahman Nishad",
           role: "Customer Support Executive",
-          photo: "https://eshikhon.com.bd/wp-content/uploads/2026/04/Niamur-Rahman-Nishad.webp",
+          photo:
+            "https://eshikhon.com.bd/wp-content/uploads/2026/04/Niamur-Rahman-Nishad.webp",
         },
         {
           name: "Fabiha Afifa",
           role: "Customer Support Executive",
-          photo: "https://eshikhon.com.bd/wp-content/uploads/2026/04/Fabiha-Afifa.webp",
+          photo:
+            "https://eshikhon.com.bd/wp-content/uploads/2026/04/Fabiha-Afifa.webp",
         },
         {
           name: "Tawhid Khan",
           role: "Customer Support Executive",
-          photo: "https://eshikhon.com.bd/wp-content/uploads/2026/08/Tawhid.gif",
+          photo:
+            "https://eshikhon.com.bd/wp-content/uploads/2026/08/Tawhid.gif",
         },
         {
           name: "Md. Mustafiz Rahman",
           role: "Junior MERN Stack Developer",
-          photo: "https://eshikhon.com.bd/wp-content/uploads/2026/06/Mustafizur-Rahman.webp",
+          photo:
+            "https://eshikhon.com.bd/wp-content/uploads/2026/06/Mustafizur-Rahman.webp",
         },
         {
           name: "Bikrom Ray",
           role: "Instructor Web Design & Development",
-          photo: "https://eshikhon.com.bd/wp-content/uploads/2026/06/Bikrom-Roy.webp",
+          photo:
+            "https://eshikhon.com.bd/wp-content/uploads/2026/06/Bikrom-Roy.webp",
         },
       ],
     },
@@ -177,7 +243,6 @@ export default function AboutUs() {
 
   return (
     <div className="min-h-screen bg-[#F8FAFC] font-HindSiliguri text-slate-800 pb-20">
-      
       {/* ================= 1. HERO HEADER ================= */}
       <section className="pt-16 pb-12 bg-white border-b border-slate-100 text-center relative overflow-hidden">
         <div className="max-w-4xl mx-auto px-4">
@@ -187,17 +252,22 @@ export default function AboutUs() {
           </span>
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#005776] via-[#006f94] to-[#008BB8] tracking-tight leading-tight">
-            দক্ষতা অর্জন ও ক্যারিয়ার গড়ার <br className="hidden sm:inline" /> বিশ্বস্ত ঠিকানা ইশিখন
+            দক্ষতা অর্জন ও ক্যারিয়ার গড়ার <br className="hidden sm:inline" />{" "}
+            বিশ্বস্ত ঠিকানা ইশিখন
           </h1>
 
-          <p className="mt-4 text-xs sm:text-base text-slate-600 max-w-2xl mx-auto leading-relaxed">
-            Empowering your learning journey with passion, purpose, and people who care. ২০১২ সাল থেকে শুরু করে আজ পর্যন্ত ১.৫ লক্ষাধিক শিক্ষার্থীকে স্বাবলম্বী করেছে ইশিখন।
+          <p className="mt-4 text-xs sm:text-base text-slate-600 max-w-3xl mx-auto leading-relaxed">
+            ২০১২ সাল থেকে eShikhon কাজ করছে দক্ষতা উন্নয়ন ও কর্মসংস্থানের সুযোগ
+            তৈরির লক্ষ্যে। এ পর্যন্ত ১.৫ লক্ষাধিক শিক্ষার্থীর শেখার যাত্রায়
+            যুক্ত হয়ে আমরা তাদের নতুন দক্ষতা অর্জন, বাস্তব অভিজ্ঞতা তৈরি এবং
+            ক্যারিয়ারের জন্য প্রস্তুত হতে সহায়তা করেছি। আমাদের লক্ষ্য শুধু
+            প্রশিক্ষণ দেওয়া নয়, বরং শিক্ষার্থীদের অর্জিত দক্ষতা বাস্তব জীবনে
+            কাজে লাগানোর উপযোগী করে তোলা।
           </p>
         </div>
       </section>
 
       <div className="max-w-6xl mx-auto px-4 mt-12 space-y-16">
-
         {/* ================= 2. MISSION, VISION & GOAL CARDS ================= */}
         <div>
           <div className="text-center mb-8">
@@ -208,7 +278,8 @@ export default function AboutUs() {
               মিশন, ভিশন ও আমাদের লক্ষ্য
             </h2>
             <p className="text-xs sm:text-sm text-slate-500 mt-1 max-w-lg mx-auto">
-              যে আদর্শ ও লক্ষ্যকে সামনে রেখে এক দশকেরও বেশি সময় ধরে আমরা দক্ষ জনশক্তি গড়ে তুলছি
+              যে আদর্শ ও লক্ষ্যকে সামনে রেখে এক দশকেরও বেশি সময় ধরে আমরা দক্ষ
+              জনশক্তি গড়ে তুলছি
             </p>
           </div>
 
@@ -246,9 +317,16 @@ export default function AboutUs() {
                     </span>
 
                     {/* Title */}
-                    <h3 className="text-lg font-bold text-slate-900 mt-1 mb-4 leading-snug">
+                    <h3 className="text-lg font-bold text-slate-900 mt-1 mb-2 leading-snug">
                       {item.title}
                     </h3>
+
+                    {/* Description Paragraph */}
+                    {item.description && (
+                      <p className="text-xs sm:text-[13px] text-slate-500 leading-relaxed mb-4 pb-3 border-b border-slate-100">
+                        {item.description}
+                      </p>
+                    )}
 
                     {/* Bullet Points */}
                     <ul className="space-y-2.5">
@@ -280,7 +358,6 @@ export default function AboutUs() {
         {/* ================= 3. FOUNDER & CEO SPOTLIGHT ================= */}
         <div className="bg-white rounded-3xl border-2 border-orange-100 shadow-sm p-6 sm:p-10 relative overflow-hidden">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-            
             {/* Founder Photo */}
             <div className="md:col-span-4 flex justify-center">
               <div className="relative">
@@ -295,7 +372,7 @@ export default function AboutUs() {
               </div>
             </div>
 
-            {/* Founder Details & ONLY VALID SOCIAL LINKS */}
+            {/* Founder Details */}
             <div className="md:col-span-8 space-y-3.5 text-center md:text-left">
               <span className="text-xs font-bold uppercase tracking-wider text-teal-700 bg-teal-50 px-3 py-1 rounded-full">
                 Leadership
@@ -306,12 +383,11 @@ export default function AboutUs() {
               <p className="text-xs font-bold text-orange-600 uppercase tracking-wider">
                 Founder & CEO, eShikhon
               </p>
-              
+
               <blockquote className="text-xs sm:text-sm text-slate-600 leading-relaxed italic pt-2 border-t border-slate-100">
                 "{leadership.quote}"
               </blockquote>
 
-              {/* Real Social Links Only (No blank #) */}
               <div className="flex items-center justify-center md:justify-start gap-2.5 pt-2">
                 {leadership.socials.map((soc, sIdx) => (
                   <a
@@ -327,7 +403,6 @@ export default function AboutUs() {
                 ))}
               </div>
             </div>
-
           </div>
         </div>
 
@@ -341,7 +416,8 @@ export default function AboutUs() {
               মিট আওয়ার ডেডিকেটেড টিম
             </h2>
             <p className="text-xs sm:text-sm text-slate-500 mt-1">
-              যাঁদের আন্তরিক প্রচেষ্টা ও দিকনির্দেশনায় ইশিখনের শিক্ষার্থীরা প্রতিনিয়ত সফলতার শিখরে পৌঁছাচ্ছেন
+              যাঁদের আন্তরিক প্রচেষ্টা ও দিকনির্দেশনায় ইশিখনের শিক্ষার্থীরা
+              প্রতিনিয়ত সফলতার শিখরে পৌঁছাচ্ছেন
             </p>
           </div>
 
@@ -349,7 +425,6 @@ export default function AboutUs() {
             const isTeal = dept.theme === "teal";
             return (
               <div key={dIdx} className="space-y-6">
-                
                 {/* Department Section Header */}
                 <div className="border-l-4 border-l-orange-500 pl-3">
                   <h3 className="text-lg sm:text-xl font-bold text-slate-900">
@@ -399,7 +474,6 @@ export default function AboutUs() {
                     </div>
                   ))}
                 </div>
-
               </div>
             );
           })}
@@ -416,7 +490,10 @@ export default function AboutUs() {
             </h3>
             <p className="text-xs sm:text-sm text-slate-600 flex items-center justify-center md:justify-start gap-2">
               <HiOutlineMapPin className="text-orange-600 shrink-0 text-base" />
-              <span>151/7, Goodluck Center (4th Floor), Panthapath Signal, Green Road, Dhaka</span>
+              <span>
+                151/7, Goodluck Center (4th Floor), Panthapath Signal, Green
+                Road, Dhaka
+              </span>
             </p>
           </div>
 
@@ -427,7 +504,6 @@ export default function AboutUs() {
             যোগাযোগ ও দিকনির্দেশনা
           </a>
         </div>
-
       </div>
     </div>
   );

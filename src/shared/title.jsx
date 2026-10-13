@@ -7,7 +7,7 @@ const Title = ({title , desc}) => {
         {title}
       </h2>
 
-      <p className="text-slate-600 pt-1 text-sm sm:text-base leading-relaxed ">
+      <p className="text-slate-600 pt-1 text-sm  leading-relaxed ">
       {desc}
       </p>
     </div>

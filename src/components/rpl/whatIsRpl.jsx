@@ -46,10 +46,14 @@ export default function WhatIsRPL() {
         </h2>
 
         {/* Short Subtitle for Students */}
-        <p className="mt-3 max-w-2xl mx-auto text-sm sm:text-base text-slate-600 leading-relaxed">
-          RPL হলো এমন একটি জাতীয় পদ্ধতি, যেখানে প্রাতিষ্ঠানিক ডিগ্রি না থাকলেও
-          আপনার আগে থেকে অর্জিত কাজ, অভিজ্ঞতা ও জ্ঞান মূল্যায়ন করে সরাসরি সরকারি
-          সনদ দেওয়া হয়।
+        <p className="mt-3 max-w-3xl mx-auto text-sm sm:text-base text-slate-600 leading-relaxed">
+          RPL হলো এমন একটি প্রক্রিয়া, যার মাধ্যমে কাজের অভিজ্ঞতা, নিজে নিজে শেখা
+          বা পূর্বের প্রশিক্ষণের মাধ্যমে অর্জিত দক্ষতা মূল্যায়ন করা হয়।
+          নির্ধারিত Assessment-এ উত্তীর্ণ হলে সেই দক্ষতার স্বীকৃতি হিসেবে NSDA
+          অনুমোদিত National Skills Certificate পাওয়ার সুযোগ রয়েছে। বাংলাদেশে RPL
+          Certificate আপনার দক্ষতার আনুষ্ঠানিক স্বীকৃতি পেতে সহায়তা করতে পারে।
+          eShikhon-এর RPL Assessment-এর মাধ্যমে আপনার দক্ষতার স্বীকৃতি পাওয়ার
+          প্রক্রিয়া সম্পর্কে জানুন।
         </p>
 
         {/* 3 Cards Grid */}

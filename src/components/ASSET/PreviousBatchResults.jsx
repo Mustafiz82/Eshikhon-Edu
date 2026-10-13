@@ -12,37 +12,13 @@ import {
 
 export default function PreviousBatchResults() {
   // 1. Video List (Strictly ASSET batch verified outcomes, NO income figures)
-  const videos = [
-    {
-      id: 1,
-      name: "রহিম উদ্দিন",
-      course: "Web Design & Development",
-      batch: "ASSET ব্যাচ ৩",
-      outcome: "৩ মাসের প্রশিক্ষণ শেষে সফলভাবে NSDA সার্টিফিকেট অর্জন করেছেন",
-      duration: "১:১৫ মিনিট",
-      thumbnail: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80",
-      videoEmbedUrl: "https://www.youtube-nocookie.com/embed/dQw9WgXcQ", // Replace with real ASSET video embed
-    },
-    {
-      id: 2,
-      name: "নাসরিন আক্তার",
-      course: "Graphic & UI Design",
-      batch: "ASSET ব্যাচ ২",
-      outcome: "জাতীয় দক্ষতা মূল্যায়ন (NSDA Assessment) সফলভাবে সম্পন্ন",
-      duration: "০:৫৮ মিনিট",
-      thumbnail: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80",
-      videoEmbedUrl: "https://www.youtube-nocookie.com/embed/dw9WgXcQ",
-    },
-    {
-      id: 3,
-      name: "তানভীর আহমেদ",
-      course: "Digital Marketing",
-      batch: "ASSET ব্যাচ ৩",
-      outcome: "কোর্স সমাপনী লাইভ প্রজেক্ট প্রেজেন্টেশন সম্পন্ন করেছেন",
-      duration: "১:০৫ মিনিট",
-      thumbnail: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80",
-      videoEmbedUrl: "https://www.youtube-nocookie.com/embed/dQwWgXcQ",
-    },
+   const [activeId, setActiveId] = useState(null);
+
+  const shortsVideos = [
+    { id: 1, videoId: "VGL0Wa91dPQ" },
+    { id: 2, videoId: "HsdZyTusFQw" },
+    { id: 3, videoId: "crE9yBBevWo" },
+    { id: 4, videoId: "Cq9xdYsVEDk" },
   ];
 
   // 2. Batch Photos (6 photos, verified captions with Batch and Month)
@@ -85,7 +61,7 @@ export default function PreviousBatchResults() {
     },
   ];
 
-  const [activeVideo, setActiveVideo] = useState(videos[0]);
+  // const [activeVideo, setActiveVideo] = useState(videos[0]);
   const [activePhoto, setActivePhoto] = useState(null);
 
   return (
@@ -97,7 +73,7 @@ export default function PreviousBatchResults() {
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-teal-50 border border-teal-200 text-teal-700 text-xs font-bold tracking-wide mb-3">
             বাস্তব প্রমাণ ও অর্জন
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-transparent bg-clip-text bg-linear-to-b from-[#005776] to-[#008BB8]">
+          <h2 className="text-2xl pt-2 sm:text-3xl md:text-4xl font-extrabold tracking-tight text-transparent bg-clip-text bg-linear-to-b from-[#005776] to-[#008BB8]">
             আমাদের পূর্ববর্তী ব্যাচের সফলতা
           </h2>
           <p className="mt-2 text-sm sm:text-base text-slate-600">
@@ -148,98 +124,42 @@ export default function PreviousBatchResults() {
             </h3>
            
           </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
-            
-            {/* Main Featured Player (7 Columns) */}
-            <div className="lg:col-span-7 bg-white rounded-2xl border border-slate-200 p-3 sm:p-4 shadow-sm">
-              <div className="relative aspect-video w-full rounded-xl overflow-hidden bg-slate-900 shadow-inner">
+<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {shortsVideos.map((vid) => (
+            <div 
+              key={vid.id} 
+              className="relative aspect-[9/16] rounded-3xl overflow-hidden shadow-lg border border-slate-200 bg-slate-900 transition-all duration-300"
+            >
+              {activeId === vid.id ? (
+                // Play the video when active
                 <iframe
-                  src={activeVideo.videoEmbedUrl}
-                  title={activeVideo.name}
-                  className="w-full h-full border-0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  src={`https://www.youtube.com/embed/${vid.videoId}?autoplay=1&rel=0&modestbranding=1`}
+                  className="w-full h-full"
+                  allow="autoplay; encrypted-media"
                   allowFullScreen
                 />
-              </div>
-
-              {/* Active Video Meta */}
-              <div className="pt-4 px-1 pb-1">
-                <div className="flex flex-wrap items-center justify-between gap-2">
-                  <span className="px-2.5 py-0.5 text-[11px] font-bold rounded-md bg-teal-50 text-teal-800 border border-teal-200">
-                    {activeVideo.batch}
-                  </span>
-                  <span className="text-xs text-slate-500 flex items-center gap-1 font-mono">
-                    <HiOutlineClock className="w-3.5 h-3.5 text-slate-400" />
-                    {activeVideo.duration}
-                  </span>
+              ) : (
+                // Show thumbnail when inactive
+                <div 
+                  className="absolute inset-0 cursor-pointer group"
+                  onClick={() => setActiveId(vid.id)}
+                >
+                  <img
+                    src={`https://img.youtube.com/vi/${vid.videoId}/hqdefault.jpg`}
+                    alt="Video thumbnail"
+                    className="w-full h-full object-cover"
+                  />
+                  {/* Play Icon Overlay */}
+                  <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/10 transition-colors">
+                    <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center border border-white/30 shadow-lg group-hover:scale-110 transition-transform">
+                      <HiOutlinePlay className="w-8 h-8 text-white fill-white" />
+                    </div>
+                  </div>
                 </div>
-                
-                <h4 className="text-base sm:text-lg font-bold text-slate-900 mt-2">
-                  {activeVideo.name} — <span className="font-normal text-slate-600 text-sm">{activeVideo.course}</span>
-                </h4>
-                
-                <p className="text-xs sm:text-sm text-teal-800 font-medium mt-1 flex items-center gap-1.5">
-                  <HiOutlineCheckBadge className="w-4 h-4 text-teal-600 shrink-0" />
-                  {activeVideo.outcome}
-                </p>
-              </div>
+              )}
             </div>
-
-            {/* Thumbnail Playlist (5 Columns) */}
-            <div className="lg:col-span-5 flex lg:flex-col gap-3 overflow-x-auto lg:overflow-visible pb-2 lg:pb-0 snap-x">
-              {videos.map((vid) => {
-                const isSelected = activeVideo.id === vid.id;
-                return (
-                  <button
-                    key={vid.id}
-                    onClick={() => setActiveVideo(vid)}
-                    className={`shrink-0 w-72 sm:w-80 lg:w-full snap-start text-left p-3 rounded-xl border transition-all flex items-center gap-3 ${
-                      isSelected
-                        ? "bg-teal-50/60 border-teal-400 shadow-sm"
-                        : "bg-white border-slate-200 hover:border-slate-300"
-                    }`}
-                  >
-                    {/* Thumbnail with Play Icon */}
-                    <div className="relative w-24 h-16 rounded-lg overflow-hidden shrink-0 bg-slate-100">
-                      <img
-                        src={vid.thumbnail}
-                        alt={vid.name}
-                        className="w-full h-full object-cover"
-                      />
-                      <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-                        <div className="w-6 h-6 rounded-full bg-white/90 flex items-center justify-center text-orange-600 shadow">
-                          <HiOutlinePlay className="w-3.5 h-3.5 ml-0.5" />
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Metadata */}
-                    <div className="min-w-0 flex-1">
-                      <div className="flex items-center justify-between">
-                        <span className="text-[10px] font-bold text-slate-500 uppercase">
-                          {vid.batch}
-                        </span>
-                        <span className="text-[10px] text-slate-400 font-mono">
-                          {vid.duration}
-                        </span>
-                      </div>
-                      <h5 className="text-sm font-bold text-slate-900 truncate">
-                        {vid.name}
-                      </h5>
-                      <p className="text-xs text-slate-500 truncate">
-                        {vid.course}
-                      </p>
-                      <p className="text-[11px] text-teal-700 truncate mt-0.5">
-                        ✓ {vid.outcome}
-                      </p>
-                    </div>
-                  </button>
-                );
-              })}
-            </div>
-
-          </div>
+          ))}
+        </div>
         </div>
 
         {/* --- BLOCK 3: BATCH PHOTOS (3x2 Desktop, 2x3 Mobile) --- */}

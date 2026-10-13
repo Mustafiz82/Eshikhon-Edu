@@ -1,83 +1,85 @@
-// constants/navigation.js (or wherever your nav data lives)
+// constants/navigation.js
 
 export const navDropdowns = [
   {
     title: 'ASSET',
-    href: '/programs/asset',
+    href: '/programs/asset-project-training',
     items: [
       { 
-        title: 'Digital Marketing', 
-        href: '/programs/asset/digital-marketing' 
-      },
-      { 
-        title: 'Web Design for Freelancing (Level 3)', 
-        href: '/programs/asset/web-design-freelancing-level-3',
+        title: 'Digital Marketing for Freelancing (Level 3)', 
+        href: '/programs/asset-project-training/digital-marketing-for-freelancing-level-3',
         badge: 'Level 3' 
       },
       { 
-        title: 'Web Design with Python (Level 4)', 
-        href: '/programs/asset/web-design-python-level-4',
-        badge: 'Level 4' 
+        title: 'Web Design for Freelancing (Level 3)', 
+        href: '/programs/asset-project-training/web-design-for-freelancing-level-3',
+        badge: 'Level 3' 
       },
       { 
-        title: 'Graphic Design', 
-        href: '/programs/asset/graphic-design' 
+        title: 'Graphic Design (Level 3)', 
+        href: '/programs/asset-project-training/graphic-design-level-3',
+        badge: 'Level 3' 
+      },
+      { 
+        title: 'Web Application Development with Python (Level 4)', 
+        href: '/programs/asset-project-training/web-application-development-with-python-level-4',
+        badge: 'Level 4' 
       },
     ],
   },
   {
     title: 'RPL',
-    href: '/programs/rpl',
+    href: '/programs/rpl-skills-assessment',
     items: [
       { 
-        title: 'Digital Marketing for Freelancing', 
-        href: '/programs/rpl/digital-marketing-for-freelancing' 
+        title: 'Digital Marketing for Freelancing – NSDA RPL Assessment (Level 3)', 
+        href: '/programs/rpl-skills-assessment/digital-marketing-for-freelancing-nsda-rpl-assessment-level-3' 
       },
       { 
-        title: 'Graphic Design', 
-        href: '/programs/rpl/graphic-design' 
+        title: 'Graphic Design – NSDA RPL Assessment (Level 3)', 
+        href: '/programs/rpl-skills-assessment/graphic-design-nsda-rpl-assessment-level-3' 
       },
       { 
-        title: 'Web Design & Development for Freelancing', 
-        href: '/programs/rpl/web-design-dev-freelancing' 
+        title: 'Web Design and Development for Freelancing – NSDA RPL Assessment (Level 3)', 
+        href: '/programs/rpl-skills-assessment/web-design-and-development-for-freelancing-nsda-rpl-assessment-level-3' 
       },
       { 
-        title: 'Professional Customer Services', 
-        href: '/programs/rpl/professional-customer-services' 
+        title: 'Professional Customer Services – NSDA RPL Assessment (Level 3)', 
+        href: '/programs/rpl-skills-assessment/professional-customer-services-nsda-rpl-assessment-level-3' 
       },
       { 
-        title: 'IT Support Service', 
-        href: '/programs/rpl/it-support-service' 
+        title: 'IT Support Service – NSDA RPL Assessment (Level 3)', 
+        href: '/programs/rpl-skills-assessment/it-support-service-nsda-rpl-assessment-level-3' 
       },
     ],
   },
   {
     title: 'Industrial Attachment',
-    href: '/programs/industrial-attachment',
+    href: '/programs/industrial-attachment-training',
     items: [
       { 
-        title: 'Digital Marketing', 
-        href: '/programs/industrial-attachment/digital-marketing' 
+        title: 'Industrial Attachment in Digital Marketing', 
+        href: '/programs/industrial-attachment-training/industrial-attachment-in-digital-marketing' 
       },
       { 
-        title: 'Graphic Design', 
-        href: '/programs/industrial-attachment/graphic-design' 
+        title: 'Industrial Attachment in Graphic Design', 
+        href: '/programs/industrial-attachment-training/industrial-attachment-in-graphic-design' 
       },
       { 
-        title: 'Ethical Hacking', 
-        href: '/programs/industrial-attachment/ethical-hacking' 
+        title: 'Industrial Attachment in Ethical Hacking', 
+        href: '/programs/industrial-attachment-training/industrial-attachment-in-ethical-hacking' 
       },
       { 
-        title: 'Web Design & Development', 
-        href: '/programs/industrial-attachment/web-design-development' 
+        title: 'Industrial Attachment in Web Design and Development', 
+        href: '/programs/industrial-attachment-training/industrial-attachment-in-web-design-and-development' 
       },
       { 
-        title: 'AutoCAD', 
-        href: '/programs/industrial-attachment/autocad' 
+        title: 'Industrial Attachment in AutoCAD', 
+        href: '/programs/industrial-attachment-training/industrial-attachment-in-autocad' 
       },
       { 
-        title: 'UI/UX Design', 
-        href: '/programs/industrial-attachment/ui-ux-design' 
+        title: 'Industrial Attachment in UI/UX Design', 
+        href: '/programs/industrial-attachment-training/industrial-attachment-in-ui-ux-design' 
       },
     ],
   },
@@ -87,4 +89,4 @@ export const staticNavLinks = [
   { title: 'All Courses', href: 'http://eshikhon.com.bd/batch' },
   { title: 'About', href: '/about' },
   { title: 'Contact', href: '/contact', isButton: true },
-];
+];  

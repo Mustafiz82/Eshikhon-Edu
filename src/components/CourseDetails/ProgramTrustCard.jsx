@@ -22,6 +22,7 @@ export default function ProgramTrustCard({ program , courseTitle }) {
       <div className="space-y-2">
         <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-orange-50 text-orange-600 border border-orange-200">
           <HiOutlineSparkles className="text-sm" />
+    
           {data.tag}
         </span>
 

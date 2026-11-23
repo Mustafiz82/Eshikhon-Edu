@@ -2,6 +2,7 @@ import { Geist, Hind_Siliguri } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/shared/Nav";
 import Footer from "@/shared/Footer";
+import { Analytics } from "@vercel/analytics/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -48,6 +49,7 @@ export default function RootLayout({ children }) {
         <Navbar />
         {children}
         <Footer />
+        <Analytics />
       </body>
     </html>
   );

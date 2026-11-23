@@ -27,37 +27,37 @@ export default function PreviousBatchResults() {
       id: 1,
       caption: "ASSET ব্যাচ ৩: প্র্যাকটিক্যাল কম্পিউটার ল্যাব",
       date: "মার্চ ২০২৬",
-      src: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=800&q=80",
+      src: "/Classroom and Lab Photos/1.webp",
     },
     {
       id: 2,
       caption: "ASSET ব্যাচ ২: NSDA সনদপত্র বিতরণ অনুষ্ঠান",
       date: "ফেব্রুয়ারি ২০২৬",
-      src: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80",
+      src: "/Classroom and Lab Photos/2.webp",
     },
     {
       id: 3,
       caption: "ASSET ব্যাচ ৩: ইন্ডাস্ট্রি স্ট্যান্ডার্ড প্রজেক্ট রিভিউ",
       date: "মার্চ ২০২৬",
-      src: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=800&q=80",
+      src: "/Classroom and Lab Photos/3.webp",
     },
     {
       id: 4,
       caption: "ASSET ব্যাচ ১: শিক্ষার্থীদের ল্যাব প্র্যাকটিস সেশন",
       date: "জানুয়ারি ২০২৬",
-      src: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80",
+      src: "/Classroom and Lab Photos/4.webp",
     },
     {
       id: 5,
       caption: "ASSET ব্যাচ ২: সরকারি NSDA এসেসমেন্ট পরীক্ষার দিন",
       date: "ফেব্রুয়ারি ২০২৬",
-      src: "https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&w=800&q=80",
+      src: "/Classroom and Lab Photos/5.webp",
     },
     {
       id: 6,
       caption: "ASSET ব্যাচ ৩: সমাপনী ক্লাস ও গ্রুপ ফটো",
       date: "মার্চ ২০২৬",
-      src: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80",
+      src: "/Classroom and Lab Photos/6.webp",
     },
   ];
 
@@ -185,18 +185,18 @@ export default function PreviousBatchResults() {
                 <img
                   src={photo.src}
                   alt={photo.caption}
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  className={`${((photo.id === 4) || (photo.id === 6)) && "brightness-120 "} w-full h-full  object-cover transition-transform duration-300 group-hover:scale-105`}
                 />
                 
                 {/* Gradient Overlay & Verified Caption */}
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/20 to-transparent flex flex-col justify-end p-3 text-white">
+                {/* <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/20 to-transparent flex flex-col justify-end p-3 text-white">
                   <span className="text-[10px] font-medium text-orange-300">
                     {photo.date}
                   </span>
                   <p className="text-xs sm:text-sm font-semibold line-clamp-2 leading-snug">
                     {photo.caption}
                   </p>
-                </div>
+                </div> */}
               </div>
             ))}
           </div>
@@ -236,7 +236,8 @@ export default function PreviousBatchResults() {
             <img
               src={activePhoto.src}
               alt={activePhoto.caption}
-              className="w-full max-h-[70vh] object-cover"
+              className={ `w-full max-h-[70vh] object-cover`}
+              // style={{}}
             />
 
             <div className="p-4 bg-white flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-t border-slate-100">

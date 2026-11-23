@@ -9,15 +9,14 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-   <div>
-
-    <Banner/>
-    <IndustrialAttachMent/>
-    <RPL/>  
-    <Asset/>
-    <Partners/>
-    <SuccessStories/>
-    <BentoGallery/>
-   </div>
+    <div>
+      <Banner />
+      <IndustrialAttachMent />
+      <RPL />
+      <Asset />
+      <Partners />
+      <SuccessStories />
+      <BentoGallery />
+    </div>
   );
 }

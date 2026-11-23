@@ -51,7 +51,7 @@ const page = () => {
   return (
     <div>
       <CenterHeroBanner
-        imageUrl="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1600&auto=format&fit=crop"
+        imageUrl="/banner/banner.webp"
         title="Industrial Attachment Training in Bangladesh"
         subtitle="ডিপ্লোমা শেষ করার আগে বাস্তব কাজের অভিজ্ঞতা অর্জন করতে প্রয়োজন Practical Training। eShikhon-এর Industrial Attachment Training-এ হাতে-কলমে শিখুন, Practical Projects করুন এবং ক্যারিয়ারের জন্য প্রস্তুত হন।
 "

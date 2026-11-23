@@ -136,18 +136,18 @@ export default function Banner() {
             {/* Image Container with Floating Admission Tag */}
             <div className="relative w-full h-64 sm:h-72 md:h-80 rounded-2xl overflow-hidden group shadow-inner">
               <img
-                src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1000&q=80"
+                src="/banner-section/দক্ষতা-অর্জন-করুন.webp"
                 alt="Students in Robotics and Engineering Lab"
                 fill
                 priority
                 sizes="(max-width: 768px) 100vw, 500px"
-                className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
+                className="object-cover brightness-120 object-center group-hover:scale-105 transition-transform duration-700 ease-out"
               />
 
               {/* Bottom Admission Strip with Glassmorphism */}
-              <div className="absolute bottom-3 left-3 right-3 py-2.5 px-4 rounded-xl bg-slate-900/80 backdrop-blur-md border border-white/20 flex items-center justify-center gap-2.5 text-white text-xs sm:text-sm font-medium font-HindSiliguri shadow-lg">
+              {/* <div className="absolute bottom-3 left-3 right-3 py-2.5 px-4 rounded-xl bg-slate-900/80 backdrop-blur-md border border-white/20 flex items-center justify-center gap-2.5 text-white text-xs sm:text-sm font-medium font-HindSiliguri shadow-lg">
                 <span>নতুন সেশন ভর্তি চলছে (Admission Open 2026)</span>
-              </div>
+              </div> */}
             </div>
 
             {/* 3 Modern Stats Boxes */}

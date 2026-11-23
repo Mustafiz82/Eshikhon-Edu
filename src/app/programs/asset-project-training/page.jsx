@@ -42,7 +42,7 @@ const Page = () => {
   return (
     <div className="bg-white">
       <CenterHeroBanner
-        imageUrl="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1600&auto=format&fit=crop"
+        imageUrl="/banner/banner.webp"
         title="ASSET Project: বিনামূল্যে দক্ষতা উন্নয়ন প্রশিক্ষণ"
         subtitle="ASSET Project-এর আওতায় ইশিখনে বিনামূল্যে Skill Development Training-এর সুযোগ নিন। ৩ মাসের প্রশিক্ষণ শেষে Assessment-এ অংশ নিয়ে NSDA অনুমোদিত সার্টিফিকেট ও বৃত্তি পাওয়ার সুযোগ রয়েছে। নতুন দক্ষতা অর্জন করে এগিয়ে যান ক্যারিয়ারের পথে।"
         courseID={"#asset-course"}

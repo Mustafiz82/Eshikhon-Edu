@@ -20,7 +20,7 @@ export const courses = [
         "ASSET Project-এর আওতায় Digital Marketing for Freelancing (Level 3) কোর্সে বিনামূল্যে প্রশিক্ষণের সুযোগ নিন। যোগ্যতা, কারিকুলাম ও আবেদনের বিস্তারিত জানুন।",
     },
     thumbnail: {
-      src: "/RPL.jpg",
+      src: "/Asset/ASSET-Project-Free-Course-Digital-Marketing-for-Freelancing-Level-3.webp",
       alt: "ডিজিটাল মার্কেটিং স্কলারশিপ কোর্স",
     },
      rating: 4.9,
@@ -141,7 +141,7 @@ export const courses = [
         "ASSET Project-এর আওতায় Web Design for Freelancing (Level 3) কোর্সে বিনামূল্যে প্রশিক্ষণের সুযোগ নিন। যোগ্যতা, কারিকুলাম ও আবেদনের বিস্তারিত জানুন।",
     },
     thumbnail: {
-      src: "/RPL.jpg",
+      src: "/Asset/ASSET-Project-Free-Course-Web-Design-and-Development-for-Freelancing-Level-3.webp",
       alt: "ওয়েব ডিজাইন স্কলারশিপ কোর্স",
     },
      rating: 4.8,
@@ -266,7 +266,7 @@ export const courses = [
         "ASSET Project-এর আওতায় Graphic Design (Level 3) কোর্সে বিনামূল্যে প্রশিক্ষণের সুযোগ নিন। Graphic Design, Image Editing ও Freelancing-এর দক্ষতা, যোগ্যতা ও কারিকুলাম সম্পর্কে জানুন।",
     },
     thumbnail: {
-      src: "/RPL.jpg",
+      src: "/Asset/ASSET-Project-Free-Course-Graphic-Design-Level-3.webp",
       alt: "গ্রাফিক ডিজাইন স্কলারশিপ কোর্স",
     },
      rating: 4.8,
@@ -396,7 +396,7 @@ export const courses = [
         "Web Application Development with Python (Level 4) কোর্সে Django, Database Management, Forms Processing, User Management ও API Development শিখুন। কারিকুলাম ও ভর্তির যোগ্যতা জানুন।",
     },
     thumbnail: {
-      src: "/RPL.jpg",
+      src: "/Asset/ASSET-Project-Free-Course-Web-Application-Development-with-Python-Level-4.webp",
       alt: "পাইথন ও জ্যাঙ্গো ওয়েব ডেভেলপমেন্ট স্কলারশিপ কোর্স",
     },
      rating: 4.9,
@@ -521,7 +521,7 @@ export const courses = [
       keywords: ["Digital Marketing RPL Assessment"],
     },
     thumbnail: {
-      src: "/RPL.jpg",
+      src: "/RPL/NSDA-এর-আওতায়-স্ব-অর্থায়নে-RPL-in-Digital-Marketing-for-Freelancing-Level-3.webp",
       alt: "ডিজিটাল মার্কেটিং আরপিএল অ্যাসেসমেন্ট",
     },
       rating: 4.9,
@@ -585,7 +585,7 @@ export const courses = [
       keywords: ["Web Design and Development RPL Assessment"],
     },
     thumbnail: {
-      src: "/RPL.jpg",
+      src: "/RPL/NSDA-এর-আওতায়-স্ব-অর্থায়নে-Web-Design-and-Development-for-Freelancing-Level-3.webp",
       alt: "ওয়েব ডিজাইন অ্যান্ড ডেভেলপমেন্ট আরপিএল অ্যাসেসমেন্ট",
     },
     rating: 4.9,
@@ -648,7 +648,7 @@ export const courses = [
       keywords: ["Professional Customer Services RPL Assessment"],
     },
     thumbnail: {
-      src: "/RPL.jpg",
+      src: "/RPL/NSDA-এর-আওতায়-স্ব-অর্থায়নে-Professional-Customer-Services-Level-3.webp",
       alt: "প্রফেশনাল কাস্টমার সার্ভিসেস আরপিএল অ্যাসেসমেন্ট",
     },
      rating: 4.9,
@@ -712,7 +712,7 @@ export const courses = [
       keywords: ["IT Support Service RPL Assessment"],
     },
     thumbnail: {
-      src: "/RPL.jpg",
+      src: "/RPL/NSDA-এর-আওতায়-স্ব-অর্থায়নে-IT-Support-Service-Level-3.webp",
       alt: "আইটি সাপোর্ট সার্ভিস আরপিএল অ্যাসেসমেন্ট",
     },
      rating: 4.8,
@@ -776,7 +776,7 @@ export const courses = [
       keywords: ["Graphic Design RPL Assessment"],
     },
     thumbnail: {
-      src: "/RPL.jpg",
+      src: "/RPL/NSDA-এর-আওতায়-স্ব-অর্থায়নে-RPL-on-Graphic-Design-Level-3.webp",
       alt: "গ্রাফিক ডিজাইন আরপিএল অ্যাসেসমেন্ট",
     },
  rating: 4.8,
@@ -847,7 +847,7 @@ export const courses = [
     rating: 4.8,
     ratingCount: 120,
     thumbnail: {
-      src: "/RPL.jpg",
+      src: "/Industrial Attachment/Industrial-Attachment-in-Digital-Marketing.webp",
       alt: "ইন্ডাস্ট্রিয়াল অ্যাটাচমেন্ট ইন ডিজিটাল মার্কেটিং",
     },
     sections: [
@@ -1163,7 +1163,7 @@ export const courses = [
         "Diploma ও Polytechnic শিক্ষার্থীদের জন্য eShikhon-এ ৩ মাসের Industrial Attachment Training in Graphic Design। Graphic Design-এ হাতে-কলমে দক্ষতা অর্জন ও Industrial Training Certificate পাওয়ার সুযোগ।",
     },
     thumbnail: {
-      src: "/RPL.jpg",
+      src: "/Industrial Attachment/Industrial-Attachment-in-Graphic-Design.webp",
       alt: "ইন্ডাস্ট্রিয়াল অ্যাটাচমেন্ট ইন গ্রাফিক ডিজাইন",
     },
     rating: 4.9,
@@ -1343,7 +1343,7 @@ export const courses = [
         "Diploma ও Polytechnic শিক্ষার্থীদের জন্য eShikhon-এ ৩ মাসের Industrial Attachment Training in Ethical Hacking। Cyber Security ও Ethical Hacking-এ হাতে-কলমে দক্ষতা অর্জন ও Industrial Training Certificate পাওয়ার সুযোগ।",
     },
     thumbnail: {
-      src: "/RPL.jpg",
+      src: "/Industrial Attachment/Industrial-Attachment-in-Ethical-Hacking.webp",
       alt: "ইন্ডাস্ট্রিয়াল অ্যাটাচমেন্ট ইন এথিক্যাল হ্যাকিং",
     },
     rating: 4.7,
@@ -1521,7 +1521,7 @@ export const courses = [
         "Diploma ও Polytechnic শিক্ষার্থীদের জন্য eShikhon-এ ৩ মাসের Industrial Attachment Training in Web Design and Development। হাতে-কলমে দক্ষতা অর্জন ও Industrial Training Certificate পাওয়ার সুযোগ।",
     },
     thumbnail: {
-      src: "/RPL.jpg",
+      src: "/Industrial Attachment/Industrial-Attachment-in-Web-Design-and-Development.webp",
       alt: "ইন্ডাস্ট্রিয়াল অ্যাটাচমেন্ট ইন ওয়েব ডিজাইন অ্যান্ড ডেভেলপমেন্ট",
     },
     rating: 4.9,
@@ -1757,7 +1757,7 @@ export const courses = [
         "Diploma ও Polytechnic শিক্ষার্থীদের জন্য eShikhon-এ ৩ মাসের Industrial Attachment Training in AutoCAD। হাতে-কলমে CAD Drafting, Technical Drawing ও 3D Modeling শেখার এবং Industrial Training Certificate পাওয়ার সুযোগ।",
     },
     thumbnail: {
-      src: "/RPL.jpg",
+      src: "/Industrial Attachment/Industrial-Attachment-in-AutoCAD.webp",
       alt: "ইন্ডাস্ট্রিয়াল অ্যাটাচমেন্ট ইন অটোক্যাড",
     },
     rating: 4.6,
@@ -1946,7 +1946,7 @@ export const courses = [
         "Diploma ও Polytechnic শিক্ষার্থীদের জন্য eShikhon-এ ৩ মাসের Industrial Attachment Training in UI/UX Design। Figma, Wireframing ও Prototyping-এ হাতে-কলমে দক্ষতা অর্জন এবং Industrial Training Certificate পাওয়ার সুযোগ।",
     },
     thumbnail: {
-      src: "/RPL.jpg",
+      src: "/Industrial Attachment/Industrial-Attachment-in-UIUX-Design.webp",
       alt: "ইন্ডাস্ট্রিয়াল অ্যাটাচমেন্ট ইন ইউআই/ইউএক্স ডিজাইন",
     },
     rating: 4.8,

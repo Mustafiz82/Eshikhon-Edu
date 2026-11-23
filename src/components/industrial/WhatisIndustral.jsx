@@ -70,7 +70,7 @@ export default function WhatIsIndustrialAttachment() {
               {/* Photo Area */}
               <div className="relative w-full h-64 sm:h-72 rounded-2xl overflow-hidden bg-slate-100">
                 <img
-                  src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=900&q=80"
+                  src="/banner-section/What-is-Industrial-Attachment.webp"
                   alt="Industrial Attachment Engineering Students"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
@@ -79,11 +79,7 @@ export default function WhatIsIndustrialAttachment() {
                 />
 
                 {/* Floating dark banner over image */}
-                <div className="absolute inset-x-3 bottom-3 bg-[#092244]/90 backdrop-blur-sm text-white py-2.5 px-4 rounded-xl text-center shadow-lg">
-                  <p className="text-xs sm:text-sm font-semibold tracking-wide">
-                    নতুন সেশন ভর্তি চলছে (Admission Open 2026)
-                  </p>
-                </div>
+              
               </div>
             </div>
           </div>

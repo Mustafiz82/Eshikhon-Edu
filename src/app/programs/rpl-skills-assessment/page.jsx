@@ -53,7 +53,7 @@ const page = () => {
   return (
     <div>
       <CenterHeroBanner
-        imageUrl="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1600&auto=format&fit=crop"
+        imageUrl="/banner/banner.webp"
         title="RPL Skills Assessment"
         subtitle="আপনার কি কাজের অভিজ্ঞতা বা নিজের শেখা কোনো দক্ষতা আছে, কিন্তু সেই দক্ষতার স্বীকৃত সার্টিফিকেট নেই? RPL Skills Assessment-এর মাধ্যমে আপনার অর্জিত দক্ষতা মূল্যায়ন করে NSDA অনুমোদিত RPL Certificate পাওয়ার সুযোগ রয়েছে।"
         courseID={"#rpl-course"}

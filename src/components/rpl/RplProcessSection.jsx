@@ -1,4 +1,3 @@
-import React from "react";
 import {
   HiOutlineAcademicCap,
   HiOutlineDocumentText,
@@ -9,64 +8,64 @@ import {
   HiBolt,
 } from "react-icons/hi2";
 
-export default function RplProcessSection() {
-  const steps = [
-    {
-      id: 1,
-      step: "ধাপ ০১",
-      title: "আপনার স্কিল নির্বাচন করুন",
-      desc: "আপনার পূর্বের বাস্তব অভিজ্ঞতার সঙ্গে মেলে এমন নির্দিষ্ট Occupation ও Level বেছে নিন।",
-      theme: "teal",
-      icon: <HiOutlineAcademicCap className="text-xl" />,
-    },
-    {
-      id: 2,
-      step: "ধাপ ০২",
-      title: "যোগ্যতা যাচাই করুন",
-      desc: "সংশ্লিষ্ট Assessment-এর নির্ধারিত শর্তাবলি এবং প্রয়োজনীয় কাগজপত্র ঠিক আছে কি না দেখুন।",
-      theme: "teal",
-      icon: <HiOutlineDocumentText className="text-xl" />,
-    },
-    {
-      id: 3,
-      step: "ধাপ ০৩",
-      title: "আবেদন সম্পন্ন করুন",
-      desc: "নির্ধারিত প্ল্যাটফর্মে সঠিক নিয়মে ও প্রয়োজনীয় তথ্যাদিসহ আপনার আবেদন জমা দিন।",
-      theme: "teal",
-      icon: <HiOutlineDocumentCheck className="text-xl" />,
-    },
-    {
-      id: 4,
-      step: "ধাপ ০৪",
-      title: "Assessment-এর জন্য প্রস্তুত হন",
-      desc: "নির্ধারিত তারিখ, সময়, পরীক্ষা কেন্দ্র এবং কর্তৃপক্ষের প্রয়োজনীয় নির্দেশনা অনুসরণ করুন।",
-      theme: "orange",
-      icon: <HiOutlineClock className="text-xl" />,
-    },
-    {
-      id: 5,
-      step: "ধাপ ০৫",
-      title: "দক্ষতা মূল্যায়নে অংশ নিন",
-      desc: "অনুমোদিত Competency Standard অনুযায়ী প্র্যাকটিক্যাল কাজের মাধ্যমে নিজের দক্ষতা প্রদর্শন করুন।",
-      theme: "orange",
-      icon: <HiOutlineWrenchScrewdriver className="text-xl" />,
-    },
-    {
-      id: 6,
-      step: "ধাপ ০৬",
-      title: "ফলাফল ও সার্টিফিকেট অর্জন",
-      desc: "Assessment-এর ফলাফল এবং অফিসিয়াল সার্টিফিকেট পাওয়ার প্রক্রিয়া সংশ্লিষ্ট কর্তৃপক্ষের নিয়মে সম্পন্ন হবে।",
-      theme: "orange",
-      icon: <HiOutlineCheckBadge className="text-xl" />,
-    },
-  ];
+const steps = [
+  {
+    id: 1,
+    step: "ধাপ ০১",
+    title: "আপনার স্কিল নির্বাচন করুন",
+    desc: "আপনার পূর্বের বাস্তব অভিজ্ঞতার সঙ্গে মেলে এমন নির্দিষ্ট Occupation ও Level বেছে নিন।",
+    theme: "teal",
+    icon: <HiOutlineAcademicCap className="text-xl" aria-hidden="true" />,
+  },
+  {
+    id: 2,
+    step: "ধাপ ০২",
+    title: "যোগ্যতা যাচাই করুন",
+    desc: "সংশ্লিষ্ট Assessment-এর নির্ধারিত শর্তাবলি এবং প্রয়োজনীয় কাগজপত্র ঠিক আছে কি না দেখুন।",
+    theme: "teal",
+    icon: <HiOutlineDocumentText className="text-xl" aria-hidden="true" />,
+  },
+  {
+    id: 3,
+    step: "ধাপ ০৩",
+    title: "আবেদন সম্পন্ন করুন",
+    desc: "নির্ধারিত প্ল্যাটফর্মে সঠিক নিয়মে ও প্রয়োজনীয় তথ্যাদিসহ আপনার আবেদন জমা দিন।",
+    theme: "teal",
+    icon: <HiOutlineDocumentCheck className="text-xl" aria-hidden="true" />,
+  },
+  {
+    id: 4,
+    step: "ধাপ ০৪",
+    title: "Assessment-এর জন্য প্রস্তুত হন",
+    desc: "নির্ধারিত তারিখ, সময়, পরীক্ষা কেন্দ্র এবং কর্তৃপক্ষের প্রয়োজনীয় নির্দেশনা অনুসরণ করুন।",
+    theme: "orange",
+    icon: <HiOutlineClock className="text-xl" aria-hidden="true" />,
+  },
+  {
+    id: 5,
+    step: "ধাপ ০৫",
+    title: "দক্ষতা মূল্যায়নে অংশ নিন",
+    desc: "অনুমোদিত Competency Standard অনুযায়ী প্র্যাকটিক্যাল কাজের মাধ্যমে নিজের দক্ষতা প্রদর্শন করুন।",
+    theme: "orange",
+    icon: <HiOutlineWrenchScrewdriver className="text-xl" aria-hidden="true" />,
+  },
+  {
+    id: 6,
+    step: "ধাপ ০৬",
+    title: "ফলাফল ও সার্টিফিকেট অর্জন",
+    desc: "Assessment-এর ফলাফল এবং অফিসিয়াল সার্টিফিকেট পাওয়ার প্রক্রিয়া সংশ্লিষ্ট কর্তৃপক্ষের নিয়মে সম্পন্ন হবে।",
+    theme: "orange",
+    icon: <HiOutlineCheckBadge className="text-xl" aria-hidden="true" />,
+  },
+];
 
+export default function RplProcessSection() {
   return (
-    <section className="py-14 font-HindSiliguri bg-white">
+    <section className="py-14 font-HindSiliguri bg-white [content-visibility:auto] [contain-intrinsic-size:1px_650px]">
       <div className="max-w-6xl mx-auto px-4 text-center">
         {/* Top Badge */}
         <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-teal-50 border border-teal-200 text-teal-700 text-xs font-semibold tracking-wide mb-3">
-          <span className="w-2 h-2 rounded-full bg-teal-500"></span>
+          <span aria-hidden="true" className="w-2 h-2 rounded-full bg-teal-500" />
           ধাপে ধাপে সার্টিফিকেট অর্জনের পথ
         </div>
 
@@ -87,7 +86,7 @@ export default function RplProcessSection() {
             return (
               <div
                 key={item.id}
-                className={`bg-white p-6 rounded-2xl border transition-all duration-200 hover:-translate-y-1 hover:shadow-md flex flex-col justify-between ${
+                className={`bg-white p-6 rounded-2xl border transition-[transform,box-shadow,border-color] duration-200 hover:-translate-y-1 hover:shadow-md flex flex-col justify-between ${
                   isTeal
                     ? "border-teal-100 hover:border-teal-400"
                     : "border-orange-100 hover:border-orange-400"
@@ -133,16 +132,15 @@ export default function RplProcessSection() {
           })}
         </div>
 
-        {/* Bottom Note Bar (Matching WhatIsRPL Theme) */}
+        {/* Bottom Note Bar */}
         <div className="mt-8 inline-flex flex-col sm:flex-row items-center gap-2 px-5 py-3 rounded-xl bg-orange-50 border border-orange-200 text-xs sm:text-sm text-slate-700 shadow-sm text-center sm:text-left">
           <span className="font-bold text-orange-600 flex items-center gap-1.5 shrink-0">
-            <HiBolt className="text-base" /> সার্বিক সহায়তা:
+            <HiBolt className="text-base" aria-hidden="true" /> সার্বিক সহায়তা:
           </span>
           <span>
             আবেদন থেকে অ্যাসেসমেন্ট প্রস্তুতি পর্যন্ত যেকোনো প্রয়োজনে ইশিখন টিম আপনাকে সঠিক গাইডলাইন প্রদান করবে।
           </span>
         </div>
-
       </div>
     </section>
   );

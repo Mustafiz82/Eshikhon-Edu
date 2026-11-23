@@ -5,38 +5,40 @@ import {
   HiOutlineBookOpen,
 } from "react-icons/hi2";
 
-export default function RequiredDocuments() {
-  const documents = [
-    {
-      badge: "বাধ্যতামূলক",
-      label: "শিক্ষাগত প্রমাণপত্র",
-      title: "সনদ বা মার্কশিট",
-      theme: "teal",
-      icon: <HiOutlineDocumentText className="text-xl" />,
-      details: "SSC, HSC, অনার্স, ডিপ্লোমা বা সমমানের যেকোনো একটি শিক্ষাগত সনদ অথবা মার্কশিট।",
-    },
-    {
-      badge: "বাধ্যতামূলক",
-      label: "পরিচয় যাচাই",
-      title: "প্রার্থী ও পিতা-মাতার NID",
-      theme: "teal",
-      icon: <HiOutlineIdentification className="text-xl" />,
-      details: "আবেদনকারীর নিজস্ব জাতীয় পরিচয়পত্র এবং পিতা ও মাতা উভয়ের NID কার্ডের কপি।",
-    },
-    {
-      badge: "ঐচ্ছিক / বিকল্প",
-      label: "বিকল্প সুবিধা",
-      title: "পাসপোর্ট (Passport)",
-      theme: "orange",
-      icon: <HiOutlineBookOpen className="text-xl" />,
-      details: "পাসপোর্ট থাকা বাধ্যতামূলক নয়; তবে প্রয়োজন সাপেক্ষে সনদের বিকল্প হিসেবে ব্যবহারযোগ্য।",
-    },
-  ];
+const documents = [
+  {
+    badge: "বাধ্যতামূলক",
+    label: "শিক্ষাগত প্রমাণপত্র",
+    title: "সনদ বা মার্কশিট",
+    theme: "teal",
+    icon: <HiOutlineDocumentText className="text-xl" aria-hidden="true" />,
+    details:
+      "SSC, HSC, অনার্স, ডিপ্লোমা বা সমমানের যেকোনো একটি শিক্ষাগত সনদ অথবা মার্কশিট।",
+  },
+  {
+    badge: "বাধ্যতামূলক",
+    label: "পরিচয় যাচাই",
+    title: "প্রার্থী ও পিতা-মাতার NID",
+    theme: "teal",
+    icon: <HiOutlineIdentification className="text-xl" aria-hidden="true" />,
+    details:
+      "আবেদনকারীর নিজস্ব জাতীয় পরিচয়পত্র এবং পিতা ও মাতা উভয়ের NID কার্ডের কপি।",
+  },
+  {
+    badge: "ঐচ্ছিক / বিকল্প",
+    label: "বিকল্প সুবিধা",
+    title: "পাসপোর্ট (Passport)",
+    theme: "orange",
+    icon: <HiOutlineBookOpen className="text-xl" aria-hidden="true" />,
+    details:
+      "পাসপোর্ট থাকা বাধ্যতামূলক নয়; তবে প্রয়োজন সাপেক্ষে সনদের বিকল্প হিসেবে ব্যবহারযোগ্য।",
+  },
+];
 
+export default function RequiredDocuments() {
   return (
-    <section className="py-14 font-HindSiliguri bg-linear-to-b from-[#F8FAFC] via-[#F8FAFC] to-[#F1F5F9] text-slate-800">
+    <section className="py-14 font-HindSiliguri bg-linear-to-b from-[#F8FAFC] via-[#F8FAFC] to-[#F1F5F9] text-slate-800 [content-visibility:auto] [contain-intrinsic-size:1px_450px]">
       <div className="max-w-5xl mx-auto px-4 text-center">
-        
         {/* Section Heading */}
         <h2 className="text-2xl sm:text-3xl py-4 md:text-4xl font-extrabold tracking-tight text-transparent bg-clip-text bg-linear-to-b from-[#005776] to-[#008BB8]">
           প্রয়োজনীয় কাগজপত্র (Documents)
@@ -49,7 +51,7 @@ export default function RequiredDocuments() {
             return (
               <div
                 key={index}
-                className={`bg-white p-6 rounded-2xl border transition-all duration-200 hover:-translate-y-1 hover:shadow-md flex flex-col justify-between ${
+                className={`bg-white p-6 rounded-2xl border transition-[transform,box-shadow,border-color] duration-200 hover:-translate-y-1 hover:shadow-md flex flex-col justify-between ${
                   isTeal
                     ? "border-teal-100 hover:border-teal-400"
                     : "border-orange-100 hover:border-orange-400"
@@ -102,7 +104,6 @@ export default function RequiredDocuments() {
             );
           })}
         </div>
-
       </div>
     </section>
   );

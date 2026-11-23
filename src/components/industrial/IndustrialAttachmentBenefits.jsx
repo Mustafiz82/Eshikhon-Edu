@@ -2,21 +2,18 @@
 import {
   HiOutlineUserGroup,
   HiOutlineWrenchScrewdriver,
-  HiOutlineChatBubbleLeftRight,
   HiOutlineBuildingOffice2,
   HiOutlineBriefcase,
-  HiOutlineDocumentCheck,
   HiCheck,
 } from "react-icons/hi2";
 
-export default function IndustrialAttachmentBenefits() {
-  const benefits = [
+const benefits = [
   {
     num: "01",
     title: "Expert Mentorship & Guidance",
     tag: "Expert Support",
     theme: "teal",
-    icon: <HiOutlineUserGroup className="text-2xl" />,
+    icon: <HiOutlineUserGroup className="text-2xl" aria-hidden="true" />,
     points: [
       "Experienced software engineers ও tech professionals-এর কাছ থেকে সরাসরি guidance নিন",
       "One-to-one doubt solving, code review এবং individual progress tracking-এর মাধ্যমে skill improve করুন",
@@ -27,7 +24,7 @@ export default function IndustrialAttachmentBenefits() {
     title: "Real-World Hands-on Training",
     tag: "Practical Experience",
     theme: "orange",
-    icon: <HiOutlineWrenchScrewdriver className="text-2xl" />,
+    icon: <HiOutlineWrenchScrewdriver className="text-2xl" aria-hidden="true" />,
     points: [
       "শুধু theoretical learning নয়, real-world projects-এর মাধ্যমে practical skills develop করুন",
       "Clean coding, modern development practices এবং industry-standard workflow শিখুন",
@@ -38,7 +35,7 @@ export default function IndustrialAttachmentBenefits() {
     title: "Industry Exposure & Workshops",
     tag: "Industry Insight",
     theme: "teal",
-    icon: <HiOutlineBuildingOffice2 className="text-2xl" />,
+    icon: <HiOutlineBuildingOffice2 className="text-2xl" aria-hidden="true" />,
     points: [
       "Tech talks, workshops ও masterclasses-এর মাধ্যমে real industry সম্পর্কে practical ধারণা নিন",
       "Agile development, Git teamwork এবং professional workplace culture সম্পর্কে শিখুন",
@@ -49,7 +46,7 @@ export default function IndustrialAttachmentBenefits() {
     title: "Career Support & Certification",
     tag: "Career Ready",
     theme: "orange",
-    icon: <HiOutlineBriefcase className="text-2xl" />,
+    icon: <HiOutlineBriefcase className="text-2xl" aria-hidden="true" />,
     points: [
       "CV, portfolio ও mock interview preparation-এর মাধ্যমে job-এর জন্য নিজেকে প্রস্তুত করুন",
       "Program completion certificate এবং eligible students-এর জন্য career ও interview support পান",
@@ -57,16 +54,15 @@ export default function IndustrialAttachmentBenefits() {
   },
 ];
 
+export default function IndustrialAttachmentBenefits() {
   return (
-    <section className="py-16 font-HindSiliguri bg-[#F8FAFC] text-slate-800">
+    <section className="py-16 font-HindSiliguri bg-[#F8FAFC] text-slate-800 [content-visibility:auto] [contain-intrinsic-size:1px_600px]">
       <div className="max-w-5xl mx-auto px-4">
-        
         {/* Section Heading */}
         <div className="text-center mb-10">
           <h2 className="text-2xl py-2 sm:text-3xl md:text-4xl font-extrabold tracking-tight text-transparent bg-clip-text bg-linear-to-b from-[#005776] to-[#008BB8]">
-               আপনি কী কী সুবিধা পাবেন?
+            আপনি কী কী সুবিধা পাবেন?
           </h2>
-         
         </div>
 
         {/* 2-Column Responsive Grid */}
@@ -76,7 +72,7 @@ export default function IndustrialAttachmentBenefits() {
             return (
               <div
                 key={index}
-                className={`bg-white p-6 sm:p-7 rounded-2xl border transition-all duration-200 hover:-translate-y-1 hover:shadow-md relative overflow-hidden flex flex-col justify-between ${
+                className={`bg-white p-6 sm:p-7 rounded-2xl border transition-[transform,box-shadow,border-color] duration-200 hover:-translate-y-1 hover:shadow-md relative overflow-hidden flex flex-col justify-between ${
                   isTeal
                     ? "border-teal-100 hover:border-teal-400"
                     : "border-orange-100 hover:border-orange-400"
@@ -130,7 +126,7 @@ export default function IndustrialAttachmentBenefits() {
                               : "bg-orange-100 text-orange-700"
                           }`}
                         >
-                          <HiCheck className="w-3 h-3" />
+                          <HiCheck className="w-3 h-3" aria-hidden="true" />
                         </span>
                         <span>{point}</span>
                       </li>
@@ -141,7 +137,6 @@ export default function IndustrialAttachmentBenefits() {
             );
           })}
         </div>
-
       </div>
     </section>
   );

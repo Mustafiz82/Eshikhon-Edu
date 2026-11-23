@@ -567,7 +567,7 @@ export const courses = [
     },
     action: {
       type: "apply",
-      link: "https://docs.google.com/forms/d/e/your-rpl-form-id/viewform",
+      link: "https://docs.google.com/forms/d/e/1FAIpQLSduRjHui6GMcNYEtvf4YqOpdVYi8nw_TqHHzEamK4WPm1EKLw/viewform",
     },
   },
   // web-design-dev-freelancing
@@ -631,7 +631,7 @@ export const courses = [
     },
     action: {
       type: "apply",
-      link: "https://docs.google.com/forms/d/e/your-rpl-form-id/viewform",
+      link: "https://docs.google.com/forms/d/e/1FAIpQLSduRjHui6GMcNYEtvf4YqOpdVYi8nw_TqHHzEamK4WPm1EKLw/viewform",
     },
   },
   // professional-customer-services
@@ -695,7 +695,7 @@ export const courses = [
     action: {
       type: "apply",
       label: "Assessment-এর জন্য আবেদন করুন",
-      link: "https://docs.google.com/forms/d/e/your-rpl-form-id/viewform",
+      link: "https://docs.google.com/forms/d/e/1FAIpQLSduRjHui6GMcNYEtvf4YqOpdVYi8nw_TqHHzEamK4WPm1EKLw/viewform",
     },
   },
   // it-support-service
@@ -759,7 +759,7 @@ export const courses = [
     action: {
       type: "apply",
       label: "Assessment-এর জন্য আবেদন করুন",
-      link: "https://docs.google.com/forms/d/e/your-rpl-form-id/viewform",
+      link: "https://docs.google.com/forms/d/e/1FAIpQLSduRjHui6GMcNYEtvf4YqOpdVYi8nw_TqHHzEamK4WPm1EKLw/viewform",
     },
   },
   // graphic-design-rpl
@@ -823,7 +823,7 @@ export const courses = [
     action: {
       type: "apply",
       label: "Assessment-এর জন্য আবেদন করুন",
-      link: "https://docs.google.com/forms/d/e/your-rpl-form-id/viewform",
+      link: "https://docs.google.com/forms/d/e/1FAIpQLSduRjHui6GMcNYEtvf4YqOpdVYi8nw_TqHHzEamK4WPm1EKLw/viewform",
     },
   },
 

@@ -5,7 +5,6 @@ import IndustrialAttachMent from "@/components/Home/IndustrialAttachMent";
 import Partners from "@/components/Home/Partners";
 import RPL from "@/components/Home/RPL";
 import SuccessStories from "@/components/Home/SuccessStory";
-import Image from "next/image";
 
 export default function Home() {
   return (

@@ -7,58 +7,57 @@ import {
   HiCheck,
 } from "react-icons/hi2";
 
-export default function WhatYouWillGet() {
-  const benefits = [
-    {
-      num: "০১",
-      title: "সম্পূর্ণ ফ্রি কোর্স",
-      tag: "১০০% স্কলারশিপ",
-      theme: "teal",
-      icon: <HiOutlineSparkles className="text-2xl" />,
-      points: [
-        "৩ মাসের এই বিশেষ কোর্সে কোনো কোর্স ফি নেই",
-        "ক্লাস ও স্টাডি ম্যাটেরিয়াল সম্পূর্ণ বিনামূল্যে প্রদান",
-      ],
-    },
-    {
-      num: "০২",
-      title: "NSDA Certificate",
-      tag: "সরকারি অনুমোদন",
-      theme: "orange",
-      icon: <HiOutlineDocumentCheck className="text-2xl" />,
-      points: [
-        "Government approved অফিসিয়াল স্কিল সার্টিফিকেশন",
-        "Instructor বা ট্রেইনার হতে সাহায্য করে (অনেক প্রতিষ্ঠানে এটি বাধ্যতামূলক)",
-      ],
-    },
-    {
-      num: "০৩",
-      title: "মাসিক ভাতা (Stipend)",
-      tag: "সর্বমোট ~২০,০০০ টাকা পর্যন্ত",
-      theme: "teal",
-      icon: <HiOutlineBanknotes className="text-2xl" />,
-      points: [
-        "প্রতি মাসে আনুমানিক ১,৫০০ – ২,০০০ টাকা সরাসরি ভাতা",
-        "যাতায়াত ও শিক্ষা উপকরণসহ সর্বমোট প্রায় ২০,০০০ টাকার সমমূল্যের সুবিধা",
-      ],
-    },
-    {
-      num: "০৪",
-      title: "ভবিষ্যতে ইনকাম ও ক্যারিয়ার সুযোগ",
-      tag: "কর্মসংস্থান সাপোর্ট",
-      theme: "orange",
-      icon: <HiOutlineArrowTrendingUp className="text-2xl" />,
-      points: [
-        "কোর্স শেষেই ফ্রিল্যান্সিং ও রিমোট কাজ শুরু করার বাস্তব গাইডলাইন",
-        "দক্ষতার ভিত্তিতে পরবর্তীতে Mentor হিসেবে কাজের সুযোগ",
-      ],
-    },
-  ];
+const benefits = [
+  {
+    num: "০১",
+    title: "সম্পূর্ণ ফ্রি কোর্স",
+    tag: "১০০% স্কলারশিপ",
+    theme: "teal",
+    icon: <HiOutlineSparkles className="text-2xl" aria-hidden="true" />,
+    points: [
+      "৩ মাসের এই বিশেষ কোর্সে কোনো কোর্স ফি নেই",
+      "ক্লাস ও স্টাডি ম্যাটেরিয়াল সম্পূর্ণ বিনামূল্যে প্রদান",
+    ],
+  },
+  {
+    num: "০২",
+    title: "NSDA Certificate",
+    tag: "সরকারি অনুমোদন",
+    theme: "orange",
+    icon: <HiOutlineDocumentCheck className="text-2xl" aria-hidden="true" />,
+    points: [
+      "Government approved অফিসিয়াল স্কিল সার্টিফিকেশন",
+      "Instructor বা ট্রেইনার হতে সাহায্য করে (অনেক প্রতিষ্ঠানে এটি বাধ্যতামূলক)",
+    ],
+  },
+  {
+    num: "০৩",
+    title: "মাসিক ভাতা (Stipend)",
+    tag: "সর্বমোট ~২০,০০০ টাকা পর্যন্ত",
+    theme: "teal",
+    icon: <HiOutlineBanknotes className="text-2xl" aria-hidden="true" />,
+    points: [
+      "প্রতি মাসে আনুমানিক ১,৫০০ – ২,০০০ টাকা সরাসরি ভাতা",
+      "যাতায়াত ও শিক্ষা উপকরণসহ সর্বমোট প্রায় ২০,০০০ টাকার সমমূল্যের সুবিধা",
+    ],
+  },
+  {
+    num: "০৪",
+    title: "ভবিষ্যতে ইনকাম ও ক্যারিয়ার সুযোগ",
+    tag: "কর্মসংস্থান সাপোর্ট",
+    theme: "orange",
+    icon: <HiOutlineArrowTrendingUp className="text-2xl" aria-hidden="true" />,
+    points: [
+      "কোর্স শেষেই ফ্রিল্যান্সিং ও রিমোট কাজ শুরু করার বাস্তব গাইডলাইন",
+      "দক্ষতার ভিত্তিতে পরবর্তীতে Mentor হিসেবে কাজের সুযোগ",
+    ],
+  },
+];
 
+export default function WhatYouWillGet() {
   return (
-    <section className="py-16 font-HindSiliguri bg-[#F8FAFC] text-slate-800">
+    <section className="py-16 font-HindSiliguri bg-[#F8FAFC] text-slate-800 [content-visibility:auto] [contain-intrinsic-size:1px_600px]">
       <div className="max-w-5xl mx-auto px-4">
-        
         {/* Section Heading */}
         <div className="text-center mb-10">
           <h2 className="text-2xl py-4 sm:text-3xl md:text-4xl font-extrabold tracking-tight text-transparent bg-clip-text bg-linear-to-b from-[#005776] to-[#008BB8]">
@@ -73,7 +72,7 @@ export default function WhatYouWillGet() {
             return (
               <div
                 key={index}
-                className={`bg-white p-6 sm:p-7 rounded-2xl border transition-all duration-200 hover:-translate-y-1 hover:shadow-md relative overflow-hidden flex flex-col justify-between ${
+                className={`bg-white p-6 sm:p-7 rounded-2xl border transition-[transform,box-shadow,border-color] duration-200 hover:-translate-y-1 hover:shadow-md relative overflow-hidden flex flex-col justify-between ${
                   isTeal
                     ? "border-teal-100 hover:border-teal-400"
                     : "border-orange-100 hover:border-orange-400"
@@ -127,7 +126,7 @@ export default function WhatYouWillGet() {
                               : "bg-orange-100 text-orange-700"
                           }`}
                         >
-                          <HiCheck className="w-3 h-3" />
+                          <HiCheck className="w-3 h-3" aria-hidden="true" />
                         </span>
                         <span>{point}</span>
                       </li>
@@ -138,7 +137,6 @@ export default function WhatYouWillGet() {
             );
           })}
         </div>
-
       </div>
     </section>
   );

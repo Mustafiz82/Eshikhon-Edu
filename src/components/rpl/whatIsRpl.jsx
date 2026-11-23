@@ -6,37 +6,37 @@ import {
   HiBolt,
 } from "react-icons/hi2";
 
-export default function WhatIsRPL() {
-  const cards = [
-    {
-      label: "মূল ধারণা",
-      title: "পূর্ব অভিজ্ঞতার সরাসরি স্বীকৃতি",
-      sub: "কাজ করে বা নিজে নিজে শেখা পূর্বের বাস্তব দক্ষতাকে প্রাতিষ্ঠানিক সনদে রূপান্তর করা।",
-      theme: "teal",
-      icon: <HiOutlineAcademicCap className="text-xl" />,
-    },
-    {
-      label: "মূল্যায়ন পদ্ধতি",
-      title: "হাতে-কলমে প্র্যাকটিক্যাল অ্যাসেসমেন্ট",
-      sub: "অনুমোদিত সেন্টারে জাতীয় দক্ষতা কাঠামোর (NTVQF) মান অনুযায়ী বাস্তব কাজের মূল্যায়ন।",
-      theme: "teal",
-      icon: <HiOutlineWrenchScrewdriver className="text-xl" />,
-    },
-    {
-      label: "সনদ ও কর্তৃপক্ষ",
-      title: "NSDA জাতীয় সনদ",
-      sub: "উত্তীর্ণ প্রার্থীরা পাচ্ছেন সরকার স্বীকৃত অফিসিয়াল সার্টিফিকেট, যা দেশ-বিদেশে সমাদৃত।",
-      theme: "orange",
-      icon: <HiOutlineCheckBadge className="text-xl" />,
-    },
-  ];
+const cards = [
+  {
+    label: "মূল ধারণা",
+    title: "পূর্ব অভিজ্ঞতার সরাসরি স্বীকৃতি",
+    sub: "কাজ করে বা নিজে নিজে শেখা পূর্বের বাস্তব দক্ষতাকে প্রাতিষ্ঠানিক সনদে রূপান্তর করা।",
+    theme: "teal",
+    icon: <HiOutlineAcademicCap className="text-xl" aria-hidden="true" />,
+  },
+  {
+    label: "মূল্যায়ন পদ্ধতি",
+    title: "হাতে-কলমে প্র্যাকটিক্যাল অ্যাসেসমেন্ট",
+    sub: "অনুমোদিত সেন্টারে জাতীয় দক্ষতা কাঠামোর (NTVQF) মান অনুযায়ী বাস্তব কাজের মূল্যায়ন।",
+    theme: "teal",
+    icon: <HiOutlineWrenchScrewdriver className="text-xl" aria-hidden="true" />,
+  },
+  {
+    label: "সনদ ও কর্তৃপক্ষ",
+    title: "NSDA জাতীয় সনদ",
+    sub: "উত্তীর্ণ প্রার্থীরা পাচ্ছেন সরকার স্বীকৃত অফিসিয়াল সার্টিফিকেট, যা দেশ-বিদেশে সমাদৃত।",
+    theme: "orange",
+    icon: <HiOutlineCheckBadge className="text-xl" aria-hidden="true" />,
+  },
+];
 
+export default function WhatIsRPL() {
   return (
-    <section className="py-14 font-HindSiliguri bg-linear-to-b from-[#F8FAFC] via-[#F8FAFC] to-[#F1F5F9] text-slate-800">
+    <section className="py-14 font-HindSiliguri bg-linear-to-b from-[#F8FAFC] via-[#F8FAFC] to-[#F1F5F9] text-slate-800 [content-visibility:auto] [contain-intrinsic-size:1px_520px]">
       <div className="max-w-5xl mx-auto px-4 text-center">
         {/* Top Badge */}
         <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-teal-50 border border-teal-200 text-teal-700 text-xs font-semibold tracking-wide mb-3">
-          <span className="w-2 h-2 rounded-full bg-teal-500"></span>
+          <span aria-hidden="true" className="w-2 h-2 rounded-full bg-teal-500" />
           দক্ষতা মূল্যায়ন ও জাতীয় প্রত্যয়ন
         </div>
 
@@ -63,7 +63,7 @@ export default function WhatIsRPL() {
             return (
               <div
                 key={index}
-                className={`bg-white p-6 rounded-2xl border transition-all duration-200 hover:-translate-y-1 hover:shadow-md ${
+                className={`bg-white p-6 rounded-2xl border transition-[transform,box-shadow,border-color] duration-200 hover:-translate-y-1 hover:shadow-md ${
                   isTeal
                     ? "border-teal-100 hover:border-teal-400"
                     : "border-orange-100 hover:border-orange-400"
@@ -106,7 +106,7 @@ export default function WhatIsRPL() {
         {/* eShikhon Note Bar */}
         <div className="mt-8 inline-flex flex-col sm:flex-row items-center gap-2 px-5 py-3 rounded-xl bg-orange-50 border border-orange-200 text-xs sm:text-sm text-slate-700 shadow-sm text-center sm:text-left">
           <span className="font-bold text-orange-600 flex items-center gap-1 shrink-0">
-            <HiBolt className="text-base" /> ইশিখনের ভূমিকা:
+            <HiBolt className="text-base" aria-hidden="true" /> ইশিখনের ভূমিকা:
           </span>
           <span>
             ইশিখন.কম বর্তমানে নির্বাচিত ৫টি বিষয়ে জাতীয় লেভেল-৩ (Level 3) RPL

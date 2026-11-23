@@ -1,38 +1,26 @@
-import React from "react";
 import Image from "next/image";
-import {
-  FaGraduationCap,
-  FaBriefcase,
-  FaShieldHalved,
-  FaCertificate,
-  FaFlask,
-  FaArrowRight,
-  FaUsers,
-  FaAward,
-  FaBookOpen,
-  FaComputer,
-} from "react-icons/fa6";
-import { BsPatchCheckFill } from "react-icons/bs";
+import { FaArrowRight, FaComputer } from "react-icons/fa6";
 import { HiAcademicCap, HiBookOpen } from "react-icons/hi2";
-import { HiOfficeBuilding } from "react-icons/hi";
-import {
-  HiShieldCheck,
-  HiBadgeCheck,
-  HiCurrencyBangladeshi,
-} from "react-icons/hi";
+import { HiOfficeBuilding, HiShieldCheck, HiBadgeCheck } from "react-icons/hi";
 
 export default function Banner() {
   return (
     <section className="relative w-full bg-[#F4F8FC] py-12 md:py-20 px-4 sm:px-6 lg:px-12 flex items-center justify-center overflow-hidden">
-      {/* Decorative Background Ambient Glows */}
-      <div className="absolute -top-24 -left-24 w-96 h-96 bg-sky-200/40 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute top-1/2 -right-20 w-80 h-80 bg-orange-100/40 rounded-full blur-3xl pointer-events-none" />
+      {/* Decorative Background Ambient Glows (Radial gradients instead of heavy blur-3xl) */}
+      {/* <div
+        aria-hidden="true"
+        className="absolute -top-32 -left-32 w-[28rem] h-[28rem] rounded-full pointer-events-none bg-[radial-gradient(circle,rgba(186,230,253,0.45)_0%,transparent_70%)]"
+      />
+      <div
+        aria-hidden="true"
+        className="absolute top-1/2 -right-28 w-[24rem] h-[24rem] rounded-full pointer-events-none bg-[radial-gradient(circle,rgba(255,237,213,0.5)_0%,transparent_70%)]"
+      /> */}
 
       <div className="relative max-w-7xl w-full grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
         {/* ================= LEFT CONTENT ================= */}
         <div className="lg:col-span-7 flex flex-col items-start gap-6">
           {/* Top Gov Badge */}
-          <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white border border-sky-100 shadow-sm text-[#0A3A5E] text-xs sm:text-sm font-semibold transition-transform hover:scale-[1.02]">
+          <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white border border-sky-100 shadow-sm text-[#0A3A5E] text-xs sm:text-sm font-semibold transition-transform duration-200 hover:scale-[1.02]">
             <span className="bg-[#D97706] hidden md:block text-white text-[10px] font-extrabold px-2 py-0.5 rounded-full uppercase tracking-wider shadow-xs">
               BD GOV
             </span>
@@ -54,8 +42,6 @@ export default function Banner() {
             নতুন দক্ষতা অর্জন হোক বা পূর্বের দক্ষতার স্বীকৃতি, আপনার{" "}
             <br className="hidden sm:inline" /> ক্যারিয়ারে এগিয়ে যাওয়ার
             প্রয়োজনীয় সুযোগ এক জায়গায়।
-            {/* আপনার দক্ষতা ও ক্যারিয়ারের জন্য সরকারি স্বীকৃত 
-            প্রফেশনাল কোর্স ও সার্টিফিকেশন */}
           </h2>
 
           {/* Description */}
@@ -73,24 +59,42 @@ export default function Banner() {
 
           {/* Action Pills / Buttons */}
           <div className="flex flex-wrap items-center gap-3 pt-1 w-full">
-            {/* Primary Action Button (Featured) - Using a Book/Course Icon */}
-            <button className="group flex items-center gap-2.5 px-5 py-3 rounded-xl bg-linear-to-b from-[#EA580C] to-[#D97706] hover:from-[#C2410C] hover:to-[#B45309] text-white font-semibold text-sm transition-all duration-300 shadow-md shadow-orange-950/15 hover:shadow-lg hover:-translate-y-0.5">
-              <HiBookOpen className="text-lg text-orange-100" />
+            <button
+              type="button"
+              className="group flex items-center gap-2.5 px-5 py-3 rounded-xl bg-linear-to-b from-[#EA580C] to-[#D97706] hover:from-[#C2410C] hover:to-[#B45309] text-white font-semibold text-sm transition-[transform,box-shadow] duration-300 shadow-md shadow-orange-950/15 hover:shadow-lg hover:-translate-y-0.5"
+            >
+              <HiBookOpen
+                className="text-lg text-orange-100"
+                aria-hidden="true"
+              />
               <span>ASSET Project Training</span>
-              <FaArrowRight className="text-xs opacity-70 group-hover:translate-x-1 transition-transform" />
+              <FaArrowRight
+                className="text-xs opacity-70 group-hover:translate-x-1 transition-transform duration-300"
+                aria-hidden="true"
+              />
             </button>
 
-            {/* RPL Certificate - Using a Badge/Award Icon */}
-            <button className="flex items-center gap-2.5 px-4 py-3 rounded-xl bg-white hover:bg-sky-50 border border-sky-100 text-[#024B68] font-medium text-sm transition-all shadow-xs hover:-translate-y-0.5">
-              <HiAcademicCap className="text-base text-[#007096]" />
+            <button
+              type="button"
+              className="flex items-center gap-2.5 px-4 py-3 rounded-xl bg-white hover:bg-sky-50 border border-sky-100 text-[#024B68] font-medium text-sm transition-[transform,background-color] duration-200 shadow-xs hover:-translate-y-0.5"
+            >
+              <HiAcademicCap
+                className="text-base text-[#007096]"
+                aria-hidden="true"
+              />
               <span className="font-HindSiliguri font-semibold">
                 RPL Certificate
               </span>
             </button>
 
-            {/* Industrial Attachment - Using a Building/Industry Icon */}
-            <button className="flex items-center gap-2.5 px-4 py-3 rounded-xl bg-white hover:bg-sky-50 border border-sky-100 text-[#024B68] font-medium text-sm transition-all shadow-xs hover:-translate-y-0.5">
-              <HiOfficeBuilding className="text-base text-[#007096]" />
+            <button
+              type="button"
+              className="flex items-center gap-2.5 px-4 py-3 rounded-xl bg-white hover:bg-sky-50 border border-sky-100 text-[#024B68] font-medium text-sm transition-[transform,background-color] duration-200 shadow-xs hover:-translate-y-0.5"
+            >
+              <HiOfficeBuilding
+                className="text-base text-[#007096]"
+                aria-hidden="true"
+              />
               <span className="font-HindSiliguri font-semibold">
                 Industrial Attachment
               </span>
@@ -98,32 +102,38 @@ export default function Banner() {
           </div>
 
           {/* Bottom Features Strip */}
-
-          <div className="flex flex-wrap items-center gap-2 sm:gap-6 pt-3 text-xs sm:text-sm font-semibold font-HindSiliguri text-[#004B63] bg-white/70 backdrop-blur-xs p-3 rounded-xl border border-sky-50 w-full sm:w-auto">
-            {/* NSDA Approved */}
+          <div className="flex flex-wrap items-center gap-2 sm:gap-6 pt-3 text-xs sm:text-sm font-semibold font-HindSiliguri text-[#004B63] bg-white/85 p-3 rounded-xl border border-sky-50 w-full sm:w-auto">
             <div className="flex items-center gap-2">
               <div className="p-1 rounded-md bg-sky-50 text-[#007096]">
-                <HiShieldCheck className="text-base" />
+                <HiShieldCheck className="text-base" aria-hidden="true" />
               </div>
               <span>NSDA Approved Training</span>
             </div>
 
-            <span className="hidden sm:inline text-slate-300 font-bold">•</span>
+            <span
+              aria-hidden="true"
+              className="hidden sm:inline text-slate-300 font-bold"
+            >
+              •
+            </span>
 
-            {/* Government Certificate */}
             <div className="flex items-center gap-2">
               <div className="p-1 rounded-md bg-sky-50 text-[#007096]">
-                <HiBadgeCheck className="text-base" />
+                <HiBadgeCheck className="text-base" aria-hidden="true" />
               </div>
               <span>Government Skills Certificate</span>
             </div>
 
-            <span className="hidden sm:inline text-slate-300 font-bold">•</span>
+            <span
+              aria-hidden="true"
+              className="hidden sm:inline text-slate-300 font-bold"
+            >
+              •
+            </span>
 
-            {/* Free Skills Training */}
             <div className="flex items-center gap-2">
               <div className="p-1 rounded-md bg-sky-50 text-[#007096]">
-                <FaComputer className="text-base" />
+                <FaComputer className="text-base" aria-hidden="true" />
               </div>
               <span>Free Skills Training</span>
             </div>
@@ -132,28 +142,23 @@ export default function Banner() {
 
         {/* ================= RIGHT CARD ================= */}
         <div className="lg:col-span-5 w-full">
-          <div className="relative bg-white/90 backdrop-blur-md p-4 sm:p-5 rounded-3xl shadow-xl shadow-slate-200/60 border border-white/80 transition-all hover:shadow-2xl hover:shadow-slate-300/60">
-            {/* Image Container with Floating Admission Tag */}
+          <div className="relative bg-white/95 p-4 sm:p-5 rounded-3xl shadow-xl shadow-slate-200/60 border border-white/80 transition-shadow duration-300 hover:shadow-2xl hover:shadow-slate-300/60">
+            {/* Image Container */}
             <div className="relative w-full h-64 sm:h-72 md:h-80 rounded-2xl overflow-hidden group shadow-inner">
-              <img
+              <Image
                 src="/banner-section/দক্ষতা-অর্জন-করুন.webp"
                 alt="Students in Robotics and Engineering Lab"
                 fill
                 priority
-                sizes="(max-width: 768px) 100vw, 500px"
+                fetchPriority="high"
+                sizes="(max-width: 1023px) 92vw, 500px"
                 className="object-cover brightness-120 object-center group-hover:scale-105 transition-transform duration-700 ease-out"
               />
-
-              {/* Bottom Admission Strip with Glassmorphism */}
-              {/* <div className="absolute bottom-3 left-3 right-3 py-2.5 px-4 rounded-xl bg-slate-900/80 backdrop-blur-md border border-white/20 flex items-center justify-center gap-2.5 text-white text-xs sm:text-sm font-medium font-HindSiliguri shadow-lg">
-                <span>নতুন সেশন ভর্তি চলছে (Admission Open 2026)</span>
-              </div> */}
             </div>
 
             {/* 3 Modern Stats Boxes */}
             <div className="grid grid-cols-3 gap-3 pt-3">
-              {/* Stat 1 */}
-              <div className="group/stat bg-[#F4F9FD] hover:bg-[#EBF4FC] transition-colors rounded-2xl py-3 px-2 text-center flex flex-col items-center justify-center border border-sky-50">
+              <div className="bg-[#F4F9FD] hover:bg-[#EBF4FC] transition-colors rounded-2xl py-3 px-2 text-center flex flex-col items-center justify-center border border-sky-50">
                 <span className="text-base sm:text-xl font-extrabold text-[#005776] font-HindSiliguri">
                   ১.৫ লাখ+
                 </span>
@@ -162,8 +167,7 @@ export default function Banner() {
                 </span>
               </div>
 
-              {/* Stat 2 */}
-              <div className="group/stat bg-[#F4F9FD] hover:bg-[#EBF4FC] transition-colors rounded-2xl py-3 px-2 text-center flex flex-col items-center justify-center border border-sky-50">
+              <div className="bg-[#F4F9FD] hover:bg-[#EBF4FC] transition-colors rounded-2xl py-3 px-2 text-center flex flex-col items-center justify-center border border-sky-50">
                 <span className="text-base sm:text-xl font-extrabold text-[#005776] font-HindSiliguri">
                   ৯৫%
                 </span>
@@ -172,8 +176,7 @@ export default function Banner() {
                 </span>
               </div>
 
-              {/* Stat 3 */}
-              <div className="group/stat bg-[#F4F9FD] hover:bg-[#EBF4FC] transition-colors rounded-2xl py-3 px-2 text-center flex flex-col items-center justify-center border border-sky-50">
+              <div className="bg-[#F4F9FD] hover:bg-[#EBF4FC] transition-colors rounded-2xl py-3 px-2 text-center flex flex-col items-center justify-center border border-sky-50">
                 <span className="text-base sm:text-xl font-extrabold text-[#005776] font-HindSiliguri">
                   ৪০+
                 </span>

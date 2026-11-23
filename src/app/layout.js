@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono, Roboto, Poppins ,  Hind_Siliguri } from "next/font/google";
+import { Geist, Hind_Siliguri } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/shared/Nav";
 import Footer from "@/shared/Footer";
@@ -6,32 +6,15 @@ import Footer from "@/shared/Footer";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: "swap",
 });
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-// Configure Roboto font (Requires specifying weights)
-const roboto = Roboto({
-  variable: "--font-roboto",
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
-});
-
-// Configure Poppins font (Requires specifying weights)
-const poppins = Poppins({
-  variable: "--font-poppins",
-  subsets: ["latin"],
-  weight: ["400", "600", "700"],
-});
-
 
 const HindSiliguri = Hind_Siliguri({
   variable: "--font-hind-silliguri",
   subsets: ["bengali"],
   weight: ["400", "600", "700"],
+  display: "swap",
+  preload: true,
 });
 
 export const metadata = {
@@ -52,20 +35,19 @@ export const metadata = {
     url: "https://eshikhon.edu.bd/",
     siteName: "eShikhon",
     locale: "bn_BD",
-    type: "website",
   },
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html 
-      lang="en" 
-      className={`${geistSans.variable} ${geistMono.variable} ${roboto.variable} ${poppins.variable} ${HindSiliguri.variable} h-full antialiased`}
+    <html
+      lang="bn"
+      className={`${geistSans.variable} ${HindSiliguri.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col font-HindSiliguri">
         <Navbar />
         {children}
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );

@@ -6,42 +6,41 @@ import {
   HiOutlineLightBulb,
 } from "react-icons/hi2";
 
-export default function WhoCanApply() {
-  const criteria = [
-    {
-      label: "বয়সসীমা",
-      title: "১৮ – ৪০ বছর",
-      sub: "যেকোনো বাংলাদেশি নাগরিক আবেদন করতে পারবেন",
-      theme: "teal",
-      icon: <HiOutlineIdentification className="text-xl" />,
-    },
-    {
-      label: "শিক্ষাগত যোগ্যতা",
-      title: "HSC বা সমমান পাস",
-      sub: "এইচএসসি বা তদূর্ধ্ব যেকোনো ডিগ্রির শিক্ষার্থী",
-      theme: "orange",
-      icon: <HiOutlineAcademicCap className="text-xl" />,
-    },
-    {
-      label: "প্রযুক্তিগত দক্ষতা",
-      title: "কম্পিউটার বেসিক জ্ঞান",
-      sub: "কম্পিউটার পরিচালনা ও ইন্টারনেটের প্রাথমিক ধারণা",
-      theme: "teal",
-      icon: <HiOutlineComputerDesktop className="text-xl" />,
-    },
-    {
-      label: "অগ্রাধিকার",
-      title: "কোর্সের বেসিক ধারণা",
-      sub: "নির্বাচিত কোর্সের উপর প্রাথমিক জ্ঞান থাকলে ভালো",
-      theme: "orange",
-      icon: <HiOutlineLightBulb className="text-xl" />,
-    },
-  ];
+const criteria = [
+  {
+    label: "বয়সসীমা",
+    title: "১৮ – ৪০ বছর",
+    sub: "যেকোনো বাংলাদেশি নাগরিক আবেদন করতে পারবেন",
+    theme: "teal",
+    icon: <HiOutlineIdentification className="text-xl" aria-hidden="true" />,
+  },
+  {
+    label: "শিক্ষাগত যোগ্যতা",
+    title: "HSC বা সমমান পাস",
+    sub: "এইচএসসি বা তদূর্ধ্ব যেকোনো ডিগ্রির শিক্ষার্থী",
+    theme: "orange",
+    icon: <HiOutlineAcademicCap className="text-xl" aria-hidden="true" />,
+  },
+  {
+    label: "প্রযুক্তিগত দক্ষতা",
+    title: "কম্পিউটার বেসিক জ্ঞান",
+    sub: "কম্পিউটার পরিচালনা ও ইন্টারনেটের প্রাথমিক ধারণা",
+    theme: "teal",
+    icon: <HiOutlineComputerDesktop className="text-xl" aria-hidden="true" />,
+  },
+  {
+    label: "অগ্রাধিকার",
+    title: "কোর্সের বেসিক ধারণা",
+    sub: "নির্বাচিত কোর্সের উপর প্রাথমিক জ্ঞান থাকলে ভালো",
+    theme: "orange",
+    icon: <HiOutlineLightBulb className="text-xl" aria-hidden="true" />,
+  },
+];
 
+export default function WhoCanApply() {
   return (
-    <section className="py-14 font-HindSiliguri bg-linear-to-b from-[#F8FAFC] via-[#F8FAFC] to-[#F1F5F9] text-slate-800">
+    <section className="py-14 font-HindSiliguri bg-linear-to-b from-[#F8FAFC] via-[#F8FAFC] to-[#F1F5F9] text-slate-800 [content-visibility:auto] [contain-intrinsic-size:1px_420px]">
       <div className="max-w-6xl mx-auto px-4 text-center">
-        
         {/* Section Heading */}
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-transparent bg-clip-text bg-linear-to-b from-[#005776] to-[#008BB8]">
           কারা আবেদন করতে পারবেন?
@@ -54,7 +53,7 @@ export default function WhoCanApply() {
             return (
               <div
                 key={index}
-                className={`bg-white p-6 rounded-2xl border transition-all duration-200 hover:-translate-y-1 hover:shadow-md ${
+                className={`bg-white p-6 rounded-2xl border transition-[transform,box-shadow,border-color] duration-200 hover:-translate-y-1 hover:shadow-md ${
                   isTeal
                     ? "border-teal-100 hover:border-teal-400"
                     : "border-orange-100 hover:border-orange-400"
@@ -93,7 +92,6 @@ export default function WhoCanApply() {
             );
           })}
         </div>
-
       </div>
     </section>
   );

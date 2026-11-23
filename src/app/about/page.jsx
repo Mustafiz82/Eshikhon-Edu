@@ -1,6 +1,3 @@
-
-
-import React from "react";
 import {
   HiOutlineSparkles,
   HiOutlineRocketLaunch,
@@ -10,6 +7,7 @@ import {
   HiOutlineCheck,
 } from "react-icons/hi2";
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa6";
+import Image from "next/image";
 
 export const metadata = {
   title: "About eShikhon | IT Training Institute in Bangladesh",
@@ -46,208 +44,204 @@ export const metadata = {
     type: "website",
   },
 };
-export default function AboutUs() {
-  // 1. Mission, Vision & Goals (Updated Content)
-  const missionVisionGoals = [
-    {
-      label: "আমাদের ভিশন",
-      title: "Vision: ডিজিটাল কর্মসংস্থান",
-      description:
-        "বাংলাদেশের তরুণ-তরুণীদের দক্ষ করে তোলা এবং তাদের জন্য দেশীয় ও আন্তর্জাতিক কর্মক্ষেত্রে সুযোগ তৈরিতে অবদান রাখাই আমাদের ভিশন।",
-      theme: "teal",
-      icon: <HiOutlineGlobeAlt className="text-2xl" />,
-      points: [
-        "বাংলাদেশের তরুণ-তরুণীদের আন্তর্জাতিক মানের IT ও ডিজিটাল দক্ষতা অর্জনে সহায়তা করা।",
-        "গ্লোবাল মার্কেটপ্লেস ও দেশীয় কর্পোরেট সেক্টরের জন্য দক্ষ মানবসম্পদ গড়ে তোলা।",
-        "দেশের বিভিন্ন পর্যায়ে মানসম্মত প্রযুক্তিভিত্তিক শিক্ষা পৌঁছে দিতে কাজ করা।",
-      ],
-    },
-    {
-      label: "আমাদের মিশন",
-      title: "Mission: হাতে-কলমে বাস্তব শিক্ষা",
-      description:
-        "শুধু তাত্ত্বিক জ্ঞান নয়, বাস্তব কাজের অভিজ্ঞতার মাধ্যমে দক্ষতা অর্জনের সুযোগ তৈরি করাই আমাদের মিশন।",
-      theme: "orange",
-      icon: <HiOutlineRocketLaunch className="text-2xl" />,
-      points: [
-        "বাস্তবধর্মী প্রজেক্ট ও পোর্টফোলিও তৈরির মাধ্যমে ব্যবহারিক শেখাকে গুরুত্ব দেওয়া।",
-        "অভিজ্ঞ মেন্টরের দিকনির্দেশনা এবং শেখার প্রয়োজনে সহায়তা প্রদান করা।",
-        "সাশ্রয়ী খরচে মানসম্মত ও কর্মক্ষেত্রের উপযোগী প্রশিক্ষণের সুযোগ তৈরি করা।",
-      ],
-    },
-    {
-      label: "আমাদের লক্ষ্য",
-      title: "Goal: স্বাবলম্বী বাংলাদেশ",
-      description:
-        "দক্ষতা উন্নয়নের মাধ্যমে আরও বেশি মানুষের কর্মসংস্থান, আত্মকর্মসংস্থান ও স্বাবলম্বী হওয়ার সুযোগ তৈরিতে কাজ করতে চাই আমরা।",
-      theme: "teal",
-      icon: <HiOutlineTrophy className="text-2xl" />,
-      points: [
-        "আগামী ৫ বছরে আরও ২ লক্ষাধিক তরুণ-তরুণীকে দক্ষতা অর্জন ও স্বাবলম্বী হওয়ার পথে এগিয়ে নিতে কাজ করা।",
-        "প্রযোজ্য জাতীয় দক্ষতা মানদণ্ড অনুযায়ী প্রশিক্ষণের মান উন্নয়নে গুরুত্ব দেওয়া।",
-        "শিক্ষার্থীদের ক্যারিয়ার প্রস্তুতি, ইন্টার্নশিপ ও কর্মসংস্থানের সুযোগ পেতে সহায়তা করা।",
-      ],
-    },
-  ];
 
-  // 2. Leadership (Ibrahim Akbar) with real social profiles
-  const leadership = {
-    name: "Ibrahim Akbar",
-    role: "Founder & CEO",
-    photo:
-      "https://eshikhon.com.bd/wp-content/uploads/2025/06/Ibrahim-vai.webp",
-    quote:
-      "Empowering your learning journey with passion, purpose, and people who care. আমাদের মূল লক্ষ্য হলো দেশের প্রত্যন্ত অঞ্চলের তরুণদেরও এমন একটি আন্তর্জাতিক মানের দক্ষতায় গড়ে তোলা, যাতে ঘরে বসেই তারা বিশ্বমানের প্রযুক্তি ক্যারিয়ার গড়তে পারে।",
-    socials: [
+const missionVisionGoals = [
+  {
+    label: "আমাদের ভিশন",
+    title: "Vision: ডিজিটাল কর্মসংস্থান",
+    description:
+      "বাংলাদেশের তরুণ-তরুণীদের দক্ষ করে তোলা এবং তাদের জন্য দেশীয় ও আন্তর্জাতিক কর্মক্ষেত্রে সুযোগ তৈরিতে অবদান রাখাই আমাদের ভিশন।",
+    theme: "teal",
+    icon: <HiOutlineGlobeAlt className="text-2xl" aria-hidden="true" />,
+    points: [
+      "বাংলাদেশের তরুণ-তরুণীদের আন্তর্জাতিক মানের IT ও ডিজিটাল দক্ষতা অর্জনে সহায়তা করা।",
+      "গ্লোবাল মার্কেটপ্লেস ও দেশীয় কর্পোরেট সেক্টরের জন্য দক্ষ মানবসম্পদ গড়ে তোলা।",
+      "দেশের বিভিন্ন পর্যায়ে মানসম্মত প্রযুক্তিভিত্তিক শিক্ষা পৌঁছে দিতে কাজ করা।",
+    ],
+  },
+  {
+    label: "আমাদের মিশন",
+    title: "Mission: হাতে-কলমে বাস্তব শিক্ষা",
+    description:
+      "শুধু তাত্ত্বিক জ্ঞান নয়, বাস্তব কাজের অভিজ্ঞতার মাধ্যমে দক্ষতা অর্জনের সুযোগ তৈরি করাই আমাদের মিশন।",
+    theme: "orange",
+    icon: <HiOutlineRocketLaunch className="text-2xl" aria-hidden="true" />,
+    points: [
+      "বাস্তবধর্মী প্রজেক্ট ও পোর্টফোলিও তৈরির মাধ্যমে ব্যবহারিক শেখাকে গুরুত্ব দেওয়া।",
+      "অভিজ্ঞ মেন্টরের দিকনির্দেশনা এবং শেখার প্রয়োজনে সহায়তা প্রদান করা।",
+      "সাশ্রয়ী খরচে মানসম্মত ও কর্মক্ষেত্রের উপযোগী প্রশিক্ষণের সুযোগ তৈরি করা।",
+    ],
+  },
+  {
+    label: "আমাদের লক্ষ্য",
+    title: "Goal: স্বাবলম্বী বাংলাদেশ",
+    description:
+      "দক্ষতা উন্নয়নের মাধ্যমে আরও বেশি মানুষের কর্মসংস্থান, আত্মকর্মসংস্থান ও স্বাবলম্বী হওয়ার সুযোগ তৈরিতে কাজ করতে চাই আমরা।",
+    theme: "teal",
+    icon: <HiOutlineTrophy className="text-2xl" aria-hidden="true" />,
+    points: [
+      "আগামী ৫ বছরে আরও ২ লক্ষাধিক তরুণ-তরুণীকে দক্ষতা অর্জন ও স্বাবলম্বী হওয়ার পথে এগিয়ে নিতে কাজ করা।",
+      "প্রযোজ্য জাতীয় দক্ষতা মানদণ্ড অনুযায়ী প্রশিক্ষণের মান উন্নয়নে গুরুত্ব দেওয়া।",
+      "শিক্ষার্থীদের ক্যারিয়ার প্রস্তুতি, ইন্টার্নশিপ ও কর্মসংস্থানের সুযোগ পেতে সহায়তা করা।",
+    ],
+  },
+];
+
+const leadership = {
+  name: "Ibrahim Akbar",
+  role: "Founder & CEO",
+  photo: "https://eshikhon.com.bd/wp-content/uploads/2025/06/Ibrahim-vai.webp",
+  quote:
+    "Empowering your learning journey with passion, purpose, and people who care. আমাদের মূল লক্ষ্য হলো দেশের প্রত্যন্ত অঞ্চলের তরুণদেরও এমন একটি আন্তর্জাতিক মানের দক্ষতায় গড়ে তোলা, যাতে ঘরে বসেই তারা বিশ্বমানের প্রযুক্তি ক্যারিয়ার গড়তে পারে।",
+  socials: [
+    {
+      name: "Facebook",
+      href: "https://www.facebook.com/w3cibrahim",
+      icon: <FaFacebookF className="text-sm" aria-hidden="true" />,
+    },
+    {
+      name: "LinkedIn",
+      href: "https://www.linkedin.com/in/ibrahimakbar01/",
+      icon: <FaLinkedinIn className="text-sm" aria-hidden="true" />,
+    },
+  ],
+};
+
+const teamDepartments = [
+  {
+    category: "Business Development, HR & Operations",
+    theme: "teal",
+    members: [
       {
-        name: "Facebook",
-        href: "https://www.facebook.com/w3cibrahim",
-        icon: <FaFacebookF className="text-sm" />,
+        name: "Rahe Sanjid Nahid",
+        role: "Senior Operating Officer",
+        photo:
+          "https://eshikhon.com.bd/wp-content/uploads/2026/06/Rahe-Sanjid-Nahid-1.webp",
       },
       {
-        name: "LinkedIn",
-        href: "https://www.linkedin.com/in/ibrahimakbar01/",
-        icon: <FaLinkedinIn className="text-sm" />,
+        name: "Fozle Anwar Nayem",
+        role: "Executive Director, Business Development",
+        photo:
+          "https://eshikhon.com.bd/wp-content/uploads/2026/04/Fozle-Anwar-Nayem.webp",
+      },
+      {
+        name: "Md Nadim Mahamud",
+        role: "Business Development Executive",
+        photo:
+          "https://eshikhon.com.bd/wp-content/uploads/2026/06/Nadim-Mahmud.webp",
       },
     ],
-  };
+  },
+  {
+    category: "Marketing & Creative Team",
+    theme: "orange",
+    members: [
+      {
+        name: "Md. Shihab Shaharia",
+        role: "Head of Digital Marketing Department",
+        photo:
+          "https://eshikhon.com.bd/wp-content/uploads/2026/04/Md.-Shihab-Shaharia.webp",
+      },
+      {
+        name: "Israt Jahan",
+        role: "Senior Digital Marketing Executive",
+        photo:
+          "https://eshikhon.com.bd/wp-content/uploads/2026/04/Israt-Jahan_Senior-Digital-Marketing-Executive.webp",
+      },
+      {
+        name: "Shafikul Islam Shohag",
+        role: "Sr Graphic Design Executive",
+        photo:
+          "https://eshikhon.com.bd/wp-content/uploads/2026/04/Shafikul-Islam-Shohag.webp",
+      },
+      {
+        name: "MD. Atikur Rahman",
+        role: "Sr Graphic Design Executive",
+        photo:
+          "https://eshikhon.com.bd/wp-content/uploads/2026/06/Atikur-Rahman.webp",
+      },
+      {
+        name: "Md Mehedi Hasan",
+        role: "Creative Video Editor & Videographer",
+        photo:
+          "https://eshikhon.com.bd/wp-content/uploads/2025/06/mehedi-vai.webp",
+      },
+    ],
+  },
+  {
+    category: "Support & Academic Team",
+    theme: "teal",
+    members: [
+      {
+        name: "Jannatul Ferdous",
+        role: "Sr. Customer Support Executive",
+        photo:
+          "https://eshikhon.com.bd/wp-content/uploads/2025/06/jannat-apu.webp",
+      },
+      {
+        name: "Md. Shamim Sweet",
+        role: "Sr. Customer Support Executive",
+        photo:
+          "https://eshikhon.com.bd/wp-content/uploads/2026/04/Md.-Shamim-Sweet.webp",
+      },
+      {
+        name: "Nayela Ahmed",
+        role: "Front-Desk Executive",
+        photo:
+          "https://eshikhon.com.bd/wp-content/uploads/2025/06/nayla-apu.webp",
+      },
+      {
+        name: "Antora Imaculate Gomes",
+        role: "Front-Desk Executive",
+        photo:
+          "https://eshikhon.com.bd/wp-content/uploads/2025/06/noboni-apu.webp",
+      },
+      {
+        name: "Sabrina Reem",
+        role: "Front-Desk Executive",
+        photo: "https://eshikhon.com.bd/wp-content/uploads/2026/08/Rimi.jpg",
+      },
+      {
+        name: "Niamur Rahman Nishad",
+        role: "Customer Support Executive",
+        photo:
+          "https://eshikhon.com.bd/wp-content/uploads/2026/04/Niamur-Rahman-Nishad.webp",
+      },
+      {
+        name: "Fabiha Afifa",
+        role: "Customer Support Executive",
+        photo:
+          "https://eshikhon.com.bd/wp-content/uploads/2026/04/Fabiha-Afifa.webp",
+      },
+      {
+        name: "Tawhid Khan",
+        role: "Customer Support Executive",
+        photo: "https://eshikhon.com.bd/wp-content/uploads/2026/08/Tawhid.gif",
+      },
+      {
+        name: "Md. Mustafiz Rahman",
+        role: "Junior MERN Stack Developer",
+        photo:
+          "https://eshikhon.com.bd/wp-content/uploads/2026/06/Mustafizur-Rahman.webp",
+      },
+      {
+        name: "Bikrom Ray",
+        role: "Instructor Web Design & Development",
+        photo:
+          "https://eshikhon.com.bd/wp-content/uploads/2026/06/Bikrom-Roy.webp",
+      },
+    ],
+  },
+];
 
-  // 3. Team Departments (Real data from eshikhon.com.bd/team/)
-  const teamDepartments = [
-    {
-      category: "Business Development, HR & Operations",
-      theme: "teal",
-      members: [
-        {
-          name: "Rahe Sanjid Nahid",
-          role: "Senior Operating Officer",
-          photo:
-            "https://eshikhon.com.bd/wp-content/uploads/2026/06/Rahe-Sanjid-Nahid-1.webp",
-        },
-        {
-          name: "Fozle Anwar Nayem",
-          role: "Executive Director, Business Development",
-          photo:
-            "https://eshikhon.com.bd/wp-content/uploads/2026/04/Fozle-Anwar-Nayem.webp",
-        },
-        {
-          name: "Md Nadim Mahamud",
-          role: "Business Development Executive",
-          photo:
-            "https://eshikhon.com.bd/wp-content/uploads/2026/06/Nadim-Mahmud.webp",
-        },
-      ],
-    },
-    {
-      category: "Marketing & Creative Team",
-      theme: "orange",
-      members: [
-        {
-          name: "Md. Shihab Shaharia",
-          role: "Head of Digital Marketing Department",
-          photo:
-            "https://eshikhon.com.bd/wp-content/uploads/2026/04/Md.-Shihab-Shaharia.webp",
-        },
-        {
-          name: "Israt Jahan",
-          role: "Senior Digital Marketing Executive",
-          photo:
-            "https://eshikhon.com.bd/wp-content/uploads/2026/04/Israt-Jahan_Senior-Digital-Marketing-Executive.webp",
-        },
-        {
-          name: "Shafikul Islam Shohag",
-          role: "Sr Graphic Design Executive",
-          photo:
-            "https://eshikhon.com.bd/wp-content/uploads/2026/04/Shafikul-Islam-Shohag.webp",
-        },
-        {
-          name: "MD. Atikur Rahman",
-          role: "Sr Graphic Design Executive",
-          photo:
-            "https://eshikhon.com.bd/wp-content/uploads/2026/06/Atikur-Rahman.webp",
-        },
-        {
-          name: "Md Mehedi Hasan",
-          role: "Creative Video Editor & Videographer",
-          photo:
-            "https://eshikhon.com.bd/wp-content/uploads/2025/06/mehedi-vai.webp",
-        },
-      ],
-    },
-    {
-      category: "Support & Academic Team",
-      theme: "teal",
-      members: [
-        {
-          name: "Jannatul Ferdous",
-          role: "Sr. Customer Support Executive",
-          photo:
-            "https://eshikhon.com.bd/wp-content/uploads/2025/06/jannat-apu.webp",
-        },
-        {
-          name: "Md. Shamim Sweet",
-          role: "Sr. Customer Support Executive",
-          photo:
-            "https://eshikhon.com.bd/wp-content/uploads/2026/04/Md.-Shamim-Sweet.webp",
-        },
-        {
-          name: "Nayela Ahmed",
-          role: "Front-Desk Executive",
-          photo:
-            "https://eshikhon.com.bd/wp-content/uploads/2025/06/nayla-apu.webp",
-        },
-        {
-          name: "Antora Imaculate Gomes",
-          role: "Front-Desk Executive",
-          photo:
-            "https://eshikhon.com.bd/wp-content/uploads/2025/06/noboni-apu.webp",
-        },
-        {
-          name: "Sabrina Reem",
-          role: "Front-Desk Executive",
-          photo: "https://eshikhon.com.bd/wp-content/uploads/2026/08/Rimi.jpg",
-        },
-        {
-          name: "Niamur Rahman Nishad",
-          role: "Customer Support Executive",
-          photo:
-            "https://eshikhon.com.bd/wp-content/uploads/2026/04/Niamur-Rahman-Nishad.webp",
-        },
-        {
-          name: "Fabiha Afifa",
-          role: "Customer Support Executive",
-          photo:
-            "https://eshikhon.com.bd/wp-content/uploads/2026/04/Fabiha-Afifa.webp",
-        },
-        {
-          name: "Tawhid Khan",
-          role: "Customer Support Executive",
-          photo:
-            "https://eshikhon.com.bd/wp-content/uploads/2026/08/Tawhid.gif",
-        },
-        {
-          name: "Md. Mustafiz Rahman",
-          role: "Junior MERN Stack Developer",
-          photo:
-            "https://eshikhon.com.bd/wp-content/uploads/2026/06/Mustafizur-Rahman.webp",
-        },
-        {
-          name: "Bikrom Ray",
-          role: "Instructor Web Design & Development",
-          photo:
-            "https://eshikhon.com.bd/wp-content/uploads/2026/06/Bikrom-Roy.webp",
-        },
-      ],
-    },
-  ];
-
+export default function AboutUs() {
   return (
     <div className="min-h-screen bg-[#F8FAFC] font-HindSiliguri text-slate-800 pb-20">
       {/* ================= 1. HERO HEADER ================= */}
       <section className="pt-16 pb-12 bg-white border-b border-slate-100 text-center relative overflow-hidden">
         <div className="max-w-4xl mx-auto px-4">
           <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-bold bg-orange-50 text-orange-600 border border-orange-200 mb-3.5">
-            <HiOutlineSparkles className="text-sm" />
+            <HiOutlineSparkles className="text-sm" aria-hidden="true" />
             We Are eShikhon
           </span>
 
@@ -289,7 +283,7 @@ export default function AboutUs() {
               return (
                 <div
                   key={idx}
-                  className={`bg-white p-6 sm:p-7 rounded-2xl border transition-all duration-200 hover:-translate-y-1 hover:shadow-md flex flex-col justify-between ${
+                  className={`bg-white p-6 sm:p-7 rounded-2xl border transition-[transform,box-shadow,border-color] duration-200 hover:-translate-y-1 hover:shadow-md flex flex-col justify-between ${
                     isTeal
                       ? "border-teal-100 hover:border-teal-400"
                       : "border-orange-100 hover:border-orange-400"
@@ -342,7 +336,10 @@ export default function AboutUs() {
                                 : "bg-orange-100 text-orange-700"
                             }`}
                           >
-                            <HiOutlineCheck className="w-3 h-3" />
+                            <HiOutlineCheck
+                              className="w-3 h-3"
+                              aria-hidden="true"
+                            />
                           </span>
                           <span>{pt}</span>
                         </li>
@@ -359,14 +356,19 @@ export default function AboutUs() {
         <div className="bg-white rounded-3xl border-2 border-orange-100 shadow-sm p-6 sm:p-10 relative overflow-hidden">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
             {/* Founder Photo */}
+            {/* Founder Photo */}
             <div className="md:col-span-4 flex justify-center">
               <div className="relative">
-                <img
-                  src={leadership.photo}
-                  alt={leadership.name}
-                  className="w-48 h-56 sm:w-60 sm:h-72 rounded-2xl object-cover border-4 border-orange-50 shadow-md bg-slate-100"
-                />
-                <span className="absolute -bottom-3 left-1/2 -translate-x-1/2 whitespace-nowrap bg-orange-500 text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-xs">
+                <div className="relative w-48 h-56 sm:w-60 sm:h-72 rounded-2xl overflow-hidden border-4 border-orange-50 shadow-md bg-slate-100">
+                  <Image
+                    src={leadership.photo}
+                    alt={leadership.name}
+                    fill
+                    sizes="(max-width: 640px) 192px, 240px"
+                    className="object-cover"
+                  />
+                </div>
+                <span className="absolute -bottom-3 left-1/2 -translate-x-1/2 whitespace-nowrap bg-orange-500 text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-xs z-10">
                   {leadership.role}
                 </span>
               </div>
@@ -385,7 +387,7 @@ export default function AboutUs() {
               </p>
 
               <blockquote className="text-xs sm:text-sm text-slate-600 leading-relaxed italic pt-2 border-t border-slate-100">
-                "{leadership.quote}"
+                &ldquo;{leadership.quote}&rdquo;
               </blockquote>
 
               <div className="flex items-center justify-center md:justify-start gap-2.5 pt-2">
@@ -396,7 +398,7 @@ export default function AboutUs() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={soc.name}
-                    className="w-9 h-9 rounded-xl bg-orange-50 text-orange-600 hover:bg-orange-500 hover:text-white flex items-center justify-center transition shadow-2xs"
+                    className="w-9 h-9 rounded-xl bg-orange-50 text-orange-600 hover:bg-orange-500 hover:text-white flex items-center justify-center transition-colors shadow-2xs"
                   >
                     {soc.icon}
                   </a>
@@ -407,7 +409,7 @@ export default function AboutUs() {
         </div>
 
         {/* ================= 4. TEAM DEPARTMENTS SHOWCASE ================= */}
-        <div className="space-y-14">
+        <div className="space-y-14 [content-visibility:auto] [contain-intrinsic-size:1px_1600px]">
           <div className="text-center max-w-2xl mx-auto">
             <span className="text-xs font-bold uppercase tracking-wider text-orange-600 bg-orange-50 border border-orange-200 px-3 py-1 rounded-full">
               Our People
@@ -440,19 +442,20 @@ export default function AboutUs() {
                   {dept.members.map((member, mIdx) => (
                     <div
                       key={mIdx}
-                      className={`bg-white rounded-2xl border transition-all duration-200 hover:-translate-y-1 hover:shadow-md overflow-hidden flex flex-col justify-between ${
+                      className={`bg-white rounded-2xl border transition-[transform,box-shadow,border-color] duration-200 hover:-translate-y-1 hover:shadow-md overflow-hidden flex flex-col justify-between ${
                         isTeal
                           ? "border-teal-100 hover:border-teal-400"
                           : "border-orange-100 hover:border-orange-400"
                       }`}
                     >
                       {/* Image Container */}
-                      <div className="aspect-[4/4] w-full overflow-hidden bg-slate-100 relative">
-                        <img
+                      <div className="aspect-square w-full overflow-hidden bg-slate-100 relative">
+                        <Image
                           src={member.photo}
                           alt={member.name}
-                          loading="lazy"
-                          className="w-full h-full object-cover object-top transition-transform duration-300 hover:scale-105"
+                          fill
+                          sizes="(max-width: 639px) 45vw, (max-width: 1023px) 30vw, 250px"
+                          className="object-cover object-top transition-transform duration-300 hover:scale-105"
                         />
                       </div>
 
@@ -480,7 +483,7 @@ export default function AboutUs() {
         </div>
 
         {/* ================= 5. CAMPUS LOCATION CARD ================= */}
-        <div className="bg-white rounded-2xl border-2 border-orange-100 p-6 sm:p-8 shadow-xs flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="bg-white rounded-2xl border-2 border-orange-100 p-6 sm:p-8 shadow-xs flex flex-col md:flex-row items-center justify-between gap-6 [content-visibility:auto] [contain-intrinsic-size:1px_200px]">
           <div className="space-y-2 text-center md:text-left">
             <span className="text-xs font-bold text-teal-700 uppercase tracking-wider bg-teal-50 px-2.5 py-1 rounded-md">
               সরাসরি ক্যাম্পাস ভিজিট করুন
@@ -489,7 +492,10 @@ export default function AboutUs() {
               আমাদের আধুনিক কম্পিউটার ল্যাব ও অফিস
             </h3>
             <p className="text-xs sm:text-sm text-slate-600 flex items-center justify-center md:justify-start gap-2">
-              <HiOutlineMapPin className="text-orange-600 shrink-0 text-base" />
+              <HiOutlineMapPin
+                className="text-orange-600 shrink-0 text-base"
+                aria-hidden="true"
+              />
               <span>
                 151/7, Goodluck Center (4th Floor), Panthapath Signal, Green
                 Road, Dhaka
@@ -499,7 +505,7 @@ export default function AboutUs() {
 
           <a
             href="/contact"
-            className="px-6 py-3 bg-gradient-to-r from-orange-500 via-orange-600 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-bold rounded-xl text-sm shadow-md shadow-orange-500/25 transition cursor-pointer whitespace-nowrap"
+            className="px-6 py-3 bg-gradient-to-r from-orange-500 via-orange-600 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-bold rounded-xl text-sm shadow-md shadow-orange-500/25 transition-colors cursor-pointer whitespace-nowrap"
           >
             যোগাযোগ ও দিকনির্দেশনা
           </a>

@@ -1,5 +1,3 @@
-
-
 import React from "react";
 import {
   HiOutlineMapPin,
@@ -14,6 +12,7 @@ import {
   FaYoutube,
   FaPhoneVolume,
 } from "react-icons/fa6";
+import Image from "next/image";
 
 export const metadata = {
   title: "Contact eShikhon | IT Training & Course Counselling in Dhaka",
@@ -52,8 +51,6 @@ export const metadata = {
   },
 };
 
-
-
 export default function Page() {
   const phoneNumbers = [
     { label: "হটলাইন ১", number: "01705 776939", tel: "+8801705776939" },
@@ -64,7 +61,6 @@ export default function Page() {
 
   return (
     <div className="min-h-screen bg-[#F8FAFC] font-HindSiliguri text-slate-800 pb-20">
-      
       {/* ================= 1. PAGE HEADER ================= */}
       <section className="bg-white border-b border-slate-100 py-12 text-center relative overflow-hidden">
         <div className="max-w-4xl mx-auto px-4">
@@ -78,7 +74,8 @@ export default function Page() {
           </h1>
 
           <p className="mt-3 text-xs sm:text-base text-slate-600 max-w-xl mx-auto leading-relaxed">
-            যেকোনো কোর্স সংক্রান্ত তথ্য, ক্যারিয়ার কাউন্সেলিং বা সরাসরি ক্যাম্পাস পরিদর্শনের জন্য আমরা সর্বদা আপনার পাশে আছি।
+            যেকোনো কোর্স সংক্রান্ত তথ্য, ক্যারিয়ার কাউন্সেলিং বা সরাসরি
+            ক্যাম্পাস পরিদর্শনের জন্য আমরা সর্বদা আপনার পাশে আছি।
           </p>
         </div>
       </section>
@@ -86,10 +83,8 @@ export default function Page() {
       {/* ================= 2. MAIN 2-COLUMN SECTION ================= */}
       <main className="max-w-6xl mx-auto px-4 mt-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          
           {/* ================= LEFT COLUMN: CONTACT DETAILS ================= */}
           <div className="lg:col-span-6 bg-white rounded-3xl border-2 border-orange-100 shadow-sm p-6 sm:p-8 space-y-7">
-            
             {/* Address Block */}
             <div className="space-y-3 pb-6 border-b border-slate-100">
               <div className="flex items-center gap-2.5">
@@ -109,7 +104,8 @@ export default function Page() {
               {/* Full Unbroken Address */}
               <div className="p-4 rounded-2xl bg-orange-50/50 border border-orange-100">
                 <p className="text-sm sm:text-base font-semibold text-slate-800 leading-relaxed break-words">
-                  151/7, Goodluck Center (4th Floor), Panthapath Signal, Green Road, Dhaka-1205
+                  151/7, Goodluck Center (4th Floor), Panthapath Signal, Green
+                  Road, Dhaka-1205
                 </p>
               </div>
             </div>
@@ -146,7 +142,9 @@ export default function Page() {
               {/* Working Hours */}
               <div className="flex items-center gap-2 text-xs font-semibold text-slate-500 pt-1">
                 <HiOutlineClock className="text-orange-600 text-base" />
-                <span>অফিস সময়: সকাল ৯:৩০ থেকে রাত ৯:৩০ পর্যন্ত (প্রতিদিন খোলা)</span>
+                <span>
+                  অফিস সময়: সকাল ৯:৩০ থেকে রাত ৯:৩০ পর্যন্ত (প্রতিদিন খোলা)
+                </span>
               </div>
             </div>
 
@@ -155,7 +153,7 @@ export default function Page() {
               <span className="text-xs font-bold uppercase tracking-wider text-slate-400 block">
                 সরাসরি মেসেজ করুন
               </span>
-              
+
               <div className="flex flex-wrap gap-3">
                 {/* WhatsApp */}
                 <a
@@ -207,12 +205,10 @@ export default function Page() {
                 </a>
               </div>
             </div>
-
           </div>
 
           {/* ================= RIGHT COLUMN: VIDEO & YOUTUBE BOX ================= */}
           <div className="lg:col-span-6 space-y-6">
-            
             {/* 1. Featured Video Embed */}
             <div className="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm">
               <div className="p-4 border-b border-slate-100 flex items-center justify-between">
@@ -220,7 +216,9 @@ export default function Page() {
                   <span className="w-2.5 h-2.5 rounded-full bg-red-600 animate-pulse" />
                   ইশিখন পরিচিতি ভিডিও
                 </span>
-                <span className="text-[11px] font-bold text-slate-400">YouTube Video</span>
+                <span className="text-[11px] font-bold text-slate-400">
+                  YouTube Video
+                </span>
               </div>
 
               <div className="relative aspect-video w-full bg-slate-900">
@@ -238,10 +236,12 @@ export default function Page() {
             <div className="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm">
               {/* YouTube Channel Cover */}
               <div className="h-32 sm:h-36 w-full overflow-hidden bg-slate-100 relative">
-                <img
+                <Image
                   src="https://eshikhon.com.bd/wp-content/uploads/2025/06/Cover-v2.jpg"
                   alt="eShikhon YouTube Cover"
-                  className="w-full h-full object-cover"
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 500px"
+                  className="object-cover"
                 />
               </div>
 
@@ -249,9 +249,11 @@ export default function Page() {
               <div className="p-5 sm:p-6 relative pt-0">
                 <div className="flex flex-col sm:flex-row items-center sm:items-end justify-between gap-4 -mt-10 mb-4">
                   {/* Avatar */}
-                  <img
+                  <Image
                     src="https://eshikhon.com.bd/wp-content/uploads/2025/06/DP-1-1.jpg"
                     alt="eShikhon Profile"
+                    width={80}
+                    height={80}
                     className="w-20 h-20 rounded-2xl object-cover border-4 border-white shadow-md bg-white shrink-0"
                   />
 
@@ -279,14 +281,14 @@ export default function Page() {
                     </a>
                   </h4>
                   <p className="text-xs text-slate-500 mt-1 text-center sm:text-left leading-relaxed">
-                    ফ্রিল্যান্সিং টিউটোরিয়াল, লাইভ সেমিনার এবং সফল শিক্ষার্থীদের অনুপ্রেরণামূলক গল্প দেখতে আমাদের অফিসিয়াল ইউটিউব চ্যানেলে যুক্ত থাকুন।
+                    ফ্রিল্যান্সিং টিউটোরিয়াল, লাইভ সেমিনার এবং সফল
+                    শিক্ষার্থীদের অনুপ্রেরণামূলক গল্প দেখতে আমাদের অফিসিয়াল
+                    ইউটিউব চ্যানেলে যুক্ত থাকুন।
                   </p>
                 </div>
               </div>
             </div>
-
           </div>
-
         </div>
 
         {/* ================= 3. FULL-WIDTH CAMPUS GOOGLE MAP ================= */}
@@ -301,7 +303,7 @@ export default function Page() {
                 সরাসরি এসে কথা বলুন ও আধুনিক কম্পিউটার ল্যাব পরিদর্শন করুন
               </p>
             </div>
-            
+
             <a
               href="https://maps.google.com/?q=eShikhon+Campus-2"
               target="_blank"
@@ -327,7 +329,6 @@ export default function Page() {
             />
           </div>
         </div>
-
       </main>
     </div>
   );

@@ -10,23 +10,26 @@ const partners = [
 
 export default function Partners() {
   return (
-      <section className="relative py-16 md:py-24 bg-linear-to-b from-[#F8FAFC] via-[#F8FAFC] to-[#F1F5F9] overflow-hidden">
-      {/* Decorative subtle background glows */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-96 bg-radial from-orange-100/40 via-blue-50/20 to-transparent pointer-events-none blur-3xl -z-10" />
+    <section className="relative py-16 md:py-24 bg-linear-to-b from-[#F8FAFC] via-[#F8FAFC] to-[#F1F5F9] overflow-hidden [content-visibility:auto] [contain-intrinsic-size:1px_450px]">
+      {/* Decorative subtle background glows (blur-3xl removed, bg-radial kept as-is) */}
+      <div
+        aria-hidden="true"
+        className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-96 bg-radial from-orange-100/40 via-blue-50/20 to-transparent pointer-events-none -z-10"
+      />
+
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Sleek Header */}
         <div className="text-center max-w-xl mx-auto mb-10">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-50 border border-orange-200/50 text-[11px] font-semibold text-[#f25c05] mb-2.5">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#f25c05]"></span>
+            <span aria-hidden="true" className="w-1.5 h-1.5 rounded-full bg-[#f25c05]" />
             <span>আমাদের সহযোগী প্রতিষ্ঠানসমূহ</span>
           </div>
 
           <h3 className="text-2xl font-bold text-[#0a2540] tracking-tight">
-            Our Partners in Skills Development Training 
+            Our Partners in Skills Development Training
           </h3>
           <p className="mt-1.5 text-xs sm:text-sm text-slate-500 font-normal">
-        দক্ষতা উন্নয়ন ও মানসম্মত প্রশিক্ষণের লক্ষ্যে বিভিন্ন প্রতিষ্ঠানের সঙ্গে আমাদের পথচলা।
-
+            দক্ষতা উন্নয়ন ও মানসম্মত প্রশিক্ষণের লক্ষ্যে বিভিন্ন প্রতিষ্ঠানের সঙ্গে আমাদের পথচলা।
           </p>
         </div>
 
@@ -35,18 +38,24 @@ export default function Partners() {
           {partners.map((partner, index) => (
             <div
               key={partner.id}
-              className={`group flex items-center justify-center p-6 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:border-sky-200 transition-all duration-300 hover:-translate-y-1 ${
+              className={`group flex items-center justify-center p-6 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:border-sky-200 transition-[transform,box-shadow,border-color] duration-300 hover:-translate-y-1 ${
                 index === 4 ? "col-span-2 sm:col-span-1" : ""
               }`}
             >
               {/* Fixed height container to equalize all 5 logo sizes */}
-              <div className={`relative w-full ${partner?.name == "Bangladesh Technical Education Board" ? "h-17" : "h-14"} flex items-center justify-center`}>
+              <div
+                className={`relative w-full ${
+                  partner.name === "Bangladesh Technical Education Board"
+                    ? "h-17"
+                    : "h-14"
+                } flex items-center justify-center`}
+              >
                 <Image
                   src={partner.src}
                   alt={partner.name}
                   fill
-                  sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 20vw"
-                  className="object-contain filter  opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 p-1"
+                  sizes="(max-width: 639px) 45vw, (max-width: 1023px) 30vw, 200px"
+                  className="object-contain opacity-70 group-hover:opacity-100 transition-all duration-300 p-1"
                 />
               </div>
             </div>

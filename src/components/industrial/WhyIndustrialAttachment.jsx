@@ -1,4 +1,3 @@
-import React from "react";
 import {
   HiOutlineWrenchScrewdriver,
   HiOutlineDocumentCheck,
@@ -11,15 +10,16 @@ import {
 
 export default function WhyIndustrialAttachment() {
   return (
-    <section className="py-16 md:py-20 font-HindSiliguri bg-linear-to-b from-[#F8FAFC] via-slate-50 to-[#F1F5F9] text-slate-800 relative overflow-hidden">
-
+    <section className="py-16 md:py-20 font-HindSiliguri bg-linear-to-b from-[#F8FAFC] via-slate-50 to-[#F1F5F9] text-slate-800 relative overflow-hidden [content-visibility:auto] [contain-intrinsic-size:1px_700px]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
-        
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
           {/* Pill Badge */}
           <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-teal-50 border border-teal-200/80 text-teal-700 text-xs font-semibold tracking-wide mb-3">
-            <span className="w-2 h-2 rounded-full bg-teal-500 animate-pulse"></span>
+            <span
+              aria-hidden="true"
+              className="w-2 h-2 rounded-full bg-teal-500 animate-pulse"
+            />
             পলিটেকনিক ও ডিপ্লোমা ইন্টার্নশিপ
           </div>
 
@@ -33,13 +33,12 @@ export default function WhyIndustrialAttachment() {
 
         {/* 12-Column Asymmetric Bento Grid (2 + 3 = 5 Items) */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-5">
-          
           {/* CARD 1: Wide Featured Card (7 Columns) - Practical Training */}
-          <div className="lg:col-span-7 bg-white rounded-3xl p-7 border border-teal-100 shadow-xs hover:border-teal-400 hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
+          <div className="lg:col-span-7 bg-white rounded-3xl p-7 border border-teal-100 shadow-xs hover:border-teal-400 hover:shadow-lg transition-[border-color,box-shadow] duration-300 flex flex-col justify-between group">
             <div>
               <div className="flex items-center justify-between mb-5">
-                <div className="w-12 h-12 rounded-2xl bg-teal-50 text-teal-600 flex items-center justify-center text-2xl group-hover:bg-teal-600 group-hover:text-white transition-all duration-300">
-                  <HiOutlineWrenchScrewdriver />
+                <div className="w-12 h-12 rounded-2xl bg-teal-50 text-teal-600 flex items-center justify-center text-2xl group-hover:bg-teal-600 group-hover:text-white transition-[background-color,color] duration-300">
+                  <HiOutlineWrenchScrewdriver aria-hidden="true" />
                 </div>
                 <span className="text-xs font-bold px-3 py-1 rounded-full bg-teal-50 text-teal-700 border border-teal-200">
                   হাতে-কলমে প্রশিক্ষণ
@@ -63,11 +62,11 @@ export default function WhyIndustrialAttachment() {
           </div>
 
           {/* CARD 2: Project Focused Card (5 Columns) - Project-Based Learning */}
-          <div className="lg:col-span-5 bg-white rounded-3xl p-7 border border-orange-100 shadow-xs hover:border-orange-400 hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
+          <div className="lg:col-span-5 bg-white rounded-3xl p-7 border border-orange-100 shadow-xs hover:border-orange-400 hover:shadow-lg transition-[border-color,box-shadow] duration-300 flex flex-col justify-between group">
             <div>
               <div className="flex items-center justify-between mb-5">
-                <div className="w-12 h-12 rounded-2xl bg-orange-50 text-orange-500 flex items-center justify-center text-2xl group-hover:bg-orange-500 group-hover:text-white transition-all duration-300">
-                  <HiOutlineDocumentCheck />
+                <div className="w-12 h-12 rounded-2xl bg-orange-50 text-orange-500 flex items-center justify-center text-2xl group-hover:bg-orange-500 group-hover:text-white transition-[background-color,color] duration-300">
+                  <HiOutlineDocumentCheck aria-hidden="true" />
                 </div>
                 <span className="text-xs font-bold px-3 py-1 rounded-full bg-orange-50 text-orange-600 border border-orange-200">
                   রিয়েল-লাইফ অভিজ্ঞতা
@@ -83,15 +82,15 @@ export default function WhyIndustrialAttachment() {
             </div>
 
             <div className="mt-6 pt-4 border-t border-slate-100 flex items-center gap-2 text-xs font-semibold text-orange-600">
-              <HiCheck className="text-base" /> বাস্তব কেস-স্টাডি ও লাইভ প্রোজেক্ট
+              <HiCheck className="text-base" aria-hidden="true" /> বাস্তব কেস-স্টাডি ও লাইভ প্রোজেক্ট
             </div>
           </div>
 
           {/* CARD 3: Compact Tile (4 Columns) - Mentor Support */}
-          <div className="lg:col-span-4 bg-white rounded-3xl p-6 sm:p-7 border border-slate-100 shadow-xs hover:border-teal-400 hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
+          <div className="lg:col-span-4 bg-white rounded-3xl p-6 sm:p-7 border border-slate-100 shadow-xs hover:border-teal-400 hover:shadow-lg transition-[border-color,box-shadow] duration-300 flex flex-col justify-between group">
             <div>
-              <div className="w-11 h-11 rounded-2xl bg-teal-50 text-teal-600 flex items-center justify-center text-xl mb-4 group-hover:bg-teal-600 group-hover:text-white transition-all duration-300">
-                <HiOutlineAcademicCap />
+              <div className="w-11 h-11 rounded-2xl bg-teal-50 text-teal-600 flex items-center justify-center text-xl mb-4 group-hover:bg-teal-600 group-hover:text-white transition-[background-color,color] duration-300">
+                <HiOutlineAcademicCap aria-hidden="true" />
               </div>
               <span className="text-[11px] font-bold text-teal-600 uppercase tracking-wider block">
                 সার্বক্ষণিক দিকনির্দেশনা
@@ -106,10 +105,10 @@ export default function WhyIndustrialAttachment() {
           </div>
 
           {/* CARD 4: Compact Tile (4 Columns) - বিষয়ভিত্তিক প্রশিক্ষণ */}
-          <div className="lg:col-span-4 bg-white rounded-3xl p-6 sm:p-7 border border-slate-100 shadow-xs hover:border-teal-400 hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
+          <div className="lg:col-span-4 bg-white rounded-3xl p-6 sm:p-7 border border-slate-100 shadow-xs hover:border-teal-400 hover:shadow-lg transition-[border-color,box-shadow] duration-300 flex flex-col justify-between group">
             <div>
-              <div className="w-11 h-11 rounded-2xl bg-teal-50 text-teal-600 flex items-center justify-center text-xl mb-4 group-hover:bg-teal-600 group-hover:text-white transition-all duration-300">
-                <HiOutlineCheckBadge />
+              <div className="w-11 h-11 rounded-2xl bg-teal-50 text-teal-600 flex items-center justify-center text-xl mb-4 group-hover:bg-teal-600 group-hover:text-white transition-[background-color,color] duration-300">
+                <HiOutlineCheckBadge aria-hidden="true" />
               </div>
               <span className="text-[11px] font-bold text-teal-600 uppercase tracking-wider block">
                 পছন্দের স্বাধীনতা
@@ -124,11 +123,11 @@ export default function WhyIndustrialAttachment() {
           </div>
 
           {/* CARD 5: Accent Grand Finale Card (4 Columns) - Career Preparation */}
-          <div className="lg:col-span-4 rounded-3xl p-6 sm:p-7 bg-linear-to-br from-[#005776] to-[#003b50] text-white shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+          <div className="lg:col-span-4 rounded-3xl p-6 sm:p-7 bg-linear-to-br from-[#005776] to-[#003b50] text-white shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between group">
             <div>
               <div className="flex items-center justify-between mb-4">
-                <div className="w-11 h-11 rounded-2xl bg-white/10 text-orange-400 flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
-                  <HiBolt />
+                <div className="w-11 h-11 rounded-2xl bg-white/10 text-orange-400 flex items-center justify-center text-xl group-hover:scale-110 transition-transform duration-300">
+                  <HiBolt aria-hidden="true" />
                 </div>
                 <span className="text-[11px] font-bold px-2.5 py-1 rounded-full bg-orange-500/20 text-orange-300 border border-orange-400/30">
                   জব-রেডি সাপোর্ট
@@ -145,12 +144,10 @@ export default function WhyIndustrialAttachment() {
 
             <div className="mt-6 pt-3 border-t border-white/15 flex items-center justify-between text-xs text-teal-200">
               <span className="font-semibold text-orange-300">CV + Portfolio + Mock Interview</span>
-              <HiArrowRight className="text-sm group-hover:translate-x-1 transition-transform" />
+              <HiArrowRight className="text-sm group-hover:translate-x-1 transition-transform duration-300" aria-hidden="true" />
             </div>
           </div>
-
         </div>
-
       </div>
     </section>
   );

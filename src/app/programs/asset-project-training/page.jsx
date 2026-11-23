@@ -1,5 +1,4 @@
 import ASSETCTA from "@/components/ASSET/ASSETCTA";
-import ASSETFAQ from "@/components/ASSET/ASSETFAQ";
 import PreviousBatchResults from "@/components/ASSET/PreviousBatchResults";
 import RequiredDocuments from "@/components/ASSET/RequiredDocuments";
 import WhatIsAsset from "@/components/ASSET/WhatIsAsset";
